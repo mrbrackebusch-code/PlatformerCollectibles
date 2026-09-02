@@ -12,7 +12,13 @@ Included collectibles: spinning coin, energy orb, crystal, star, heart, key, pot
 
 ## Use in MakeCode Arcade
 
-After this folder is published as a public GitHub repository, add its GitHub URL through **Settings → Extensions**. Because `assetPack` is enabled, the named animations appear in the Animation gallery and the pack's code is ignored.
+1. Open a game in [MakeCode Arcade](https://arcade.makecode.com/).
+2. Open **Settings → Extensions**.
+3. Paste `https://github.com/mrbrackebusch-code/PlatformerCollectibles` into the search box.
+4. Select the extension card.
+5. Open the Animation editor to find the imported idle and collected animations.
+
+Because `assetPack` is enabled, MakeCode imports the named animations without importing executable extension code.
 
 For each item, choose the matching `Idle` and `Collected` animations. Loop the idle animation. Run the collected animation once, then destroy or hide the collectible after the final frame. Each collected sequence preserves the item's identity: coins flip away, orbs contract, crystals split into shards, hearts release tiny hearts, potions pop into bubbles, batteries discharge, and candies unwrap into sugar sparkles. No stock destroyed effect is needed.
 
