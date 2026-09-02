@@ -32,7 +32,9 @@
         "collected_animations_loop": false,
         "stock_destroy_effects_used": false,
         "main_ts_is_empty": true,
-        "asset_pack_enabled": true
+        "asset_pack_enabled": false,
+        "asset_lookup_factories_compiled": true,
+        "public_namespace": "Platformer_Animated_Collectibles"
     },
     "families": [
         {
@@ -41,13 +43,16 @@
             "width": 16,
             "height": 16,
             "static_image": {
-                "asset_id": "coinStatic",
+                "asset_id": "Coin",
+                "legacy_asset_id": "coinStatic",
                 "display_name": "Coin",
                 "source_frame": "frames/coin/idle-1.png"
             },
             "states": {
                 "idle": {
-                    "animation_id": "coinIdle",
+                    "animation_id": "Spinning_Coin__Idle",
+                    "legacy_animation_id": "coinIdle",
+                    "display_name": "Spinning Coin - Idle",
                     "frame_ms": 120,
                     "loop": true,
                     "frames": [
@@ -82,7 +87,9 @@
                     ]
                 },
                 "collected": {
-                    "animation_id": "coinCollected",
+                    "animation_id": "Spinning_Coin__Collected",
+                    "legacy_animation_id": "coinCollected",
+                    "display_name": "Spinning Coin - Collected",
                     "frame_ms": 75,
                     "loop": false,
                     "frames": [
@@ -124,13 +131,16 @@
             "width": 16,
             "height": 16,
             "static_image": {
-                "asset_id": "orbStatic",
+                "asset_id": "Energy_Orb",
+                "legacy_asset_id": "orbStatic",
                 "display_name": "Energy Orb",
                 "source_frame": "frames/orb/idle-1.png"
             },
             "states": {
                 "idle": {
-                    "animation_id": "orbIdle",
+                    "animation_id": "Orbiting_Energy_Orb__Idle",
+                    "legacy_animation_id": "orbIdle",
+                    "display_name": "Orbiting Energy Orb - Idle",
                     "frame_ms": 150,
                     "loop": true,
                     "frames": [
@@ -165,7 +175,9 @@
                     ]
                 },
                 "collected": {
-                    "animation_id": "orbCollected",
+                    "animation_id": "Orbiting_Energy_Orb__Collected",
+                    "legacy_animation_id": "orbCollected",
+                    "display_name": "Orbiting Energy Orb - Collected",
                     "frame_ms": 75,
                     "loop": false,
                     "frames": [
@@ -207,13 +219,16 @@
             "width": 16,
             "height": 16,
             "static_image": {
-                "asset_id": "gemStatic",
+                "asset_id": "Crystal",
+                "legacy_asset_id": "gemStatic",
                 "display_name": "Crystal",
                 "source_frame": "frames/gem/idle-1.png"
             },
             "states": {
                 "idle": {
-                    "animation_id": "gemIdle",
+                    "animation_id": "Shimmering_Crystal__Idle",
+                    "legacy_animation_id": "gemIdle",
+                    "display_name": "Shimmering Crystal - Idle",
                     "frame_ms": 140,
                     "loop": true,
                     "frames": [
@@ -248,7 +263,9 @@
                     ]
                 },
                 "collected": {
-                    "animation_id": "gemCollected",
+                    "animation_id": "Shimmering_Crystal__Collected",
+                    "legacy_animation_id": "gemCollected",
+                    "display_name": "Shimmering Crystal - Collected",
                     "frame_ms": 75,
                     "loop": false,
                     "frames": [
@@ -290,13 +307,16 @@
             "width": 16,
             "height": 16,
             "static_image": {
-                "asset_id": "starStatic",
+                "asset_id": "Star",
+                "legacy_asset_id": "starStatic",
                 "display_name": "Star",
                 "source_frame": "frames/star/idle-1.png"
             },
             "states": {
                 "idle": {
-                    "animation_id": "starIdle",
+                    "animation_id": "Pulsing_Star__Idle",
+                    "legacy_animation_id": "starIdle",
+                    "display_name": "Pulsing Star - Idle",
                     "frame_ms": 130,
                     "loop": true,
                     "frames": [
@@ -331,7 +351,9 @@
                     ]
                 },
                 "collected": {
-                    "animation_id": "starCollected",
+                    "animation_id": "Pulsing_Star__Collected",
+                    "legacy_animation_id": "starCollected",
+                    "display_name": "Pulsing Star - Collected",
                     "frame_ms": 75,
                     "loop": false,
                     "frames": [
@@ -373,13 +395,16 @@
             "width": 16,
             "height": 16,
             "static_image": {
-                "asset_id": "heartStatic",
+                "asset_id": "Heart",
+                "legacy_asset_id": "heartStatic",
                 "display_name": "Heart",
                 "source_frame": "frames/heart/idle-1.png"
             },
             "states": {
                 "idle": {
-                    "animation_id": "heartIdle",
+                    "animation_id": "Orbiting_Heart__Idle",
+                    "legacy_animation_id": "heartIdle",
+                    "display_name": "Orbiting Heart - Idle",
                     "frame_ms": 150,
                     "loop": true,
                     "frames": [
@@ -414,7 +439,9 @@
                     ]
                 },
                 "collected": {
-                    "animation_id": "heartCollected",
+                    "animation_id": "Orbiting_Heart__Collected",
+                    "legacy_animation_id": "heartCollected",
+                    "display_name": "Orbiting Heart - Collected",
                     "frame_ms": 75,
                     "loop": false,
                     "frames": [
@@ -456,13 +483,16 @@
             "width": 16,
             "height": 16,
             "static_image": {
-                "asset_id": "keyStatic",
+                "asset_id": "Key",
+                "legacy_asset_id": "keyStatic",
                 "display_name": "Key",
                 "source_frame": "frames/key/idle-1.png"
             },
             "states": {
                 "idle": {
-                    "animation_id": "keyIdle",
+                    "animation_id": "Swaying_Key__Idle",
+                    "legacy_animation_id": "keyIdle",
+                    "display_name": "Swaying Key - Idle",
                     "frame_ms": 150,
                     "loop": true,
                     "frames": [
@@ -497,7 +527,9 @@
                     ]
                 },
                 "collected": {
-                    "animation_id": "keyCollected",
+                    "animation_id": "Swaying_Key__Collected",
+                    "legacy_animation_id": "keyCollected",
+                    "display_name": "Swaying Key - Collected",
                     "frame_ms": 75,
                     "loop": false,
                     "frames": [
@@ -539,13 +571,16 @@
             "width": 16,
             "height": 16,
             "static_image": {
-                "asset_id": "potionStatic",
+                "asset_id": "Potion",
+                "legacy_asset_id": "potionStatic",
                 "display_name": "Potion",
                 "source_frame": "frames/potion/idle-1.png"
             },
             "states": {
                 "idle": {
-                    "animation_id": "potionIdle",
+                    "animation_id": "Bubbling_Potion__Idle",
+                    "legacy_animation_id": "potionIdle",
+                    "display_name": "Bubbling Potion - Idle",
                     "frame_ms": 160,
                     "loop": true,
                     "frames": [
@@ -580,7 +615,9 @@
                     ]
                 },
                 "collected": {
-                    "animation_id": "potionCollected",
+                    "animation_id": "Bubbling_Potion__Collected",
+                    "legacy_animation_id": "potionCollected",
+                    "display_name": "Bubbling Potion - Collected",
                     "frame_ms": 75,
                     "loop": false,
                     "frames": [
@@ -622,13 +659,16 @@
             "width": 16,
             "height": 16,
             "static_image": {
-                "asset_id": "berriesStatic",
+                "asset_id": "Berries",
+                "legacy_asset_id": "berriesStatic",
                 "display_name": "Berries",
                 "source_frame": "frames/berries/idle-1.png"
             },
             "states": {
                 "idle": {
-                    "animation_id": "berriesIdle",
+                    "animation_id": "Swinging_Berries__Idle",
+                    "legacy_animation_id": "berriesIdle",
+                    "display_name": "Swinging Berries - Idle",
                     "frame_ms": 150,
                     "loop": true,
                     "frames": [
@@ -663,7 +703,9 @@
                     ]
                 },
                 "collected": {
-                    "animation_id": "berriesCollected",
+                    "animation_id": "Swinging_Berries__Collected",
+                    "legacy_animation_id": "berriesCollected",
+                    "display_name": "Swinging Berries - Collected",
                     "frame_ms": 75,
                     "loop": false,
                     "frames": [
@@ -705,13 +747,16 @@
             "width": 16,
             "height": 16,
             "static_image": {
-                "asset_id": "gearStatic",
+                "asset_id": "Gear",
+                "legacy_asset_id": "gearStatic",
                 "display_name": "Gear",
                 "source_frame": "frames/gear/idle-1.png"
             },
             "states": {
                 "idle": {
-                    "animation_id": "gearIdle",
+                    "animation_id": "Turning_Gear__Idle",
+                    "legacy_animation_id": "gearIdle",
+                    "display_name": "Turning Gear - Idle",
                     "frame_ms": 120,
                     "loop": true,
                     "frames": [
@@ -746,7 +791,9 @@
                     ]
                 },
                 "collected": {
-                    "animation_id": "gearCollected",
+                    "animation_id": "Turning_Gear__Collected",
+                    "legacy_animation_id": "gearCollected",
+                    "display_name": "Turning Gear - Collected",
                     "frame_ms": 75,
                     "loop": false,
                     "frames": [
@@ -788,13 +835,16 @@
             "width": 16,
             "height": 16,
             "static_image": {
-                "asset_id": "batteryStatic",
+                "asset_id": "Energy_Cell",
+                "legacy_asset_id": "batteryStatic",
                 "display_name": "Energy Cell",
                 "source_frame": "frames/battery/idle-1.png"
             },
             "states": {
                 "idle": {
-                    "animation_id": "batteryIdle",
+                    "animation_id": "Pulsing_Energy_Cell__Idle",
+                    "legacy_animation_id": "batteryIdle",
+                    "display_name": "Pulsing Energy Cell - Idle",
                     "frame_ms": 140,
                     "loop": true,
                     "frames": [
@@ -829,7 +879,9 @@
                     ]
                 },
                 "collected": {
-                    "animation_id": "batteryCollected",
+                    "animation_id": "Pulsing_Energy_Cell__Collected",
+                    "legacy_animation_id": "batteryCollected",
+                    "display_name": "Pulsing Energy Cell - Collected",
                     "frame_ms": 75,
                     "loop": false,
                     "frames": [
@@ -871,13 +923,16 @@
             "width": 16,
             "height": 16,
             "static_image": {
-                "asset_id": "crownStatic",
+                "asset_id": "Crown",
+                "legacy_asset_id": "crownStatic",
                 "display_name": "Crown",
                 "source_frame": "frames/crown/idle-1.png"
             },
             "states": {
                 "idle": {
-                    "animation_id": "crownIdle",
+                    "animation_id": "Gliding_Crown__Idle",
+                    "legacy_animation_id": "crownIdle",
+                    "display_name": "Gliding Crown - Idle",
                     "frame_ms": 150,
                     "loop": true,
                     "frames": [
@@ -912,7 +967,9 @@
                     ]
                 },
                 "collected": {
-                    "animation_id": "crownCollected",
+                    "animation_id": "Gliding_Crown__Collected",
+                    "legacy_animation_id": "crownCollected",
+                    "display_name": "Gliding Crown - Collected",
                     "frame_ms": 75,
                     "loop": false,
                     "frames": [
@@ -954,13 +1011,16 @@
             "width": 16,
             "height": 16,
             "static_image": {
-                "asset_id": "candyStatic",
+                "asset_id": "Wrapped_Candy",
+                "legacy_asset_id": "candyStatic",
                 "display_name": "Wrapped Candy",
                 "source_frame": "frames/candy/idle-1.png"
             },
             "states": {
                 "idle": {
-                    "animation_id": "candyIdle",
+                    "animation_id": "Wrapped_Candy__Idle",
+                    "legacy_animation_id": "candyIdle",
+                    "display_name": "Wrapped Candy - Idle",
                     "frame_ms": 160,
                     "loop": true,
                     "frames": [
@@ -995,7 +1055,9 @@
                     ]
                 },
                 "collected": {
-                    "animation_id": "candyCollected",
+                    "animation_id": "Wrapped_Candy__Collected",
+                    "legacy_animation_id": "candyCollected",
+                    "display_name": "Wrapped Candy - Collected",
                     "frame_ms": 75,
                     "loop": false,
                     "frames": [

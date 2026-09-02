@@ -20,7 +20,7 @@ Included collectibles: spinning coin, energy orb, crystal, star, heart, key, pot
 5. Create each collectible sprite with its plainly named image asset, such as `Coin`, `Heart`, or `Potion`.
 6. Open the Animation editor to find the matching idle and collected animations.
 
-Because `assetPack` is enabled, MakeCode imports the 12 named images and 24 named animations without importing executable extension code.
+This is an art-only extension: it adds no gameplay behavior. Its generated lookup code keeps gallery selections and named image or animation references on the same resources, including identifiers already used by v0.0.2 projects.
 
 Each static image is identical to the first frame of its idle animation, so starting the animation does not cause a visual jump.
 

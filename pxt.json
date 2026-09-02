@@ -20,6 +20,5 @@
     "testDependencies": {},
     "testFiles": [
         "test.ts"
-    ],
-    "assetPack": true
+    ]
 }

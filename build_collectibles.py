@@ -4,6 +4,7 @@ import base64
 import hashlib
 import json
 import math
+import re
 import zipfile
 from pathlib import Path
 
@@ -15,6 +16,7 @@ FRAME_DIR = ROOT / "frames"
 PREVIEW_DIR = ROOT / "previews"
 SIZE = 16
 VERSION = "0.0.3"
+PUBLIC_NAMESPACE = "Platformer_Animated_Collectibles"
 
 STATIC_ASSET_NAMES = {
     "coin": "Coin",
@@ -30,6 +32,19 @@ STATIC_ASSET_NAMES = {
     "crown": "Crown",
     "candy": "Wrapped Candy",
 }
+
+
+def gallery_id(display_name: str) -> str:
+    """Match the identifiers PXT generated for the public v0.0.2 asset pack."""
+    return re.sub(r"[^A-Za-z0-9_]", "", display_name.replace(" ", "_"))
+
+
+def factory_case_lines(aliases: list[str], expression: str) -> list[str]:
+    unique_aliases = list(dict.fromkeys(aliases))
+    return [
+        *[f"            case \"{alias}\":" for alias in unique_aliases[:-1]],
+        f"            case \"{unique_aliases[-1]}\": return {expression};",
+    ]
 
 # MakeCode Arcade's default 16-color palette. Index 0 is transparent.
 PALETTE_HEX = [
@@ -770,62 +785,82 @@ def ts_image(frame: list[list[int]]) -> str:
 
 
 def write_project_files(families: list[dict]) -> None:
-    jres: dict[str, object] = {"*": {"namespace": "collectibles"}}
+    jres: dict[str, object] = {"*": {"namespace": PUBLIC_NAMESPACE}}
     static_images: list[dict] = []
     animations: list[dict] = []
     for family in families:
         image_id = f"{family['id']}Static"
         image_name = STATIC_ASSET_NAMES[family["id"]]
-        jres[image_id] = {
-            "namespace": "collectibles",
-            "id": image_id,
+        public_image_id = gallery_id(image_name)
+        jres[public_image_id] = {
             "mimeType": "image/x-mkcd-f4",
             "data": base64.b64encode(encode_f4(family["idle"][0])).decode("ascii"),
             "displayName": image_name,
         }
-        static_images.append({"id": image_id, "display_name": image_name, "frame": family["idle"][0]})
+        static_images.append({"id": image_id, "public_id": public_image_id, "display_name": image_name, "frame": family["idle"][0]})
         for state in ("idle", "collected"):
             animation_id = f"{family['id']}{state.title()}"
             display_name = f"{family['name']} - {'Idle' if state == 'idle' else 'Collected'}"
-            jres[animation_id] = {
-                "namespace": "collectibles",
-                "id": animation_id,
+            public_animation_id = gallery_id(display_name)
+            jres[public_animation_id] = {
                 "mimeType": "application/mkcd-animation",
                 "data": encode_animation(family[state], family[f"{state}_ms"]),
                 "displayName": display_name,
             }
-            animations.append({"id": animation_id, "display_name": display_name, "frames": family[state]})
+            animations.append({"id": animation_id, "public_id": public_animation_id, "display_name": display_name, "frames": family[state]})
     (ROOT / "images.g.jres").write_text(json.dumps(jres, indent=4) + "\n", encoding="utf-8")
 
-    lines = ["// Auto-generated code. Do not edit.", "namespace collectibles {", "    helpers._registerFactory(\"image\", function(name: string) {", "        switch (helpers.stringTrim(name)) {"]
+    lines = ["// Auto-generated code. Do not edit.", f"namespace {PUBLIC_NAMESPACE} {{"]
     for static_image in static_images:
-        literal = ts_image(static_image["frame"]).replace("\n", "\n                ")
         lines.extend([
-            f"            case \"{static_image['display_name']}\":",
-            f"            case \"{static_image['id']}\": return {literal};",
+            "    //% fixedInstance jres whenUsed",
+            "    //% blockIdentity=images._image",
+            f"    export const {static_image['public_id']} = image.ofBuffer(hex``);",
+            "",
         ])
+    for animation in animations:
+        lines.extend([
+            "    //% fixedInstance jres whenUsed",
+            f"    export const {animation['public_id']} = [",
+        ])
+        for frame in animation["frames"]:
+            literal = ts_image(frame).replace("\n", "\n        ")
+            lines.append(f"        {literal},")
+        lines.extend(["    ];", ""])
+
+    lines.extend(["    helpers._registerFactory(\"image\", function(name: string) {", "        switch (helpers.stringTrim(name)) {"])
+    for static_image in static_images:
+        lines.extend(factory_case_lines(
+            [static_image["display_name"], static_image["public_id"], static_image["id"]],
+            static_image["public_id"],
+        ))
     lines.extend(["        }", "        return null;", "    })", "", "    helpers._registerFactory(\"animation\", function(name: string) {", "        switch (helpers.stringTrim(name)) {"])
     for animation in animations:
-        lines.extend([f"            case \"{animation['display_name']}\":", f"            case \"{animation['id']}\": return ["])
-        for frame in animation["frames"]:
-            literal = ts_image(frame).replace("\n", "\n                ")
-            lines.append(f"                {literal},")
-        lines.append("            ];")
+        lines.extend(factory_case_lines(
+            [animation["display_name"], animation["public_id"], animation["id"]],
+            animation["public_id"],
+        ))
     lines.extend(["        }", "        return null;", "    })", "}", "// Auto-generated code. Do not edit.", ""])
     (ROOT / "images.g.ts").write_text("\n".join(lines), encoding="utf-8")
     (ROOT / "assets.json").write_text("", encoding="utf-8")
     (ROOT / "main.ts").write_text("", encoding="utf-8")
     (ROOT / "main.blocks").write_text('<xml xmlns="https://developers.google.com/blockly/xml"></xml>\n', encoding="utf-8")
     (ROOT / "tsconfig.json").write_text(json.dumps({"compilerOptions": {"target": "ES5", "noImplicitAny": True, "outDir": "built", "rootDir": "."}, "exclude": ["pxt_modules/**/*test.ts"]}, indent=4) + "\n", encoding="utf-8")
-    (ROOT / ".gitignore").write_text("built/\npxt_modules/\n*.uf2\n*.hex\n", encoding="utf-8")
+    (ROOT / ".gitignore").write_text("built/\npxt_modules/\n__pycache__/\n*.uf2\n*.hex\n", encoding="utf-8")
 
-    test_lines = ["// Compile-only asset resolution test. This file is not imported with the asset pack.", "const collectibleImageSmokeTest: Image[] = ["]
+    test_lines = ["// Compile-only asset resolution test.", "const collectibleImageSmokeTest: Image[] = ["]
     for static_image in static_images:
         test_lines.append(f"    assets.image`{static_image['display_name']}`,")
     test_lines.extend(["]", "", "const collectibleAnimationSmokeTest: Image[][] = ["])
     for animation in animations:
         test_lines.append(f"    assets.animation`{animation['display_name']}`,")
-    test_lines.extend(["];", "", "if (collectibleImageSmokeTest.length != 12) {", "    control.panic(12)", "}", "", "if (collectibleAnimationSmokeTest.length != 24) {", "    control.panic(24)", "}", ""])
+    test_lines.extend(["];", "", f"const collectiblePublicImageSmokeTest: Image[] = ["])
+    for static_image in static_images:
+        test_lines.append(f"    {PUBLIC_NAMESPACE}.{static_image['public_id']},")
+    test_lines.extend(["]", "", "const collectiblePublicAnimationSmokeTest: Image[][] = ["])
+    for animation in animations:
+        test_lines.append(f"    {PUBLIC_NAMESPACE}.{animation['public_id']},")
+    test_lines.extend(["];", "", "if (collectibleImageSmokeTest.length != 12 || collectiblePublicImageSmokeTest.length != 12) {", "    control.panic(12)", "}", "", "if (collectibleAnimationSmokeTest.length != 24 || collectiblePublicAnimationSmokeTest.length != 24) {", "    control.panic(24)", "}", ""])
     (ROOT / "test.ts").write_text("\n".join(test_lines), encoding="utf-8")
 
     config = {
@@ -838,7 +873,6 @@ def write_project_files(families: list[dict]) -> None:
         "dependencies": {"device": "*"},
         "testDependencies": {},
         "testFiles": ["test.ts"],
-        "assetPack": True,
     }
     (ROOT / "pxt.json").write_text(json.dumps(config, indent=4) + "\n", encoding="utf-8")
 
@@ -864,7 +898,7 @@ Included collectibles: spinning coin, energy orb, crystal, star, heart, key, pot
 5. Create each collectible sprite with its plainly named image asset, such as `Coin`, `Heart`, or `Potion`.
 6. Open the Animation editor to find the matching idle and collected animations.
 
-Because `assetPack` is enabled, MakeCode imports the 12 named images and 24 named animations without importing executable extension code.
+This is an art-only extension: it adds no gameplay behavior. Its generated lookup code keeps gallery selections and named image or animation references on the same resources, including identifiers already used by v0.0.2 projects.
 
 Each static image is identical to the first frame of its idle animation, so starting the animation does not cause a visual jump.
 
@@ -924,6 +958,7 @@ def write_frames_and_manifest(families: list[dict]) -> None:
         item_dir.mkdir(exist_ok=True)
         states = {}
         for state in ("idle", "collected"):
+            display_name = f"{family['name']} - {'Idle' if state == 'idle' else 'Collected'}"
             frame_entries = []
             ascii_doc.extend([f"## {family['name']} — {state.title()}", ""])
             for index, frame in enumerate(family[state], start=1):
@@ -940,7 +975,9 @@ def write_frames_and_manifest(families: list[dict]) -> None:
                 })
                 ascii_doc.extend([f"### Frame {index}", "", "```text", *ascii_rows(frame), "```", ""])
             states[state] = {
-                "animation_id": f"{family['id']}{state.title()}",
+                "animation_id": gallery_id(display_name),
+                "legacy_animation_id": f"{family['id']}{state.title()}",
+                "display_name": display_name,
                 "frame_ms": family[f"{state}_ms"],
                 "loop": state == "idle",
                 "frames": frame_entries,
@@ -951,7 +988,8 @@ def write_frames_and_manifest(families: list[dict]) -> None:
             "width": SIZE,
             "height": SIZE,
             "static_image": {
-                "asset_id": f"{family['id']}Static",
+                "asset_id": gallery_id(STATIC_ASSET_NAMES[family["id"]]),
+                "legacy_asset_id": f"{family['id']}Static",
                 "display_name": STATIC_ASSET_NAMES[family["id"]],
                 "source_frame": f"frames/{family['id']}/idle-1.png",
             },
@@ -977,7 +1015,9 @@ def write_frames_and_manifest(families: list[dict]) -> None:
             "collected_animations_loop": False,
             "stock_destroy_effects_used": False,
             "main_ts_is_empty": True,
-            "asset_pack_enabled": True,
+            "asset_pack_enabled": False,
+            "asset_lookup_factories_compiled": True,
+            "public_namespace": PUBLIC_NAMESPACE,
         },
         "families": manifest_families,
     }
