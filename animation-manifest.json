@@ -114,7 +114,7 @@
         },
         {
             "id": "orb",
-            "name": "Bobbing Energy Orb",
+            "name": "Orbiting Energy Orb",
             "width": 16,
             "height": 16,
             "states": {
@@ -126,29 +126,29 @@
                         {
                             "index": 1,
                             "png": "frames/orb/idle-1.png",
-                            "png_sha256": "a4d631eab70579e3c4005cad31ae45ff38808c43a6757ccf3da92207e8225279",
-                            "f4_sha256": "f5a1009e14bb91e65410355d2b5bc4cbef97bf38d39ec9e25aad57b6a45d1b0c",
+                            "png_sha256": "a560c3e554e72bd7aaba04e9f8b05d3a14a8575659a431b823b9f474c7c57166",
+                            "f4_sha256": "1e4dab4f11d8c0ff2d7eccef3729dbb3bb75af6133765ac07ff32622002cf453",
                             "opaque_pixels": 82
                         },
                         {
                             "index": 2,
                             "png": "frames/orb/idle-2.png",
-                            "png_sha256": "e669a1d8ce5249b5b12aafbc8b384fc604173d5dbe178575f7040a2299e183cb",
-                            "f4_sha256": "104299dd3cca3011339cdfaa21736fba3bda45349cd681b81164ae72433efa23",
+                            "png_sha256": "078ed3b97a0e7ef38b87eccde7d7acc388addc9dd4968264861896c17cf3faac",
+                            "f4_sha256": "e1e7ac1d144acb7f9b3bbf92785c046fcf9da31b2c45d313572dd165e73d9ea6",
                             "opaque_pixels": 82
                         },
                         {
                             "index": 3,
                             "png": "frames/orb/idle-3.png",
-                            "png_sha256": "c4073ab69efbf12ef429383bfe3ef24cd50056c2d6d1881b565a75247ba7e145",
-                            "f4_sha256": "271f2fc38d33da645c9b2e8ea92ca53818d0d59edd774351fda65fed63a37d6b",
+                            "png_sha256": "240e8a40a7f743983468d9602f7fcf3e7ebaba1a6792ea45c8b97c36438d0a39",
+                            "f4_sha256": "ac731e6028daf692bd502c83ae557a3c108db14af9800373d2ddc05ad64c620a",
                             "opaque_pixels": 82
                         },
                         {
                             "index": 4,
                             "png": "frames/orb/idle-4.png",
-                            "png_sha256": "5fa4ed7986c4bc0b123da2962a2680974509260f7977dfc3ac6d5e2bc0f29c36",
-                            "f4_sha256": "35b36e0019250f0c44a9515593f257332face2dcdfd26801b6f437594077f3f0",
+                            "png_sha256": "f2b8cb3abe0a239bfa7907621ddae8b3787b5c102d21ed70862033b6cd318788",
+                            "f4_sha256": "b22a7bf41fe3b0b04dda7a883f479a0163cb4c67dcbeafcb97816b3edb6e12f0",
                             "opaque_pixels": 82
                         }
                     ]
@@ -161,8 +161,8 @@
                         {
                             "index": 1,
                             "png": "frames/orb/collected-1.png",
-                            "png_sha256": "9c9280c0c353fff56ba79b4ccebedd0d6877ed6d0bb93e009b4b6d985ce889f1",
-                            "f4_sha256": "8e0f97b0b2912e66acb3dec2525850a43d039d32182d67bfbb9bf3eac4d757fa",
+                            "png_sha256": "fc401556f22e4545f6dce21c3038759f73bb13244e15ec60dd31a78448679c76",
+                            "f4_sha256": "297ebed36433e14882bee2e78b77c12635328effaf4a357570ede42476b812d4",
                             "opaque_pixels": 87
                         },
                         {
@@ -204,29 +204,29 @@
                         {
                             "index": 1,
                             "png": "frames/gem/idle-1.png",
-                            "png_sha256": "344d202c719dd0251a2716d91ecec0b030b1623c53e3270099cae4efe5197889",
-                            "f4_sha256": "fc2ba10337eb3ed14dd72ab2413ea51e589583545b3c43f4acb0fcaec532f1f3",
+                            "png_sha256": "8d98819d169b7561e2ac20dd13c316bc7af7f2593ca2672bfbee3a8c754afef0",
+                            "f4_sha256": "3767f9d6ef3da159b86b17f7e375c7757bb05e81f5a9029404c9eae7f50281b9",
                             "opaque_pixels": 76
                         },
                         {
                             "index": 2,
                             "png": "frames/gem/idle-2.png",
-                            "png_sha256": "8660dcd5837a928ea483db9d104884dd8cee9ded486c4f962530144fd499340e",
-                            "f4_sha256": "fc502d846fbe7d582324866d83ba9426147318b485a1647073d0c2e1063b9d3e",
+                            "png_sha256": "750e92e37ed6c0d455ea38958a5db35e9d3e30a6be27bb2f7e8d1698eb58da05",
+                            "f4_sha256": "451ba09478cddf76399efe999091c88c3f43067b897e03691bbb9a5a019f75ab",
                             "opaque_pixels": 77
                         },
                         {
                             "index": 3,
                             "png": "frames/gem/idle-3.png",
-                            "png_sha256": "34d1c238b5071e1807a68b08d791baacd0c9a370a788aa76b6cc70afdf1be91d",
-                            "f4_sha256": "55cd7ab276a253e311e13919316800c70acf44f9fc9fe4624e5e990ad25eb042",
+                            "png_sha256": "f5639e2cccb304e0ed2f211ca0e2edfc02e362c85a53ecdaf290bb4509d9eb79",
+                            "f4_sha256": "b50ccd83caa74a7678a1919bebcf22eed275cb92a8deb3ea77c86969a92597f7",
                             "opaque_pixels": 76
                         },
                         {
                             "index": 4,
                             "png": "frames/gem/idle-4.png",
-                            "png_sha256": "bee9779866490d8da480861131daed1c336cb60e4d6352c491812e1881d4aec1",
-                            "f4_sha256": "61bb7ed006c70b26267dbea09e9f270c92a5193513f1e0615631ea269c5e0595",
+                            "png_sha256": "60b2394a169711ee3994d744c10c56d3febf36c6358c1e872f01dfdf4eee4b47",
+                            "f4_sha256": "36857c2a8ce0f5c9dee9e2cbb943b8c2313d33505eb4426e8b06a21cd7f8980e",
                             "opaque_pixels": 77
                         }
                     ]
@@ -239,15 +239,15 @@
                         {
                             "index": 1,
                             "png": "frames/gem/collected-1.png",
-                            "png_sha256": "ea2e260beed37c4fa094b47d954492dd541320fd52b464cb156e6b4cc94b9200",
-                            "f4_sha256": "f2ecef3190d22b65cea10682e5f1edde8b3949db368864c9e6bf31350e6daeab",
+                            "png_sha256": "979069ec0e8bf5e37f507f7805bbe3525fa7542e2908d320a9c76cd3484bb9cd",
+                            "f4_sha256": "ab6a898e92e07b8b4ea0e5f2420a8c7d03d8ac6f5d050e8c9abca1af8f40b1e2",
                             "opaque_pixels": 81
                         },
                         {
                             "index": 2,
                             "png": "frames/gem/collected-2.png",
-                            "png_sha256": "1ca876f575f6bcdc6f28a34d3edafb052715be72442a87df581c2465b13447ab",
-                            "f4_sha256": "d9f31571eb407af97c9adb58cdc206993faf8db665714ffe8848e4c64dafc25e",
+                            "png_sha256": "f7732458ac9ea86f5bbb92a38002ddaccac9e1a144c638e09f409ae50c7671cb",
+                            "f4_sha256": "82d33160d8122a3a7a36092e93e2692735814857b7c3009af45aefc4eed6649c",
                             "opaque_pixels": 77
                         },
                         {
@@ -348,7 +348,7 @@
         },
         {
             "id": "heart",
-            "name": "Beating Heart",
+            "name": "Orbiting Heart",
             "width": 16,
             "height": 16,
             "states": {
@@ -360,29 +360,29 @@
                         {
                             "index": 1,
                             "png": "frames/heart/idle-1.png",
-                            "png_sha256": "aa5bfa075a2483e2ef76d96e4a4f245866cb50e14acbfbbb70af1948e175e24f",
-                            "f4_sha256": "0c059189fc9d30b38d45165c125eb5c03d224ea0f9376da453ff7133fd56c0c0",
+                            "png_sha256": "02a37cc8b19adb944bf77df0dd3cdad2306c8d26dfdad13a5fcf53b97cff41ee",
+                            "f4_sha256": "d1097c74a65e681f2d0267155259b15a06c0d7c45e1950783d0f02497e8eb663",
                             "opaque_pixels": 96
                         },
                         {
                             "index": 2,
                             "png": "frames/heart/idle-2.png",
-                            "png_sha256": "f09a6fd1aecd336d15f5f5459d751dafc5708cbe0a7a408259698e02afd87f76",
-                            "f4_sha256": "7a2c3e2c6948a8c6eb342aefb5d2393119f4bee2177dad8ca61c6f98cba47a1b",
+                            "png_sha256": "3b509b68cf33bfbdee7831e60195fce06a422480f0d2f37fc2e595f041fcaa78",
+                            "f4_sha256": "9427e8a0edce815cca1c9acff899eeed0ff4cafcc23401d4d9fd45e2620abf55",
                             "opaque_pixels": 98
                         },
                         {
                             "index": 3,
                             "png": "frames/heart/idle-3.png",
-                            "png_sha256": "aa5bfa075a2483e2ef76d96e4a4f245866cb50e14acbfbbb70af1948e175e24f",
-                            "f4_sha256": "0c059189fc9d30b38d45165c125eb5c03d224ea0f9376da453ff7133fd56c0c0",
+                            "png_sha256": "6cd1b28333d3cf737c9ce94ac6ff6e269b2eb592caff9f0e96a21794ec1d5611",
+                            "f4_sha256": "8742e85d3ff7583859a86d1a15b342750e8d6f0fe9e0355c6a1ad25c360a6401",
                             "opaque_pixels": 96
                         },
                         {
                             "index": 4,
                             "png": "frames/heart/idle-4.png",
-                            "png_sha256": "6cd1b28333d3cf737c9ce94ac6ff6e269b2eb592caff9f0e96a21794ec1d5611",
-                            "f4_sha256": "8742e85d3ff7583859a86d1a15b342750e8d6f0fe9e0355c6a1ad25c360a6401",
+                            "png_sha256": "d7d6d719fc69f56b359fb726fc74bdd359cab92515c89e55fe7e915bc5dab911",
+                            "f4_sha256": "e8de1c467764f395242147f6dc097250332e1497f5bca1df67d3e3d847c8293e",
                             "opaque_pixels": 96
                         }
                     ]
@@ -395,15 +395,15 @@
                         {
                             "index": 1,
                             "png": "frames/heart/collected-1.png",
-                            "png_sha256": "8520c012b2bfc397ac3dde06a1f28ad1dcec2c7f98d090d417f32179ea8ef243",
-                            "f4_sha256": "ad4cb375b6bd49327d1f3f3d2b943c24f28d54d2c9450940865039b74aa7f213",
+                            "png_sha256": "73490f0714921bbaa2ba199df4d2dbdbd7a2821e9694b5cc7b238e0a5f5f571c",
+                            "f4_sha256": "beb84b4c91d2343b38092c51a5a1ad0b879a26ecb388f0164268b7328e730f02",
                             "opaque_pixels": 96
                         },
                         {
                             "index": 2,
                             "png": "frames/heart/collected-2.png",
-                            "png_sha256": "f09a6fd1aecd336d15f5f5459d751dafc5708cbe0a7a408259698e02afd87f76",
-                            "f4_sha256": "7a2c3e2c6948a8c6eb342aefb5d2393119f4bee2177dad8ca61c6f98cba47a1b",
+                            "png_sha256": "3b509b68cf33bfbdee7831e60195fce06a422480f0d2f37fc2e595f041fcaa78",
+                            "f4_sha256": "9427e8a0edce815cca1c9acff899eeed0ff4cafcc23401d4d9fd45e2620abf55",
                             "opaque_pixels": 98
                         },
                         {
@@ -445,8 +445,8 @@
                         {
                             "index": 2,
                             "png": "frames/key/idle-2.png",
-                            "png_sha256": "e9c7a21641a48098ba62b714c78ccfd70ce68f725631211d63cb6bebb80902d5",
-                            "f4_sha256": "b54965e584d7d5add5dafd62cf349712044d2bb93d1b04f45791614ffd81783f",
+                            "png_sha256": "274cbd43c1f143051ead9e875bfa839ef9c56f4814455232ed3e726bffe54099",
+                            "f4_sha256": "ea30a7bdd01d5f3a0f570de16fa96d0aad67c0ab37930b19439a667510611a0c",
                             "opaque_pixels": 55
                         },
                         {
@@ -459,8 +459,8 @@
                         {
                             "index": 4,
                             "png": "frames/key/idle-4.png",
-                            "png_sha256": "1681947b26ee97e1cd565c1d899b363d9b3b730ac71726e89339858115aec409",
-                            "f4_sha256": "ec7797210599822696c65a78f5d7238bc459982b0b21f8e98103620af9dc11c5",
+                            "png_sha256": "6493f0035ea24c59c3d03c044df2783870917f2e963db3555244e89e433c5c5c",
+                            "f4_sha256": "30e6c1aef1cbeee35d480790defd4aba8f8fa3ac6e606a0fa7b43756b19f41a1",
                             "opaque_pixels": 55
                         }
                     ]
@@ -530,8 +530,8 @@
                         {
                             "index": 3,
                             "png": "frames/potion/idle-3.png",
-                            "png_sha256": "da6d484a2b0f4e0ada1173753bfdff09eda1003409c9ca39711647e2f0c10397",
-                            "f4_sha256": "d1b759191b4e0a40f47e9afd6a48c32dc7fb5e26d0025738ccc24f5183990bce",
+                            "png_sha256": "54f75fa6f7603f2b546b98c252a0558f0cef14a6d9e8943e4e66ecab49ab3102",
+                            "f4_sha256": "a5a1b0bd2ea405490e1ce8f692639c124aa9f02829f4935703eb2a12b2366ce9",
                             "opaque_pixels": 98
                         },
                         {
@@ -582,7 +582,7 @@
         },
         {
             "id": "berries",
-            "name": "Bouncing Berries",
+            "name": "Swinging Berries",
             "width": 16,
             "height": 16,
             "states": {
@@ -594,29 +594,29 @@
                         {
                             "index": 1,
                             "png": "frames/berries/idle-1.png",
-                            "png_sha256": "1caa784f4bb86e2b820c2c330b274182ffa2072f0c13e8083bb4418cd80d3b25",
-                            "f4_sha256": "e2a5c944c1b8e84fe4c97d6aefd39a8b37e5b3c10f3ed0e560890d6025f23906",
-                            "opaque_pixels": 80
+                            "png_sha256": "6c90d46207c285e53a29f6e1899bf9e2eba3bec6bb3bf17f0f1bbddde84d6222",
+                            "f4_sha256": "726a83d49fcf66e2686dc197f2409bd7fee237dbdd42c7019103006ce6ac4af4",
+                            "opaque_pixels": 79
                         },
                         {
                             "index": 2,
                             "png": "frames/berries/idle-2.png",
-                            "png_sha256": "e1fdd7b1f5a13c91277630c70470e7b898325f7dcfaa94b8226407453ff26865",
-                            "f4_sha256": "e8fd89247450569d6e28f1c50f1f3048df7f165eaf23b42fc16e08e66eeeddb9",
-                            "opaque_pixels": 81
-                        },
-                        {
-                            "index": 3,
-                            "png": "frames/berries/idle-3.png",
                             "png_sha256": "291b472fdc8c7727f38eccc7940559d3fb1bac879091195c0b7b4e8abab11b1c",
                             "f4_sha256": "3c18b7fdcdaf58a44c30e27b2e3e3654611853756bf8e49fea014128e84793a0",
                             "opaque_pixels": 81
                         },
                         {
+                            "index": 3,
+                            "png": "frames/berries/idle-3.png",
+                            "png_sha256": "cf7ca7c57ad60830b69a5b11a92e712dd7ada564c2bf1212913736af35033304",
+                            "f4_sha256": "2f411c7ef2e5f75121099861e03e3b4d9c3fed18b6243c50e8ab648bde934501",
+                            "opaque_pixels": 81
+                        },
+                        {
                             "index": 4,
                             "png": "frames/berries/idle-4.png",
-                            "png_sha256": "8ae1ff71f341411947ea11c9c7ec5fca455b1186f776610438b38af0fc9611ca",
-                            "f4_sha256": "3bbb67bfba857e9e80a5e331013d31621c339b798d0c3b6895eee7f3700c75df",
+                            "png_sha256": "1caa784f4bb86e2b820c2c330b274182ffa2072f0c13e8083bb4418cd80d3b25",
+                            "f4_sha256": "e2a5c944c1b8e84fe4c97d6aefd39a8b37e5b3c10f3ed0e560890d6025f23906",
                             "opaque_pixels": 80
                         }
                     ]
@@ -629,16 +629,16 @@
                         {
                             "index": 1,
                             "png": "frames/berries/collected-1.png",
-                            "png_sha256": "74b36eb1a542dd2b2615ada726a9f50755a96d730b05b178ac1b48660c69e752",
-                            "f4_sha256": "bf6e3a4a6fb006437a8629371c2ae0e3bd3f66a05c46fdede1e54d4cd69378fc",
-                            "opaque_pixels": 85
+                            "png_sha256": "56f4bf088e6f67522c72c2ab2a92f3967056ee65502b6323d8cce376880640c0",
+                            "f4_sha256": "37b639d31faf5637976455b94576a7e05e790c5f6b987916fb5e1ce89ed44a02",
+                            "opaque_pixels": 84
                         },
                         {
                             "index": 2,
                             "png": "frames/berries/collected-2.png",
-                            "png_sha256": "a9099ffdf6c94db878435089828b7dedfb4c0ae34b2605cbb7200d45acd4ca02",
-                            "f4_sha256": "e438c03151d36ad914cf725bb14c735b34003d6e28524fb5aa38ce8abfaa9cb4",
-                            "opaque_pixels": 60
+                            "png_sha256": "ca9166ce17e2fbdeaf79407791ae3cae755faa03b35e9eec177aff0a9b8d35f5",
+                            "f4_sha256": "9c374ffa91e22ea5090f6d0b8929a41d7b8c16574a7aea3ad47502fa145d1d77",
+                            "opaque_pixels": 59
                         },
                         {
                             "index": 3,
@@ -764,8 +764,8 @@
                         {
                             "index": 3,
                             "png": "frames/battery/idle-3.png",
-                            "png_sha256": "4eace921df69ce65ba019a2167458c651942e2b18af9a816370737dfb1e74061",
-                            "f4_sha256": "32339f529e89a9e2db2aa23cdbe2c71574bc8c38fb3c598251f318a95e17b1db",
+                            "png_sha256": "20a8ad083a2d684f66b549b0f84dc01bec2316dd80b1c21fb4bec576cbe4c401",
+                            "f4_sha256": "c9f872dedb4da927b1235c34e666d42e7c25187aeae6f6fe82a2a1a657000fed",
                             "opaque_pixels": 110
                         },
                         {
@@ -816,7 +816,7 @@
         },
         {
             "id": "crown",
-            "name": "Floating Crown",
+            "name": "Gliding Crown",
             "width": 16,
             "height": 16,
             "states": {
@@ -835,9 +835,9 @@
                         {
                             "index": 2,
                             "png": "frames/crown/idle-2.png",
-                            "png_sha256": "9be64d705dddf52ee34b13f69837b4335e1fae6a94fc8b75bd2f6b56550eab35",
-                            "f4_sha256": "76df672aba91e9cd88ba74b943de609e6e10fccd6a618684dc3aacfd1be948c0",
-                            "opaque_pixels": 87
+                            "png_sha256": "ac1db6ae50cc7933f61c066a4f299650806de53352d0fa28e68fc6869a191de3",
+                            "f4_sha256": "9794f04a726bf91cd5b64c4df4823d0e1b4809904cc80fa9026cbd639a53fb2a",
+                            "opaque_pixels": 86
                         },
                         {
                             "index": 3,
@@ -849,8 +849,8 @@
                         {
                             "index": 4,
                             "png": "frames/crown/idle-4.png",
-                            "png_sha256": "04dc3fa6d6bc0ffcd08db66d857f10dea0d2d3a3ed15d28e979b5b5dd3bb2681",
-                            "f4_sha256": "05ec1661faca99cb0898f781013733f65796dcc8e1890b119f286316fd5d3c69",
+                            "png_sha256": "912adf3b86eb4e1f9344a28204c12568442b9d3f4cfa0a2c4145808b1554444b",
+                            "f4_sha256": "bff00424a1fe173112ebca60447dbfe52573ac9e1371db0846facdb74da1f461",
                             "opaque_pixels": 83
                         }
                     ]

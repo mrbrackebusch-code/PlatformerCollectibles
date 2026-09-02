@@ -300,6 +300,26 @@ def draw_berries(dy: int, phase: int) -> list[list[int]]:
     return frame
 
 
+def draw_swinging_berries(sway: int, phase: int) -> list[list[int]]:
+    frame = blank()
+    left_center = 5 + sway
+    right_center = 10 + sway
+    left = mask_ellipse(left_center, 9, 3.5, 3.5)
+    right = mask_ellipse(right_center, 9, 3.5, 3.5)
+    paint_mask(frame, left, 14, 2)
+    paint_mask(frame, right, 14, 2)
+    pixel(frame, left_center - 1, 7, 3)
+    pixel(frame, right_center - 1, 7, 3)
+    # The top of the stems stays fixed while the fruit swings underneath it.
+    line(frame, left_center, 6, 7, 2, 7)
+    line(frame, right_center, 6, 7, 2, 7)
+    leaf_direction = -1 if sway < 0 else 1 if sway > 0 else (1 if phase == 1 else 0)
+    leaf_x = 8 + leaf_direction
+    rect(frame, leaf_x, 2, leaf_x + 2, 3, 7)
+    pixel(frame, left_center - 2, 8, 1)
+    return frame
+
+
 def draw_gear(phase: int) -> list[list[int]]:
     frame = blank()
     center = mask_ellipse(7.5, 7.5, 5, 5)
@@ -577,16 +597,16 @@ def item_specific_collected(style: str, idle: list[list[list[int]]]) -> list[lis
 def build_families() -> list[dict]:
     families = [
         {"id": "coin", "name": "Spinning Coin", "idle_ms": 120, "colors": (5, 1, 4), "idle": [draw_coin(10), draw_coin(6), draw_coin(2), draw_coin(6, True)]},
-        {"id": "orb", "name": "Bobbing Energy Orb", "idle_ms": 150, "colors": (9, 1, 8), "idle": [draw_orb(dy, phase) for phase, dy in enumerate((0, -1, 0, 1))]},
-        {"id": "gem", "name": "Shimmering Crystal", "idle_ms": 140, "colors": (9, 1, 6), "idle": [draw_gem(dy, phase) for phase, dy in enumerate((0, -1, 0, 1))]},
+        {"id": "orb", "name": "Orbiting Energy Orb", "idle_ms": 150, "colors": (9, 1, 8), "idle": [shift(draw_orb(0, phase), dx, dy) for phase, (dx, dy) in enumerate(((0, -1), (1, 0), (0, 1), (-1, 0)))]},
+        {"id": "gem", "name": "Shimmering Crystal", "idle_ms": 140, "colors": (9, 1, 6), "idle": [shift(draw_gem(0, phase), dx, dy) for phase, (dx, dy) in enumerate(((0, -1), (1, 0), (0, 1), (-1, 0)))]},
         {"id": "star", "name": "Pulsing Star", "idle_ms": 130, "colors": (5, 1, 4), "idle": [draw_star(phase) for phase in range(4)]},
-        {"id": "heart", "name": "Beating Heart", "idle_ms": 150, "colors": (2, 1, 3), "idle": [draw_heart(scale, dy, phase) for phase, (scale, dy) in enumerate(((1.0, 0), (1.08, -1), (1.0, 0), (0.92, 1)))]},
-        {"id": "key", "name": "Glinting Key", "idle_ms": 150, "colors": (5, 1, 14), "idle": [draw_key(dy, phase) for phase, dy in enumerate((0, -1, 0, 1))]},
-        {"id": "potion", "name": "Bubbling Potion", "idle_ms": 160, "colors": (10, 3, 8), "idle": [draw_potion(dy, phase) for phase, dy in enumerate((0, 0, -1, 0))]},
-        {"id": "berries", "name": "Bouncing Berries", "idle_ms": 150, "colors": (2, 3, 7), "idle": [draw_berries(dy, phase) for phase, dy in enumerate((0, -1, 0, 1))]},
+        {"id": "heart", "name": "Orbiting Heart", "idle_ms": 150, "colors": (2, 1, 3), "idle": [shift(draw_heart(1.0, 0, phase), dx, dy) for phase, (dx, dy) in enumerate(((0, -1), (-1, 0), (0, 1), (1, 0)))]},
+        {"id": "key", "name": "Glinting Key", "idle_ms": 150, "colors": (5, 1, 14), "idle": [draw_key(0, phase) for phase in range(4)]},
+        {"id": "potion", "name": "Bubbling Potion", "idle_ms": 160, "colors": (10, 3, 8), "idle": [draw_potion(0, phase) for phase in range(4)]},
+        {"id": "berries", "name": "Swinging Berries", "idle_ms": 150, "colors": (2, 3, 7), "idle": [draw_swinging_berries(sway, phase) for phase, sway in enumerate((-1, 0, 1, 0))]},
         {"id": "gear", "name": "Turning Gear", "idle_ms": 120, "colors": (11, 1, 12), "idle": [draw_gear(phase) for phase in range(4)]},
-        {"id": "battery", "name": "Pulsing Energy Cell", "idle_ms": 140, "colors": (9, 1, 8), "idle": [draw_battery(dy, phase) for phase, dy in enumerate((0, 0, -1, 0))]},
-        {"id": "crown", "name": "Floating Crown", "idle_ms": 150, "colors": (5, 1, 14), "idle": [draw_crown(dy, phase) for phase, dy in enumerate((0, -1, 0, 1))]},
+        {"id": "battery", "name": "Pulsing Energy Cell", "idle_ms": 140, "colors": (9, 1, 8), "idle": [draw_battery(0, phase) for phase in range(4)]},
+        {"id": "crown", "name": "Gliding Crown", "idle_ms": 150, "colors": (5, 1, 14), "idle": [shift(draw_crown(0, phase), dx, 0) for phase, dx in enumerate((0, 1, 0, -1))]},
         {"id": "feather", "name": "Drifting Feather", "idle_ms": 170, "colors": (9, 1, 8), "idle": [draw_feather(dx, dy, phase) for phase, (dx, dy) in enumerate(((0, 0), (1, -1), (0, 0), (-1, 1)))]},
     ]
     for family in families:
