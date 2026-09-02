@@ -1,4 +1,19 @@
 // Compile-only asset resolution test. This file is not imported with the asset pack.
+const collectibleImageSmokeTest: Image[] = [
+    assets.image`Coin`,
+    assets.image`Energy Orb`,
+    assets.image`Crystal`,
+    assets.image`Star`,
+    assets.image`Heart`,
+    assets.image`Key`,
+    assets.image`Potion`,
+    assets.image`Berries`,
+    assets.image`Gear`,
+    assets.image`Energy Cell`,
+    assets.image`Crown`,
+    assets.image`Wrapped Candy`,
+]
+
 const collectibleAnimationSmokeTest: Image[][] = [
     assets.animation`Spinning Coin - Idle`,
     assets.animation`Spinning Coin - Collected`,
@@ -25,6 +40,10 @@ const collectibleAnimationSmokeTest: Image[][] = [
     assets.animation`Wrapped Candy - Idle`,
     assets.animation`Wrapped Candy - Collected`,
 ];
+
+if (collectibleImageSmokeTest.length != 12) {
+    control.panic(12)
+}
 
 if (collectibleAnimationSmokeTest.length != 24) {
     control.panic(24)

@@ -14,7 +14,22 @@ ROOT = Path(__file__).resolve().parent
 FRAME_DIR = ROOT / "frames"
 PREVIEW_DIR = ROOT / "previews"
 SIZE = 16
-VERSION = "0.0.2"
+VERSION = "0.0.3"
+
+STATIC_ASSET_NAMES = {
+    "coin": "Coin",
+    "orb": "Energy Orb",
+    "gem": "Crystal",
+    "star": "Star",
+    "heart": "Heart",
+    "key": "Key",
+    "potion": "Potion",
+    "berries": "Berries",
+    "gear": "Gear",
+    "battery": "Energy Cell",
+    "crown": "Crown",
+    "candy": "Wrapped Candy",
+}
 
 # MakeCode Arcade's default 16-color palette. Index 0 is transparent.
 PALETTE_HEX = [
@@ -756,8 +771,19 @@ def ts_image(frame: list[list[int]]) -> str:
 
 def write_project_files(families: list[dict]) -> None:
     jres: dict[str, object] = {"*": {"namespace": "collectibles"}}
+    static_images: list[dict] = []
     animations: list[dict] = []
     for family in families:
+        image_id = f"{family['id']}Static"
+        image_name = STATIC_ASSET_NAMES[family["id"]]
+        jres[image_id] = {
+            "namespace": "collectibles",
+            "id": image_id,
+            "mimeType": "image/x-mkcd-f4",
+            "data": base64.b64encode(encode_f4(family["idle"][0])).decode("ascii"),
+            "displayName": image_name,
+        }
+        static_images.append({"id": image_id, "display_name": image_name, "frame": family["idle"][0]})
         for state in ("idle", "collected"):
             animation_id = f"{family['id']}{state.title()}"
             display_name = f"{family['name']} - {'Idle' if state == 'idle' else 'Collected'}"
@@ -771,7 +797,14 @@ def write_project_files(families: list[dict]) -> None:
             animations.append({"id": animation_id, "display_name": display_name, "frames": family[state]})
     (ROOT / "images.g.jres").write_text(json.dumps(jres, indent=4) + "\n", encoding="utf-8")
 
-    lines = ["// Auto-generated code. Do not edit.", "namespace collectibles {", "    helpers._registerFactory(\"animation\", function(name: string) {", "        switch (helpers.stringTrim(name)) {"]
+    lines = ["// Auto-generated code. Do not edit.", "namespace collectibles {", "    helpers._registerFactory(\"image\", function(name: string) {", "        switch (helpers.stringTrim(name)) {"]
+    for static_image in static_images:
+        literal = ts_image(static_image["frame"]).replace("\n", "\n                ")
+        lines.extend([
+            f"            case \"{static_image['display_name']}\":",
+            f"            case \"{static_image['id']}\": return {literal};",
+        ])
+    lines.extend(["        }", "        return null;", "    })", "", "    helpers._registerFactory(\"animation\", function(name: string) {", "        switch (helpers.stringTrim(name)) {"])
     for animation in animations:
         lines.extend([f"            case \"{animation['display_name']}\":", f"            case \"{animation['id']}\": return ["])
         for frame in animation["frames"]:
@@ -786,16 +819,19 @@ def write_project_files(families: list[dict]) -> None:
     (ROOT / "tsconfig.json").write_text(json.dumps({"compilerOptions": {"target": "ES5", "noImplicitAny": True, "outDir": "built", "rootDir": "."}, "exclude": ["pxt_modules/**/*test.ts"]}, indent=4) + "\n", encoding="utf-8")
     (ROOT / ".gitignore").write_text("built/\npxt_modules/\n*.uf2\n*.hex\n", encoding="utf-8")
 
-    test_lines = ["// Compile-only asset resolution test. This file is not imported with the asset pack.", "const collectibleAnimationSmokeTest: Image[][] = ["]
+    test_lines = ["// Compile-only asset resolution test. This file is not imported with the asset pack.", "const collectibleImageSmokeTest: Image[] = ["]
+    for static_image in static_images:
+        test_lines.append(f"    assets.image`{static_image['display_name']}`,")
+    test_lines.extend(["]", "", "const collectibleAnimationSmokeTest: Image[][] = ["])
     for animation in animations:
         test_lines.append(f"    assets.animation`{animation['display_name']}`,")
-    test_lines.extend(["];", "", "if (collectibleAnimationSmokeTest.length != 24) {", "    control.panic(24)", "}", ""])
+    test_lines.extend(["];", "", "if (collectibleImageSmokeTest.length != 12) {", "    control.panic(12)", "}", "", "if (collectibleAnimationSmokeTest.length != 24) {", "    control.panic(24)", "}", ""])
     (ROOT / "test.ts").write_text("\n".join(test_lines), encoding="utf-8")
 
     config = {
         "name": "Platformer Animated Collectibles",
         "version": VERSION,
-        "description": "Twelve original 16x16 collectibles with compact idle loops and custom collected animations for MakeCode Arcade.",
+        "description": "Twelve original 16x16 collectible images with compact idle loops and custom collected animations for MakeCode Arcade.",
         "files": ["main.blocks", "main.ts", "README.md", "assets.json", "images.g.jres", "images.g.ts"],
         "preferredEditor": "blocksprj",
         "supportedTargets": ["arcade"],
@@ -810,6 +846,7 @@ def write_project_files(families: list[dict]) -> None:
 
 An original MakeCode Arcade asset pack with **12 collectible families**, each containing:
 
+- a ready-to-use **static image** for creating the collectible sprite;
 - a compact **4-frame idle loop**;
 - a custom **4-frame collected one-shot**; and
 - exact 16×16 artwork using Arcade's default palette.
@@ -824,9 +861,12 @@ Included collectibles: spinning coin, energy orb, crystal, star, heart, key, pot
 2. Open **Settings → Extensions**.
 3. Paste `https://github.com/mrbrackebusch-code/PlatformerCollectibles` into the search box.
 4. Select the extension card.
-5. Open the Animation editor to find the imported idle and collected animations.
+5. Create each collectible sprite with its plainly named image asset, such as `Coin`, `Heart`, or `Potion`.
+6. Open the Animation editor to find the matching idle and collected animations.
 
-Because `assetPack` is enabled, MakeCode imports the named animations without importing executable extension code.
+Because `assetPack` is enabled, MakeCode imports the 12 named images and 24 named animations without importing executable extension code.
+
+Each static image is identical to the first frame of its idle animation, so starting the animation does not cause a visual jump.
 
 For each item, choose the matching `Idle` and `Collected` animations. Loop the idle animation. Run the collected animation once, then destroy or hide the collectible after the final frame. Each collected sequence preserves the item's identity: coins flip away, orbs contract, crystals split into shards, hearts release tiny hearts, potions pop into bubbles, batteries discharge, and candies unwrap into sugar sparkles. No stock destroyed effect is needed.
 
@@ -834,8 +874,8 @@ Suggested timing is recorded in `animation-manifest.json`. Idle loops use 120–
 
 ## Contents
 
-- `images.g.jres` / `images.g.ts`: MakeCode animation assets
-- `test.ts`: compile-only resolution check for all 24 named animations
+- `images.g.jres` / `images.g.ts`: MakeCode image and animation assets
+- `test.ts`: compile-only resolution check for all 12 images and 24 animations
 - `contact-sheet.png`: every exact frame at readable scale
 - `collectibles-preview.gif`: simple montage of every idle and collected animation
 - `previews/`: one animated preview per collectible
@@ -905,7 +945,18 @@ def write_frames_and_manifest(families: list[dict]) -> None:
                 "loop": state == "idle",
                 "frames": frame_entries,
             }
-        manifest_families.append({"id": family["id"], "name": family["name"], "width": SIZE, "height": SIZE, "states": states})
+        manifest_families.append({
+            "id": family["id"],
+            "name": family["name"],
+            "width": SIZE,
+            "height": SIZE,
+            "static_image": {
+                "asset_id": f"{family['id']}Static",
+                "display_name": STATIC_ASSET_NAMES[family["id"]],
+                "source_frame": f"frames/{family['id']}/idle-1.png",
+            },
+            "states": states,
+        })
     (ROOT / "ANIMATION_ASCII.md").write_text("\n".join(ascii_doc), encoding="utf-8")
 
     all_animations = [entry for family in manifest_families for entry in family["states"].values()]
@@ -916,6 +967,7 @@ def write_frames_and_manifest(families: list[dict]) -> None:
         "license": "MIT",
         "palette": PALETTE_HEX,
         "family_count": len(families),
+        "static_image_count": len(families),
         "animation_count": len(all_animations),
         "frame_count": sum(len(animation["frames"]) for animation in all_animations),
         "facts": {
@@ -935,6 +987,8 @@ def write_frames_and_manifest(families: list[dict]) -> None:
 def validate(families: list[dict]) -> None:
     assert len(families) == 12
     assert len({family["id"] for family in families}) == 12
+    assert set(STATIC_ASSET_NAMES) == {family["id"] for family in families}
+    assert len(set(STATIC_ASSET_NAMES.values())) == len(families)
     for family in families:
         for state in ("idle", "collected"):
             frames = family[state]
@@ -979,7 +1033,7 @@ def main() -> None:
     make_contact_sheet(families)
     make_animated_previews(families)
     make_zip()
-    print(f"Built {len(families)} collectible families, 24 animations, and 96 exact 16x16 frames in {ROOT}")
+    print(f"Built {len(families)} collectible families, 12 static images, 24 animations, and 96 exact 16x16 frames in {ROOT}")
 
 
 if __name__ == "__main__":

@@ -1,6 +1,6 @@
 {
     "pack": "Platformer Animated Collectibles",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "generator": "build_collectibles.py",
     "license": "MIT",
     "palette": [
@@ -22,6 +22,7 @@
         "#000000"
     ],
     "family_count": 12,
+    "static_image_count": 12,
     "animation_count": 24,
     "frame_count": 96,
     "facts": {
@@ -39,6 +40,11 @@
             "name": "Spinning Coin",
             "width": 16,
             "height": 16,
+            "static_image": {
+                "asset_id": "coinStatic",
+                "display_name": "Coin",
+                "source_frame": "frames/coin/idle-1.png"
+            },
             "states": {
                 "idle": {
                     "animation_id": "coinIdle",
@@ -117,6 +123,11 @@
             "name": "Orbiting Energy Orb",
             "width": 16,
             "height": 16,
+            "static_image": {
+                "asset_id": "orbStatic",
+                "display_name": "Energy Orb",
+                "source_frame": "frames/orb/idle-1.png"
+            },
             "states": {
                 "idle": {
                     "animation_id": "orbIdle",
@@ -195,6 +206,11 @@
             "name": "Shimmering Crystal",
             "width": 16,
             "height": 16,
+            "static_image": {
+                "asset_id": "gemStatic",
+                "display_name": "Crystal",
+                "source_frame": "frames/gem/idle-1.png"
+            },
             "states": {
                 "idle": {
                     "animation_id": "gemIdle",
@@ -273,6 +289,11 @@
             "name": "Pulsing Star",
             "width": 16,
             "height": 16,
+            "static_image": {
+                "asset_id": "starStatic",
+                "display_name": "Star",
+                "source_frame": "frames/star/idle-1.png"
+            },
             "states": {
                 "idle": {
                     "animation_id": "starIdle",
@@ -351,6 +372,11 @@
             "name": "Orbiting Heart",
             "width": 16,
             "height": 16,
+            "static_image": {
+                "asset_id": "heartStatic",
+                "display_name": "Heart",
+                "source_frame": "frames/heart/idle-1.png"
+            },
             "states": {
                 "idle": {
                     "animation_id": "heartIdle",
@@ -429,6 +455,11 @@
             "name": "Swaying Key",
             "width": 16,
             "height": 16,
+            "static_image": {
+                "asset_id": "keyStatic",
+                "display_name": "Key",
+                "source_frame": "frames/key/idle-1.png"
+            },
             "states": {
                 "idle": {
                     "animation_id": "keyIdle",
@@ -507,6 +538,11 @@
             "name": "Bubbling Potion",
             "width": 16,
             "height": 16,
+            "static_image": {
+                "asset_id": "potionStatic",
+                "display_name": "Potion",
+                "source_frame": "frames/potion/idle-1.png"
+            },
             "states": {
                 "idle": {
                     "animation_id": "potionIdle",
@@ -585,6 +621,11 @@
             "name": "Swinging Berries",
             "width": 16,
             "height": 16,
+            "static_image": {
+                "asset_id": "berriesStatic",
+                "display_name": "Berries",
+                "source_frame": "frames/berries/idle-1.png"
+            },
             "states": {
                 "idle": {
                     "animation_id": "berriesIdle",
@@ -663,6 +704,11 @@
             "name": "Turning Gear",
             "width": 16,
             "height": 16,
+            "static_image": {
+                "asset_id": "gearStatic",
+                "display_name": "Gear",
+                "source_frame": "frames/gear/idle-1.png"
+            },
             "states": {
                 "idle": {
                     "animation_id": "gearIdle",
@@ -741,6 +787,11 @@
             "name": "Pulsing Energy Cell",
             "width": 16,
             "height": 16,
+            "static_image": {
+                "asset_id": "batteryStatic",
+                "display_name": "Energy Cell",
+                "source_frame": "frames/battery/idle-1.png"
+            },
             "states": {
                 "idle": {
                     "animation_id": "batteryIdle",
@@ -819,6 +870,11 @@
             "name": "Gliding Crown",
             "width": 16,
             "height": 16,
+            "static_image": {
+                "asset_id": "crownStatic",
+                "display_name": "Crown",
+                "source_frame": "frames/crown/idle-1.png"
+            },
             "states": {
                 "idle": {
                     "animation_id": "crownIdle",
@@ -897,6 +953,11 @@
             "name": "Wrapped Candy",
             "width": 16,
             "height": 16,
+            "static_image": {
+                "asset_id": "candyStatic",
+                "display_name": "Wrapped Candy",
+                "source_frame": "frames/candy/idle-1.png"
+            },
             "states": {
                 "idle": {
                     "animation_id": "candyIdle",

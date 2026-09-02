@@ -2,6 +2,7 @@
 
 An original MakeCode Arcade asset pack with **12 collectible families**, each containing:
 
+- a ready-to-use **static image** for creating the collectible sprite;
 - a compact **4-frame idle loop**;
 - a custom **4-frame collected one-shot**; and
 - exact 16×16 artwork using Arcade's default palette.
@@ -16,9 +17,12 @@ Included collectibles: spinning coin, energy orb, crystal, star, heart, key, pot
 2. Open **Settings → Extensions**.
 3. Paste `https://github.com/mrbrackebusch-code/PlatformerCollectibles` into the search box.
 4. Select the extension card.
-5. Open the Animation editor to find the imported idle and collected animations.
+5. Create each collectible sprite with its plainly named image asset, such as `Coin`, `Heart`, or `Potion`.
+6. Open the Animation editor to find the matching idle and collected animations.
 
-Because `assetPack` is enabled, MakeCode imports the named animations without importing executable extension code.
+Because `assetPack` is enabled, MakeCode imports the 12 named images and 24 named animations without importing executable extension code.
+
+Each static image is identical to the first frame of its idle animation, so starting the animation does not cause a visual jump.
 
 For each item, choose the matching `Idle` and `Collected` animations. Loop the idle animation. Run the collected animation once, then destroy or hide the collectible after the final frame. Each collected sequence preserves the item's identity: coins flip away, orbs contract, crystals split into shards, hearts release tiny hearts, potions pop into bubbles, batteries discharge, and candies unwrap into sugar sparkles. No stock destroyed effect is needed.
 
@@ -26,8 +30,8 @@ Suggested timing is recorded in `animation-manifest.json`. Idle loops use 120–
 
 ## Contents
 
-- `images.g.jres` / `images.g.ts`: MakeCode animation assets
-- `test.ts`: compile-only resolution check for all 24 named animations
+- `images.g.jres` / `images.g.ts`: MakeCode image and animation assets
+- `test.ts`: compile-only resolution check for all 12 images and 24 animations
 - `contact-sheet.png`: every exact frame at readable scale
 - `collectibles-preview.gif`: simple montage of every idle and collected animation
 - `previews/`: one animated preview per collectible

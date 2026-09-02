@@ -1,7 +1,7 @@
 {
     "name": "Platformer Animated Collectibles",
-    "version": "0.0.2",
-    "description": "Twelve original 16x16 collectibles with compact idle loops and custom collected animations for MakeCode Arcade.",
+    "version": "0.0.3",
+    "description": "Twelve original 16x16 collectible images with compact idle loops and custom collected animations for MakeCode Arcade.",
     "files": [
         "main.blocks",
         "main.ts",
