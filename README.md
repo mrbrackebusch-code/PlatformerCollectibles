@@ -14,7 +14,7 @@ Included collectibles: spinning coin, energy orb, crystal, star, heart, key, pot
 
 After this folder is published as a public GitHub repository, add its GitHub URL through **Settings → Extensions**. Because `assetPack` is enabled, the named animations appear in the Animation gallery and the pack's code is ignored.
 
-For each item, choose the matching `Idle` and `Collected` animations. Loop the idle animation. Run the collected animation once, then destroy or hide the collectible after the final frame. The custom collection sequences already supply the flash, ring, shards, sparks, bubbles, or trailing motes, so no stock destroyed effect is needed.
+For each item, choose the matching `Idle` and `Collected` animations. Loop the idle animation. Run the collected animation once, then destroy or hide the collectible after the final frame. Each collected sequence preserves the item's identity: coins flip away, orbs contract, crystals split into shards, hearts release tiny hearts, potions pop into bubbles, batteries discharge, and feathers drift upward. No stock destroyed effect is needed.
 
 Suggested timing is recorded in `animation-manifest.json`. Idle loops use 120–170 ms per frame; collected animations use 75 ms per frame and should not loop.
 
@@ -23,7 +23,7 @@ Suggested timing is recorded in `animation-manifest.json`. Idle loops use 120–
 - `images.g.jres` / `images.g.ts`: MakeCode animation assets
 - `test.ts`: compile-only resolution check for all 24 named animations
 - `contact-sheet.png`: every exact frame at readable scale
-- `collectibles-preview.gif`: combined animated preview
+- `collectibles-preview.gif`: simple montage of every idle and collected animation
 - `previews/`: one animated preview per collectible
 - `frames/`: every source frame as a lossless PNG
 - `ANIMATION_ASCII.md`: exact palette-index pixels

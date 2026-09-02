@@ -83,30 +83,30 @@
                         {
                             "index": 1,
                             "png": "frames/coin/collected-1.png",
-                            "png_sha256": "e4043dd0aa9839a2b4dbc045a0f3884e3889148698c984c2a25b47cd6b0aa2fd",
-                            "f4_sha256": "dce05371b6e63cad1b0d4930870c04ae9c0ae8fde924c42bc1270e9844db40f3",
-                            "opaque_pixels": 96
+                            "png_sha256": "575ef36c08d46f218396ceb23d3ed40ca8c631c11af4e65460e4ac04165a9f07",
+                            "f4_sha256": "3fd52648bc36b3492101e75308388c94cd87c6794ec9572b4c9e84fcc567356d",
+                            "opaque_pixels": 101
                         },
                         {
                             "index": 2,
                             "png": "frames/coin/collected-2.png",
-                            "png_sha256": "5377b5622933de66412dfb38a0b34485fd914977c72a5efe9e2a6bdbe47a3dd8",
-                            "f4_sha256": "133406279b6f42b6e5da9e74f3d0b1783c2f4ea54f3c7f78a96efe1c13b84893",
-                            "opaque_pixels": 31
+                            "png_sha256": "fbfd60367fd54fd6391e608ce0f0ed0d97135b538524919b8d2f034d8b26576e",
+                            "f4_sha256": "dfbfe3b4260ea822c00950698c41ccd07f775b084a251db43f4bad48786ff29e",
+                            "opaque_pixels": 62
                         },
                         {
                             "index": 3,
                             "png": "frames/coin/collected-3.png",
-                            "png_sha256": "c76f3c16ae8926d447543a8db726e4ce8ce4316ca9e4f0ec2df0ce1d0af233d1",
-                            "f4_sha256": "fcf5d1cc55823c47e3ae534a8a472a3e2a6201c545b6a6c8deeb41cbe9857a1b",
-                            "opaque_pixels": 43
+                            "png_sha256": "7328461d6d0c7d0a6ac037fa2feaadab0173ca57bcdc6f97bdb41f2da9169829",
+                            "f4_sha256": "5d66f2562d87be76075d0ecff13d698b0a2993416756bfdb3a890a16ee8b6871",
+                            "opaque_pixels": 22
                         },
                         {
                             "index": 4,
                             "png": "frames/coin/collected-4.png",
-                            "png_sha256": "e08aa172575284b7968121d6cbd93f6208b24f396ae4cb1e09a442b903b905dc",
-                            "f4_sha256": "da80c82f1c05a74f619be4f2e7c9276cc5a7d9548fd402b68e9f0851f864327b",
-                            "opaque_pixels": 2
+                            "png_sha256": "ff9aa5754ef773348dee61cf9e7636a1034ab8e06d0bf53c17eba412f217b1d2",
+                            "f4_sha256": "57d2d4028f0a46d264116d6fe8bbc1fe458e759ead53a3351bfd7a53b74c938f",
+                            "opaque_pixels": 4
                         }
                     ]
                 }
@@ -161,29 +161,29 @@
                         {
                             "index": 1,
                             "png": "frames/orb/collected-1.png",
-                            "png_sha256": "8d8d3e3601c2b0897b76ff2ef7f12362cd83d2b6bded7b675e6cd45aa1cdbd43",
-                            "f4_sha256": "0dd070ecd8be1f26c4eb97ee65f125689e5a32d77b8fd128342019a30f006d9f",
-                            "opaque_pixels": 82
+                            "png_sha256": "9c9280c0c353fff56ba79b4ccebedd0d6877ed6d0bb93e009b4b6d985ce889f1",
+                            "f4_sha256": "8e0f97b0b2912e66acb3dec2525850a43d039d32182d67bfbb9bf3eac4d757fa",
+                            "opaque_pixels": 87
                         },
                         {
                             "index": 2,
                             "png": "frames/orb/collected-2.png",
-                            "png_sha256": "a8d3d997f697af2d1af652f2db267f257347d104a39910038e4265407c532cad",
-                            "f4_sha256": "384772a819b7ee2e41f6b1592726f4db5cdaebbf4dad26a535fbeff03b7733f3",
-                            "opaque_pixels": 33
+                            "png_sha256": "5c887b38f605e013e19789b3f7d1677aaf3032c764efc00db8e1f39aae131acf",
+                            "f4_sha256": "040502494c79a50dc18bc75fb50315f228b3db0a6528d158895dd49133b63ad1",
+                            "opaque_pixels": 59
                         },
                         {
                             "index": 3,
                             "png": "frames/orb/collected-3.png",
-                            "png_sha256": "e7b71884289900e336188c0a12ee4c8490566e5514c234098931875166598f88",
-                            "f4_sha256": "f0bcdd376f815a11f8bbda49ec92fa7d391c4f1959d53d1725c8b436d1b2da65",
-                            "opaque_pixels": 29
+                            "png_sha256": "fa3121f2ed57c9650144e18969cfe7360042bfa940c127491bc2578c1e9db0fb",
+                            "f4_sha256": "1d1b8750fa3ecd6497e5c019cf9247063febb43c9d8554e51c82bb7fa84f7d83",
+                            "opaque_pixels": 33
                         },
                         {
                             "index": 4,
                             "png": "frames/orb/collected-4.png",
-                            "png_sha256": "1221d43527cc39ea5fcbd087c07d56ea93c1c03b038e40c50cbeff9582164fc3",
-                            "f4_sha256": "ceeb756141a8f79cab705c34dcd7e133626f529b90051aeaa203ca5cc0c90b9f",
+                            "png_sha256": "b7deb61fb0fb5318b70a9bcaa50f1cc8d34af5e57056cd42ca2c14b0b0d1351b",
+                            "f4_sha256": "08579f66028ed50e6be34dd2fa54fb8fc411a8361870e024b0da2d474d809f8e",
                             "opaque_pixels": 4
                         }
                     ]
@@ -239,30 +239,30 @@
                         {
                             "index": 1,
                             "png": "frames/gem/collected-1.png",
-                            "png_sha256": "daa3db8b0d40ac56915eda05b378ca07b33a270d2a3a58a06660a3ef340430a5",
-                            "f4_sha256": "244ac6f063dbfe4c45b47ad1b139d94806e0c5e964c647d630c7ab0c4ab656e6",
-                            "opaque_pixels": 76
+                            "png_sha256": "ea2e260beed37c4fa094b47d954492dd541320fd52b464cb156e6b4cc94b9200",
+                            "f4_sha256": "f2ecef3190d22b65cea10682e5f1edde8b3949db368864c9e6bf31350e6daeab",
+                            "opaque_pixels": 81
                         },
                         {
                             "index": 2,
                             "png": "frames/gem/collected-2.png",
-                            "png_sha256": "9f6b5575adee9c70455e0797827e3c7fa4868e1eb500a17b8dafc2e64ce491e0",
-                            "f4_sha256": "a80f77a843c268b8069ca58ce5f34f22396943d8589738855eb0a5e4e1f0dd5d",
-                            "opaque_pixels": 31
+                            "png_sha256": "1ca876f575f6bcdc6f28a34d3edafb052715be72442a87df581c2465b13447ab",
+                            "f4_sha256": "d9f31571eb407af97c9adb58cdc206993faf8db665714ffe8848e4c64dafc25e",
+                            "opaque_pixels": 77
                         },
                         {
                             "index": 3,
                             "png": "frames/gem/collected-3.png",
-                            "png_sha256": "d50b5766439dd6edefb9245212bccacb176c8bebb31aa0cc73b1b2e9b1840fe9",
-                            "f4_sha256": "4aee8adb8c40d58e55e4ac5ab49927bad0314cc1a0d76555f05c2e6edd0a4319",
-                            "opaque_pixels": 36
+                            "png_sha256": "7100c629691637c47c26fd2b39e4673e8502975de98e413e89aec4fc14ebd3c7",
+                            "f4_sha256": "6b750ec57a9de35683c3d2bce08a0fe353962c166c6772d08143acba70850781",
+                            "opaque_pixels": 8
                         },
                         {
                             "index": 4,
                             "png": "frames/gem/collected-4.png",
-                            "png_sha256": "7cc6dabee435200d7c4217112b6577765bbd07333e41b07b34ca670a07e5889e",
-                            "f4_sha256": "2ff1b111475d234187f5b6f0a93bda22d3f3d8e8c9b7d52b46212a7637279aae",
-                            "opaque_pixels": 2
+                            "png_sha256": "5093f2a0865ab9708491856ed9ed9b55dc4ebf097fe1177b498e4b04d0added1",
+                            "f4_sha256": "5ddd45324087f43a4930c916a2473d59cbf279a66e5ce1806b93f9c6df22c39e",
+                            "opaque_pixels": 4
                         }
                     ]
                 }
@@ -317,30 +317,30 @@
                         {
                             "index": 1,
                             "png": "frames/star/collected-1.png",
-                            "png_sha256": "ddee65ed20e6e329fc0ac74492d7abfe6bfea561258157da5d8eab2863ab9b94",
-                            "f4_sha256": "f2ce74e2c2c0ff8a57186a9aad0ded1814a0bf1511ffa4634d267485f53b2be7",
-                            "opaque_pixels": 75
+                            "png_sha256": "debacae49db95a28fb921058b80d4704a4c58a6953c9a1fa90b05cfe0dff3f7d",
+                            "f4_sha256": "a1d93d38638c1487bdba9df81ee117116b152cc66253ce4ad2c0331a5cb0737b",
+                            "opaque_pixels": 80
                         },
                         {
                             "index": 2,
                             "png": "frames/star/collected-2.png",
-                            "png_sha256": "5377b5622933de66412dfb38a0b34485fd914977c72a5efe9e2a6bdbe47a3dd8",
-                            "f4_sha256": "133406279b6f42b6e5da9e74f3d0b1783c2f4ea54f3c7f78a96efe1c13b84893",
-                            "opaque_pixels": 31
+                            "png_sha256": "2b95699b72d0f047379961cd70a8a6e48656ac1d4f497be62350f353555f3ed3",
+                            "f4_sha256": "1cdda246122b320ea907ebf6c457f2240075268b8d2b6447b2e0c77fdae440bd",
+                            "opaque_pixels": 84
                         },
                         {
                             "index": 3,
                             "png": "frames/star/collected-3.png",
-                            "png_sha256": "03d75d14c7fc8b3b09dfb95af5d1c58566de83aff68f1e6819f5dbde5a3cb358",
-                            "f4_sha256": "d73b06fd28a435c052c3f07b27f72382be0936f61cade7f5c199a8997b6750a5",
-                            "opaque_pixels": 33
+                            "png_sha256": "18e4dead7360b54d6d574a00d36614084cb9ec6fd16f47ba990c7dc815e2b872",
+                            "f4_sha256": "ad8e24a850fa622eb297084f2dc1ecaa35094ad357f2e57bea46fd646546a353",
+                            "opaque_pixels": 13
                         },
                         {
                             "index": 4,
                             "png": "frames/star/collected-4.png",
-                            "png_sha256": "8321eb4bbb259c682d277faf0df1bb5d5e00ad76f7a606a2ad35d355900818a2",
-                            "f4_sha256": "f93edd3a1716ca608dc1d56e847faf5238c010a16047948876151354edef2d0a",
-                            "opaque_pixels": 2
+                            "png_sha256": "42b47f027af9dafa463e77b505ad5ed709c063f5f31400cc784329998ebfef37",
+                            "f4_sha256": "227c4c6383144f7ca59b1eb5b6daa6f59278e9a2238c7e2c44c216742e55a0de",
+                            "opaque_pixels": 4
                         }
                     ]
                 }
@@ -395,30 +395,30 @@
                         {
                             "index": 1,
                             "png": "frames/heart/collected-1.png",
-                            "png_sha256": "1b265115a90f94aa8ed7f6a1cff43259f644e9332b34a80cbe23095ad0f8b3d3",
-                            "f4_sha256": "c0ca4e49a0f7844f550618c8b49fe5d76a750e631a35138bf71dab2256808915",
+                            "png_sha256": "8520c012b2bfc397ac3dde06a1f28ad1dcec2c7f98d090d417f32179ea8ef243",
+                            "f4_sha256": "ad4cb375b6bd49327d1f3f3d2b943c24f28d54d2c9450940865039b74aa7f213",
                             "opaque_pixels": 96
                         },
                         {
                             "index": 2,
                             "png": "frames/heart/collected-2.png",
-                            "png_sha256": "c44ed8e1a1365f62e82e6029da3e2a27b083c2af7db99450d0c32ab0a08e3c93",
-                            "f4_sha256": "814cc498d79e5ec0b3b89c94b685e196be6da33cb2ab1f27946cff3422ef7347",
-                            "opaque_pixels": 32
+                            "png_sha256": "f09a6fd1aecd336d15f5f5459d751dafc5708cbe0a7a408259698e02afd87f76",
+                            "f4_sha256": "7a2c3e2c6948a8c6eb342aefb5d2393119f4bee2177dad8ca61c6f98cba47a1b",
+                            "opaque_pixels": 98
                         },
                         {
                             "index": 3,
                             "png": "frames/heart/collected-3.png",
-                            "png_sha256": "1b1e6ddde35d7a6fdeb66884e3bdb27043959bae60b317dfe5178b15b093e3f2",
-                            "f4_sha256": "c6a0d9a3f960aaa4fe2075e99259ec33c0a524086a4da73f82f43e452e8edd39",
-                            "opaque_pixels": 30
+                            "png_sha256": "09a0727301435144fc55efb0bf7f8e91ba7f897b30c4606ef336bb710fb59dbe",
+                            "f4_sha256": "c0c6be3437dfd114586baee7f06b4019b47df59068cdf99f53e621087681432c",
+                            "opaque_pixels": 18
                         },
                         {
                             "index": 4,
                             "png": "frames/heart/collected-4.png",
-                            "png_sha256": "feb482ab85cb414dec3fd0c5724f770a546de476fce32bcc2dac3fe53b55f70f",
-                            "f4_sha256": "8d86fe66e917a40f8b3b030e84d257c8e42ad57fef6a175150082716b5ea6e56",
-                            "opaque_pixels": 2
+                            "png_sha256": "e20911512034bb70ca17e64427c386a382902a7df9a3e8bcc86b92253c6d20d1",
+                            "f4_sha256": "566d9ce6f4fb2294cc5e6d003b89b70bc67a283f9363eaed0e80adaae8653593",
+                            "opaque_pixels": 4
                         }
                     ]
                 }
@@ -473,30 +473,30 @@
                         {
                             "index": 1,
                             "png": "frames/key/collected-1.png",
-                            "png_sha256": "dedf29f18a4bf54994bcebc4609362432fa3384d1b6fb766c371385d6ef7def3",
-                            "f4_sha256": "b0772ce65f93148c24228ede1820580fe195d1ab8e9caa040a373fe5c7efef94",
-                            "opaque_pixels": 57
+                            "png_sha256": "33eca07ff5905021822ebc14245f54f8d0734cf10a8fe3b9cce33771c2c9a4f3",
+                            "f4_sha256": "a2eb81b648c1bb2022eac935cb3ce996360811bc706b60b1112176a87c021d5b",
+                            "opaque_pixels": 60
                         },
                         {
                             "index": 2,
                             "png": "frames/key/collected-2.png",
-                            "png_sha256": "58ab61cc05c51fa25775b0e02ba26574d332268e8836a7624558189a89f9bb1b",
-                            "f4_sha256": "3015b0d9e5992382be2decd75937dccb9fc726dace76d90f14829a36287e4406",
-                            "opaque_pixels": 32
+                            "png_sha256": "c87b688864d85a69420a0f02b1b66bc97e5598bd0f6aa14389128acdc109b12d",
+                            "f4_sha256": "d8da8642e6225ac05f33f542884d5ce9543df748bd85d8d2faeba2541e7ad287",
+                            "opaque_pixels": 56
                         },
                         {
                             "index": 3,
                             "png": "frames/key/collected-3.png",
-                            "png_sha256": "e91702396cab67a2635b77fa4e27c77e3a81cfc80ee5ebbf9cc5ce16b27fba05",
-                            "f4_sha256": "1e3f634f4f139aaf1d64ab753de798c4ce784d12a64d67657fd95757bceb3d5d",
-                            "opaque_pixels": 31
+                            "png_sha256": "bb80d54d3ca9fb72186bc043337b2f4b27a86b73a0f9a253022bae1d60ec2143",
+                            "f4_sha256": "479f071a62ba825a5af4c2eed1f739d6e105a428796fb6115aaadee83b495dd6",
+                            "opaque_pixels": 41
                         },
                         {
                             "index": 4,
                             "png": "frames/key/collected-4.png",
-                            "png_sha256": "1846b7d7421a056ea0e9858abeefe73b0819dc15811e0efa9f7487a1ad1dd485",
-                            "f4_sha256": "59924a6e23bf9f90d422eb74543603cec9dfba9a9e4fdf95507f4ee8cfb2d981",
-                            "opaque_pixels": 2
+                            "png_sha256": "2a567760ac792a449019495fe4e2dd5416b4a09dcb06f4efa8b5740c114ef2e6",
+                            "f4_sha256": "0e853ae3e56403697de39ee7e01d8beb920474e8361ace2acca0e6a04bdd4548",
+                            "opaque_pixels": 4
                         }
                     ]
                 }
@@ -551,30 +551,30 @@
                         {
                             "index": 1,
                             "png": "frames/potion/collected-1.png",
-                            "png_sha256": "1730bed4e6d9c9d9fb417dc02b99717a289e4b27d692e89a1c2c97f51ad73597",
-                            "f4_sha256": "9ac99d0c9568e654b772eb3e48bd0116f8c258abcac43f4616b863bc5ab57c22",
-                            "opaque_pixels": 98
+                            "png_sha256": "7601ea3a37c6f6cc7959e4c35fd35db74a78fa047bd756b4097f39b5898375b4",
+                            "f4_sha256": "3daca4cffa5ad5f9d8e4aa7e5723a89159ce7e1a77a8a21d1addc9fe19df3c96",
+                            "opaque_pixels": 99
                         },
                         {
                             "index": 2,
                             "png": "frames/potion/collected-2.png",
-                            "png_sha256": "2d64faaa9b08a6f7edc6319d7920c2471ab244ee703048469a31777e9a8374f2",
-                            "f4_sha256": "144f5e1e7d2cea9e1ef85755138976340792411e449cb24815efa465dbe71949",
-                            "opaque_pixels": 30
+                            "png_sha256": "3b78ab9ec3069178e4b0bfc4f77b5655eda91f7de87ca456f445a11ba6124d09",
+                            "f4_sha256": "c567269d2a4e7f9e82270c00d41f06b9efdf47f0eec646912f7d2162f2cbd57f",
+                            "opaque_pixels": 95
                         },
                         {
                             "index": 3,
                             "png": "frames/potion/collected-3.png",
-                            "png_sha256": "d43208d433ae62009e11b799fd25fdfeed5862377ae42197022f1b4f53b731aa",
-                            "f4_sha256": "65376b25d85e55ffcd1f546dcd8aeff60dfcd513971c6e9da25e7f74591e7f97",
-                            "opaque_pixels": 32
+                            "png_sha256": "601a81533e211a293cc6fa0148715b380185a6861820d147043fed9d213b7eed",
+                            "f4_sha256": "45865da0056900a0ee94f8f31b5fd12329212237f37263d7a0237f07b1b8bcfa",
+                            "opaque_pixels": 8
                         },
                         {
                             "index": 4,
                             "png": "frames/potion/collected-4.png",
-                            "png_sha256": "f612dc06b7068caf70f44472029b39872f98658a692a4abcddc5228b6ab8a81a",
-                            "f4_sha256": "d5a8fa26665a195133b908d6eb1613ff1757fb920a25c906bbcc947657502cf0",
-                            "opaque_pixels": 2
+                            "png_sha256": "b122b4af0a12abf2e2a2b2440edb8b1b50c210818afcf71de8130a8a982a5d91",
+                            "f4_sha256": "3e2758cd34cd2f3bdad999308a8e2dfac65a8d684f256f5f1993fd8d176c6cb1",
+                            "opaque_pixels": 4
                         }
                     ]
                 }
@@ -629,30 +629,30 @@
                         {
                             "index": 1,
                             "png": "frames/berries/collected-1.png",
-                            "png_sha256": "69738d34b577b09ca0b7ea478ac032c49ea4e0bd2e53d1d752912f837cb397cb",
-                            "f4_sha256": "28ffabb9522cf51a04f5852f79e0c41e79db84f817131c339ad4f2344493de37",
-                            "opaque_pixels": 82
+                            "png_sha256": "74b36eb1a542dd2b2615ada726a9f50755a96d730b05b178ac1b48660c69e752",
+                            "f4_sha256": "bf6e3a4a6fb006437a8629371c2ae0e3bd3f66a05c46fdede1e54d4cd69378fc",
+                            "opaque_pixels": 85
                         },
                         {
                             "index": 2,
                             "png": "frames/berries/collected-2.png",
-                            "png_sha256": "871cba856c43b34ddf5e45777791e0c02e5aa58d0bc529f18af20ef4e7852548",
-                            "f4_sha256": "ee42c41432f889e791bdd1201cdbf739c4645762b43d3e063b2da82838ab0fac",
-                            "opaque_pixels": 31
+                            "png_sha256": "a9099ffdf6c94db878435089828b7dedfb4c0ae34b2605cbb7200d45acd4ca02",
+                            "f4_sha256": "e438c03151d36ad914cf725bb14c735b34003d6e28524fb5aa38ce8abfaa9cb4",
+                            "opaque_pixels": 60
                         },
                         {
                             "index": 3,
                             "png": "frames/berries/collected-3.png",
-                            "png_sha256": "86b94cce314efce45ca4c9017728ac0c14febe648ae8ae5cb6b0cc947db18a43",
-                            "f4_sha256": "c19ad4cbf76bf9a590ef8b4e157bbd6b5540ea6907b9e4aa30a7f26b0f4e2e4c",
-                            "opaque_pixels": 30
+                            "png_sha256": "f8ddaba0c11e4db59d1462fa8b6ccb5c8c9ecb9710938f4ecc9c2e5e55fc572d",
+                            "f4_sha256": "ec1213588b47a262325c91c8d046f2a8f53a663488d63a1b098bdd217f247ea1",
+                            "opaque_pixels": 8
                         },
                         {
                             "index": 4,
                             "png": "frames/berries/collected-4.png",
-                            "png_sha256": "14e12b4d7c11a926b39a3db20236fc6a2e90ad692a26ec62beaea3b3bf15fe9c",
-                            "f4_sha256": "5875b56ffa3056baf31c79bb933162293421a820049303b8c54ddd8c01dfa562",
-                            "opaque_pixels": 2
+                            "png_sha256": "410f1db06cb408d642b680bbd9b05daa4feeb4db1d7ca66422c5cc48d1ca8399",
+                            "f4_sha256": "808b6c1d16763e4144f79951684afa149fea7cec173cb5bf4b46a7424563f295",
+                            "opaque_pixels": 4
                         }
                     ]
                 }
@@ -707,29 +707,29 @@
                         {
                             "index": 1,
                             "png": "frames/gear/collected-1.png",
-                            "png_sha256": "092727e9f7078b56c88e21882c698570c4c1f30cb81eaeadee7729224f583a97",
-                            "f4_sha256": "718825e6c9995c0bddf0a10281ea264433751b8ad43877dec0887949b7fba39a",
-                            "opaque_pixels": 91
+                            "png_sha256": "bfe05103da7df3be24ae85f046b44df3c15c2cc630e2763313a69c5f5e22179f",
+                            "f4_sha256": "6f4367456b195a265985c4743f26a9c4051123da2bebaa96787804dbd7a6a614",
+                            "opaque_pixels": 85
                         },
                         {
                             "index": 2,
                             "png": "frames/gear/collected-2.png",
-                            "png_sha256": "8d376606c73b6f68652f7314879154b4275a13c6f349385c8ce04e1e1455d757",
-                            "f4_sha256": "db3041d04b4342be2c7b34d0552b6eaf30d48701f8a9a89533a18d0f4df3fcfa",
-                            "opaque_pixels": 35
+                            "png_sha256": "cac7672ed5b7ffe3999a4cb1e14cc3d6b042485e4b728a4e0f5b7b3b7d2dc3ad",
+                            "f4_sha256": "f001fe4dc00a33e308f0e8e3ae8ccc42f71704420b00443e65aec292061fb2d3",
+                            "opaque_pixels": 83
                         },
                         {
                             "index": 3,
                             "png": "frames/gear/collected-3.png",
-                            "png_sha256": "8c05796df72894c52ee5a10fef9c669201490fba0d95714187ab26ec58c3798f",
-                            "f4_sha256": "32987e79a9468e536312a85b9cfaaf8fbf70702fea94890b94edf0cf02e1e8a0",
-                            "opaque_pixels": 36
+                            "png_sha256": "ee696cdb2b0e43f43cabbf061b3316594fd430737bc666d1e8dec91ffdee49af",
+                            "f4_sha256": "977c1bfcbf07d7697664911021bb80f62186f03c5d3a5df7a792db3aa4d8034b",
+                            "opaque_pixels": 29
                         },
                         {
                             "index": 4,
                             "png": "frames/gear/collected-4.png",
-                            "png_sha256": "270ce3467d6bbb4e6ca0b29c242900d99d2c4051bb09fc2fcef4830db4af9bba",
-                            "f4_sha256": "118b33eb5980499c53e197f1ec41b1f361f6485da675bee5bcef5e0aadc7ba57",
+                            "png_sha256": "633e6f8ff63819ed5dbbb5fe2a73f749bdb2d93ae6ae206b9e92114137b4763a",
+                            "f4_sha256": "c4a8fc0b1b87a845476fcf3e64e49ef9986757232f0c76a75cc8d39815bcac00",
                             "opaque_pixels": 4
                         }
                     ]
@@ -785,30 +785,30 @@
                         {
                             "index": 1,
                             "png": "frames/battery/collected-1.png",
-                            "png_sha256": "8108b4d31edafdf7fbb9c271ad4a738cd3f972160e79cf6e836ecee9ac111b2b",
-                            "f4_sha256": "ad39353af6a6318943be71d93171a277e6088d488a4a3fa222b5e6b62e05372b",
-                            "opaque_pixels": 108
+                            "png_sha256": "8311c9933c735574344f99abecdcaa56426043146e108cde18f1034dd4cdfbc7",
+                            "f4_sha256": "9fb301f0d3dd015c3081ddeb342dcf182741f4486cecc37e0d3198427248b1cd",
+                            "opaque_pixels": 115
                         },
                         {
                             "index": 2,
                             "png": "frames/battery/collected-2.png",
-                            "png_sha256": "0877fae8456049bc3f98f7a398b3cd3f30a76a30c86dfa2188431133a8159aa5",
-                            "f4_sha256": "cc64ae0161eed4ba0d106c3454b649154503fe536a016ee08655d0463c02e046",
-                            "opaque_pixels": 36
+                            "png_sha256": "fbd43add2d14565400c7b126047535dd6b1219e77c089dfcba95eede89f0551b",
+                            "f4_sha256": "866f857d22ff90ed1d67c076f5f7042237e676cfad92592f98a9cb7d913e991a",
+                            "opaque_pixels": 119
                         },
                         {
                             "index": 3,
                             "png": "frames/battery/collected-3.png",
-                            "png_sha256": "c213b17ba03069e87e924a2c40e69aa3543b854aa9babce68a012cee314a9deb",
-                            "f4_sha256": "364f3f7e43b768b76c690db15d7dff0cd6bd4356cc29d3e951b257b31b19a016",
-                            "opaque_pixels": 32
+                            "png_sha256": "1ea0cdd738e4bf714e800c3f42b232f6308bb4614ea8f32987e6278e9bb88897",
+                            "f4_sha256": "cf4be6ef12f54ac01646dca3d2d95bd22de36db42f6efe1411aa4e95953494fa",
+                            "opaque_pixels": 14
                         },
                         {
                             "index": 4,
                             "png": "frames/battery/collected-4.png",
-                            "png_sha256": "1be2d14ffa170060d89ef9df7088e61ebd0ee2b9b44afcba6a7d62ae9b7b830e",
-                            "f4_sha256": "d7f2b8b236b6eb34082f34a99ce5c04f4b37c7f492878d06a4ceafa18e6e158c",
-                            "opaque_pixels": 2
+                            "png_sha256": "73233584ec07fc1cabe4de6e5eb259dcb1b2ff0b6c84b685f3575e238a61dd07",
+                            "f4_sha256": "20f0b62bcdc19b382c3a43a28b1b045dfb68bb5db00f0dc66ec33632af80cefe",
+                            "opaque_pixels": 4
                         }
                     ]
                 }
@@ -863,30 +863,30 @@
                         {
                             "index": 1,
                             "png": "frames/crown/collected-1.png",
-                            "png_sha256": "80f9bb8058bbd3e87c2c6facea04447717175abee99237d539754255ee65facd",
-                            "f4_sha256": "aa1b26298b936d054285d5cc9fba637e185a3466bcc4c25072c46ec16711b0a6",
-                            "opaque_pixels": 82
+                            "png_sha256": "6535b35e6c90da37565bbc982d53aa59d020d979f00ae4cafd4ad67406d42f71",
+                            "f4_sha256": "fb441809bd814dc92952752d09898c026e81233d50b6748122f272e65788a42d",
+                            "opaque_pixels": 87
                         },
                         {
                             "index": 2,
                             "png": "frames/crown/collected-2.png",
-                            "png_sha256": "2c101067a19ad69b7000bfe2306a58a7dfb57190900bac9fc5a57848524d46b9",
-                            "f4_sha256": "fe1b5e32bab8b29948cf3c7125ee96634eea768535b85e79ef6083024b64ce03",
-                            "opaque_pixels": 31
+                            "png_sha256": "f62e1f4d7515850f9fc4304d55367d3ccf75e5969140143f9c0fab3f5eeec799",
+                            "f4_sha256": "6bcde86f9eda2da9b68491bd137f518c45d3037040a1c8dfd2877c9ddb725a71",
+                            "opaque_pixels": 84
                         },
                         {
                             "index": 3,
                             "png": "frames/crown/collected-3.png",
-                            "png_sha256": "e484ce0f8358eb6b7566b43df9b10d809eda89826a4a5e53acc67198ce07fd51",
-                            "f4_sha256": "61b46dd39027a9fc86e668b44c5f53b00176a18a4025a922ec4b7f04fe0e91ca",
-                            "opaque_pixels": 35
+                            "png_sha256": "fe7973894f98e9692c591408fca1a0563d9ade0583769beaf02c1c9f69c71ff7",
+                            "f4_sha256": "5a62a2db83fd6fa3176b3d3d16b5847c94dcc61e3fe16bb617ec6072b3affe16",
+                            "opaque_pixels": 39
                         },
                         {
                             "index": 4,
                             "png": "frames/crown/collected-4.png",
-                            "png_sha256": "7ce5ee3326f54e0ad7a70cd807c8e1d413804b9b4275fb53141639363c9a753e",
-                            "f4_sha256": "e6841bf919d0a4e3d849b6f55f981471a1193d35de1e1cbda47dabe298b77185",
-                            "opaque_pixels": 2
+                            "png_sha256": "aa2216a368c68681e2b9cbb987fc48ab2ccd977f631c74955f1b2cb22edfe3e0",
+                            "f4_sha256": "42b9c41f92be8544363d73f593484e73c695036b3f0c650d4786c969e1b1aaf2",
+                            "opaque_pixels": 4
                         }
                     ]
                 }
@@ -941,30 +941,30 @@
                         {
                             "index": 1,
                             "png": "frames/feather/collected-1.png",
-                            "png_sha256": "1166ce3896c2b28ef1717c90731d4e526fd351b4ff389dde14d5a8261e0644da",
-                            "f4_sha256": "337b7bf92fcefec92bc2ca1a7e3850686ec6222a61e3eb6682de678d80645a01",
-                            "opaque_pixels": 34
+                            "png_sha256": "36af7693f4d3e7c97073636d6631bb47e4ce5dbc6c764e8ee37fa58cbeb4a5b2",
+                            "f4_sha256": "e3321f282e701d3402d19d6e243d84e709f2ab9e7b80bc8ad6b32a275675e38e",
+                            "opaque_pixels": 33
                         },
                         {
                             "index": 2,
                             "png": "frames/feather/collected-2.png",
-                            "png_sha256": "f3ecbda551690bb62459ce882471153985895d75ea44f3410a897ca634e39530",
-                            "f4_sha256": "9333c8c3914cb29bfc28210b5e7ab727fe356ee4c46fcd1808c020f7cfa7c693",
-                            "opaque_pixels": 31
+                            "png_sha256": "7ce94a878c10e9ea6a13196bab2b2ac87a29363e626833c987661ee459aa7be7",
+                            "f4_sha256": "be82cab2a1399790b4b2203c4526114c75bfa6f4f9f19e0b22eacb508904c7b8",
+                            "opaque_pixels": 29
                         },
                         {
                             "index": 3,
                             "png": "frames/feather/collected-3.png",
-                            "png_sha256": "a8a22c409aff3f64312cb5ea2ae286f7732cf85dd56b7faba838868f495040cd",
-                            "f4_sha256": "8784c47b35b8f3b6896b8dcc8cbdc0ad7e4c55c50c924fcf873338c2f129c27b",
-                            "opaque_pixels": 41
+                            "png_sha256": "7df70fc0e41d5537c0f9246bfba0b859af1fab7cfdb2d215f2d39110555b9a47",
+                            "f4_sha256": "e380b494b9f7c899850164f1d7546fb4bdd4fd5c8f78296f544eb9b40b6c8d6a",
+                            "opaque_pixels": 13
                         },
                         {
                             "index": 4,
                             "png": "frames/feather/collected-4.png",
-                            "png_sha256": "88bc191d3066d73e246d5dac743bdbe4fa8051996530927d19c3512c477e902b",
-                            "f4_sha256": "e5c6929c7c54c05efe7e09505ac085ff590e83bedf709beb4a061ace8281143f",
-                            "opaque_pixels": 2
+                            "png_sha256": "fd333c99d017d2d2317fe8a21744320660bfc174b185ef4932a41b2c7c3f5e30",
+                            "f4_sha256": "142a400195adff33b35972e9947a018b3ecd73bb61672aefe85e4efad5080ea6",
+                            "opaque_pixels": 4
                         }
                     ]
                 }

@@ -375,63 +375,203 @@ def ring(frame: list[list[int]], radius: int, color: int, phase: int = 0) -> Non
                 pixel(frame, x, y, color)
 
 
-STYLE_PARTICLES: dict[str, tuple[list[tuple[int, int]], list[tuple[int, int]]]] = {
-    "coin": ([(7, 1), (14, 7), (8, 14), (1, 8)], [(2, 2), (13, 3), (12, 13), (3, 12)]),
-    "orb": ([(7, 2), (12, 4), (13, 10), (8, 13), (3, 11), (2, 5)], [(7, 0), (15, 8), (7, 15), (0, 7)]),
-    "gem": ([(3, 3), (12, 3), (12, 12), (3, 12)], [(1, 1), (14, 2), (13, 14), (2, 13)]),
-    "star": ([(7, 1), (14, 7), (8, 14), (1, 8)], [(3, 2), (13, 4), (11, 13), (2, 11)]),
-    "heart": ([(4, 4), (11, 4), (4, 11), (11, 11)], [(2, 3), (13, 3), (10, 14), (5, 14)]),
-    "key": ([(2, 7), (6, 2), (12, 4), (13, 10), (8, 13)], [(1, 12), (5, 1), (14, 5), (12, 14)]),
-    "potion": ([(5, 11), (9, 9), (7, 5), (11, 3)], [(3, 12), (7, 8), (10, 5), (13, 1)]),
-    "berries": ([(3, 6), (12, 6), (5, 12), (10, 12)], [(1, 4), (14, 5), (12, 14), (3, 13)]),
-    "gear": ([(2, 7), (4, 3), (8, 2), (12, 4), (13, 8), (11, 12), (7, 13), (3, 11)], [(1, 1), (14, 2), (13, 14), (2, 13)]),
-    "battery": ([(3, 9), (5, 6), (7, 8), (9, 5), (12, 7)], [(1, 11), (4, 2), (11, 13), (14, 4)]),
-    "crown": ([(3, 5), (7, 2), (12, 5), (5, 11), (10, 11)], [(1, 2), (14, 2), (13, 13), (2, 13)]),
-    "feather": ([(4, 11), (6, 8), (8, 6), (10, 3)], [(2, 13), (5, 9), (9, 5), (13, 1)]),
-}
-
-
-def collected_frames(base: list[list[int]], main: int, light: int, dark: int, style: str) -> list[list[list[int]]]:
-    flash = blank()
-    for y, row in enumerate(base):
-        for x, value in enumerate(row):
+def scaled_sprite(frame: list[list[int]], width: int, height: int, center_x: float = 7.5, center_y: float = 7.5) -> list[list[int]]:
+    points = [(x, y) for y, row in enumerate(frame) for x, value in enumerate(row) if value]
+    if not points:
+        return blank()
+    min_x = min(x for x, _ in points)
+    max_x = max(x for x, _ in points)
+    min_y = min(y for _, y in points)
+    max_y = max(y for _, y in points)
+    source_width = max_x - min_x + 1
+    source_height = max_y - min_y + 1
+    result = blank()
+    left = round(center_x - (width - 1) / 2)
+    top = round(center_y - (height - 1) / 2)
+    for target_y in range(height):
+        source_y = min_y + min(source_height - 1, int(target_y * source_height / height))
+        for target_x in range(width):
+            source_x = min_x + min(source_width - 1, int(target_x * source_width / width))
+            value = frame[source_y][source_x]
             if value:
-                flash[y][x] = 1 if (x + y) % 3 else light
-    sparkle(flash, 7, 7, 1, 2)
+                pixel(result, left + target_x, top + target_y, value)
+    return result
 
-    pop = blank()
-    ring(pop, 4, main)
-    sparkle(pop, 7, 7, 1, 2)
-    inner, outer = STYLE_PARTICLES[style]
-    for index, (x, y) in enumerate(inner):
-        pixel(pop, x, y, light if index % 2 else main)
-    if style == "heart":
-        pixel(pop, 4, 5, 3)
-        pixel(pop, 11, 5, 3)
-    elif style == "battery":
-        line(pop, 4, 10, 6, 7, 9)
-        line(pop, 9, 8, 11, 5, 9)
-    elif style == "potion":
-        pixel(pop, 6, 4, 3)
-        pixel(pop, 10, 2, 10)
 
-    burst = blank()
-    ring(burst, 7, dark, 1)
-    for index, (x, y) in enumerate(outer):
-        pixel(burst, x, y, 1 if index == 0 else main)
-        if style in {"gem", "gear", "star", "crown"}:
-            pixel(burst, x + (1 if x < 8 else -1), y, light)
-    if style == "feather":
-        line(burst, 4, 12, 9, 4, light)
-    elif style == "coin":
+def tiny_heart(frame: list[list[int]], x: int, y: int) -> None:
+    for dx, dy, color in ((-1, 0, 3), (1, 0, 3), (-2, 1, 2), (0, 1, 2), (2, 1, 2), (-1, 2, 2), (0, 2, 2), (1, 2, 2), (0, 3, 2)):
+        pixel(frame, x + dx, y + dy, color)
+
+
+def item_specific_collected(style: str, idle: list[list[list[int]]]) -> list[list[list[int]]]:
+    base = idle[0]
+    if style == "coin":
+        first = clone(base)
+        sparkle(first, 13, 2, 1)
+        second = shift(draw_coin(6, True), 0, -2)
+        line(second, 4, 12, 5, 10, 4)
+        line(second, 11, 12, 10, 10, 5)
+        third = shift(draw_coin(2), 0, -4)
+        for x, y, color in ((5, 11, 4), (10, 10, 5), (6, 13, 5), (11, 13, 4)):
+            pixel(third, x, y, color)
+        fourth = blank()
+        for x, y, color in ((7, 1, 1), (4, 6, 5), (11, 5, 4), (7, 10, 5)):
+            pixel(fourth, x, y, color)
+        return [first, second, third, fourth]
+
+    if style == "orb":
+        first = clone(base)
+        sparkle(first, 13, 4, 9)
+        second = scaled_sprite(base, 10, 10)
         for x, y in ((7, 1), (14, 7), (8, 14), (1, 8)):
-            sparkle(burst, x, y, main)
+            pixel(second, x, y, 9)
+        third = scaled_sprite(base, 5, 5)
+        ring(third, 5, 9)
+        fourth = blank()
+        for x, y, color in ((7, 5, 1), (4, 8, 9), (10, 8, 6), (7, 11, 8)):
+            pixel(fourth, x, y, color)
+        return [first, second, third, fourth]
 
-    fade = blank()
-    for index, (x, y) in enumerate(outer):
-        if index % 2 == 0 or style in {"orb", "gear"}:
-            pixel(fade, x, y, main if index else light)
-    return [flash, pop, burst, fade]
+    if style == "gem":
+        first = clone(base)
+        sparkle(first, 13, 2, 9)
+        second = clone(base)
+        line(second, 7, 4, 8, 8, 8)
+        line(second, 8, 8, 5, 11, 8)
+        third = blank()
+        for x, y, color in ((5, 4, 1), (4, 5, 9), (11, 4, 9), (12, 5, 6), (4, 11, 6), (6, 12, 9), (11, 11, 1), (10, 12, 9)):
+            pixel(third, x, y, color)
+        fourth = blank()
+        for x, y, color in ((2, 2, 9), (13, 3, 1), (12, 13, 6), (3, 12, 9)):
+            pixel(fourth, x, y, color)
+        return [first, second, third, fourth]
+
+    if style == "star":
+        first = clone(base)
+        sparkle(first, 14, 2, 1)
+        second = clone(idle[1])
+        for x, y in ((7, 0), (15, 7), (8, 15), (0, 8)):
+            pixel(second, x, y, 5)
+        third = blank()
+        sparkle(third, 7, 7, 5, 3)
+        pixel(third, 7, 7, 1)
+        fourth = blank()
+        for x, y, color in ((7, 1, 5), (14, 7, 4), (8, 14, 5), (1, 8, 4)):
+            pixel(fourth, x, y, color)
+        return [first, second, third, fourth]
+
+    if style == "heart":
+        first = clone(base)
+        pixel(first, 12, 3, 3)
+        second = clone(idle[1])
+        third = blank()
+        tiny_heart(third, 5, 6)
+        tiny_heart(third, 10, 5)
+        fourth = blank()
+        for x, y, color in ((4, 3, 3), (6, 5, 2), (10, 2, 3), (12, 4, 2)):
+            pixel(fourth, x, y, color)
+        return [first, second, third, fourth]
+
+    if style == "key":
+        first = clone(base)
+        sparkle(first, 13, 3, 5)
+        second = shift(mirror(base), 0, -1)
+        pixel(second, 3, 12, 4)
+        third = scaled_sprite(base, 8, 7, 8, 5)
+        for x, y in ((4, 11), (10, 10), (12, 8)):
+            pixel(third, x, y, 5)
+        fourth = blank()
+        for x, y, color in ((7, 1, 1), (12, 4, 5), (11, 9, 4), (4, 12, 5)):
+            pixel(fourth, x, y, color)
+        return [first, second, third, fourth]
+
+    if style == "potion":
+        first = clone(base)
+        pixel(first, 11, 3, 10)
+        second = clone(base)
+        rect(second, 6, 1, 9, 2, 0)
+        rect(second, 7, 0, 8, 1, 14)
+        for x, y, color in ((5, 4, 3), (10, 3, 10), (12, 6, 9)):
+            pixel(second, x, y, color)
+        third = blank()
+        for x, y, color in ((4, 10, 8), (3, 12, 9), (11, 10, 8), (12, 12, 9), (6, 8, 10), (9, 7, 3), (7, 4, 10), (11, 3, 3)):
+            pixel(third, x, y, color)
+        fourth = blank()
+        for x, y, color in ((5, 8, 10), (8, 5, 3), (11, 2, 10), (13, 7, 9)):
+            pixel(fourth, x, y, color)
+        return [first, second, third, fourth]
+
+    if style == "berries":
+        first = clone(base)
+        sparkle(first, 12, 4, 3)
+        second = scaled_sprite(base, 12, 8, 7.5, 10)
+        third = blank()
+        for x, y, color in ((4, 7, 2), (3, 9, 3), (6, 11, 2), (11, 7, 3), (12, 9, 2), (9, 12, 2), (7, 5, 7), (9, 4, 7)):
+            pixel(third, x, y, color)
+        fourth = blank()
+        for x, y, color in ((2, 5, 2), (5, 11, 3), (10, 3, 7), (13, 7, 2)):
+            pixel(fourth, x, y, color)
+        return [first, second, third, fourth]
+
+    if style == "gear":
+        first = clone(base)
+        pixel(first, 13, 3, 1)
+        second = draw_gear(1)
+        sparkle(second, 2, 12, 11)
+        third = scaled_sprite(draw_gear(2), 8, 8, 8, 5)
+        for x, y in ((4, 11), (11, 10), (13, 7)):
+            pixel(third, x, y, 11)
+        fourth = blank()
+        for x, y, color in ((2, 3, 11), (13, 3, 12), (12, 12, 11), (3, 13, 1)):
+            pixel(fourth, x, y, color)
+        return [first, second, third, fourth]
+
+    if style == "battery":
+        first = draw_battery(0, 2)
+        sparkle(first, 13, 4, 9)
+        second = clone(first)
+        rect(second, 6, 0, 9, 2, 9)
+        rect(second, 7, 0, 8, 1, 1)
+        third = blank()
+        line(third, 7, 13, 9, 9, 8)
+        line(third, 9, 9, 6, 6, 9)
+        line(third, 6, 6, 8, 2, 1)
+        pixel(third, 5, 11, 6)
+        pixel(third, 10, 5, 6)
+        fourth = blank()
+        for x, y, color in ((8, 1, 1), (5, 5, 9), (10, 7, 6), (7, 11, 9)):
+            pixel(fourth, x, y, color)
+        return [first, second, third, fourth]
+
+    if style == "crown":
+        first = clone(base)
+        sparkle(first, 14, 2, 1)
+        second = shift(base, 0, -2)
+        pixel(second, 3, 13, 5)
+        pixel(second, 12, 13, 10)
+        third = scaled_sprite(base, 8, 7, 7.5, 4.5)
+        for x, y, color in ((4, 11, 5), (8, 12, 10), (11, 10, 5)):
+            pixel(third, x, y, color)
+        fourth = blank()
+        for x, y, color in ((7, 1, 1), (3, 5, 5), (12, 4, 5), (8, 9, 10)):
+            pixel(fourth, x, y, color)
+        return [first, second, third, fourth]
+
+    if style == "feather":
+        first = clone(base)
+        sparkle(first, 12, 2, 9)
+        second = shift(base, 1, -2)
+        third = shift(base, 2, -4)
+        for y, row in enumerate(third):
+            for x, value in enumerate(row):
+                if value and (x + y) % 2:
+                    third[y][x] = 0
+        fourth = blank()
+        for x, y, color in ((4, 12, 8), (7, 8, 9), (10, 4, 1), (13, 1, 9)):
+            pixel(fourth, x, y, color)
+        return [first, second, third, fourth]
+
+    raise ValueError(style)
 
 
 def build_families() -> list[dict]:
@@ -450,8 +590,7 @@ def build_families() -> list[dict]:
         {"id": "feather", "name": "Drifting Feather", "idle_ms": 170, "colors": (9, 1, 8), "idle": [draw_feather(dx, dy, phase) for phase, (dx, dy) in enumerate(((0, 0), (1, -1), (0, 0), (-1, 1)))]},
     ]
     for family in families:
-        main, light, dark = family["colors"]
-        family["collected"] = collected_frames(family["idle"][0], main, light, dark, family["id"])
+        family["collected"] = item_specific_collected(family["id"], family["idle"])
         family["collected_ms"] = 75
     return families
 
@@ -523,8 +662,8 @@ def make_animated_previews(families: list[dict]) -> None:
     grid_frames: list[Image.Image] = []
     durations: list[int] = []
     columns = 4
-    cell_width = 210
-    cell_height = 165
+    cell_width = 128
+    cell_height = 128
     for animation_name, frame_index, duration in timeline:
         canvas = Image.new("RGB", (columns * cell_width, 3 * cell_height), "#171320")
         draw = ImageDraw.Draw(canvas)
@@ -532,16 +671,10 @@ def make_animated_previews(families: list[dict]) -> None:
             row, col = divmod(family_index, columns)
             left = col * cell_width
             top = row * cell_height
-            draw.rounded_rectangle((left + 7, top + 7, left + cell_width - 7, top + cell_height - 7), 10, fill="#2b2238", outline="#5c406c", width=2)
+            draw.rectangle((left + 4, top + 4, left + cell_width - 5, top + cell_height - 5), fill="#211a2a", outline="#3d304a", width=1)
             selected = family[animation_name][frame_index]
-            panel = sprite_panel(selected, 7)
-            canvas.paste(panel, (left + 49, top + 16))
-            label = family["name"]
-            label_font = font(14, True)
-            bounds = draw.textbbox((0, 0), label, font=label_font)
-            draw.text((left + (cell_width - (bounds[2] - bounds[0])) / 2, top + 136), label, fill="#fff1e8", font=label_font)
-            state = "IDLE" if animation_name == "idle" else "COLLECTED"
-            draw.text((left + 12, top + 12), state, fill="#87f2ff" if state == "IDLE" else "#ff93c4", font=font(10, True))
+            sprite = image_from_frame(selected).resize((112, 112), Image.Resampling.NEAREST)
+            canvas.paste(sprite, (left + 8, top + 8), sprite)
         grid_frames.append(canvas)
         durations.append(duration)
     grid_frames[0].save(ROOT / "collectibles-preview.gif", save_all=True, append_images=grid_frames[1:], duration=durations, loop=0, disposal=2, optimize=False)
@@ -641,7 +774,7 @@ Included collectibles: spinning coin, energy orb, crystal, star, heart, key, pot
 
 After this folder is published as a public GitHub repository, add its GitHub URL through **Settings → Extensions**. Because `assetPack` is enabled, the named animations appear in the Animation gallery and the pack's code is ignored.
 
-For each item, choose the matching `Idle` and `Collected` animations. Loop the idle animation. Run the collected animation once, then destroy or hide the collectible after the final frame. The custom collection sequences already supply the flash, ring, shards, sparks, bubbles, or trailing motes, so no stock destroyed effect is needed.
+For each item, choose the matching `Idle` and `Collected` animations. Loop the idle animation. Run the collected animation once, then destroy or hide the collectible after the final frame. Each collected sequence preserves the item's identity: coins flip away, orbs contract, crystals split into shards, hearts release tiny hearts, potions pop into bubbles, batteries discharge, and feathers drift upward. No stock destroyed effect is needed.
 
 Suggested timing is recorded in `animation-manifest.json`. Idle loops use 120–170 ms per frame; collected animations use 75 ms per frame and should not loop.
 
@@ -650,7 +783,7 @@ Suggested timing is recorded in `animation-manifest.json`. Idle loops use 120–
 - `images.g.jres` / `images.g.ts`: MakeCode animation assets
 - `test.ts`: compile-only resolution check for all 24 named animations
 - `contact-sheet.png`: every exact frame at readable scale
-- `collectibles-preview.gif`: combined animated preview
+- `collectibles-preview.gif`: simple montage of every idle and collected animation
 - `previews/`: one animated preview per collectible
 - `frames/`: every source frame as a lossless PNG
 - `ANIMATION_ASCII.md`: exact palette-index pixels
