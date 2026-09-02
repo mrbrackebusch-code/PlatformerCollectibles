@@ -10,8 +10,8 @@ const collectibleAnimationSmokeTest: Image[][] = [
     assets.animation`Pulsing Star - Collected`,
     assets.animation`Orbiting Heart - Idle`,
     assets.animation`Orbiting Heart - Collected`,
-    assets.animation`Glinting Key - Idle`,
-    assets.animation`Glinting Key - Collected`,
+    assets.animation`Swaying Key - Idle`,
+    assets.animation`Swaying Key - Collected`,
     assets.animation`Bubbling Potion - Idle`,
     assets.animation`Bubbling Potion - Collected`,
     assets.animation`Swinging Berries - Idle`,
@@ -22,8 +22,8 @@ const collectibleAnimationSmokeTest: Image[][] = [
     assets.animation`Pulsing Energy Cell - Collected`,
     assets.animation`Gliding Crown - Idle`,
     assets.animation`Gliding Crown - Collected`,
-    assets.animation`Drifting Feather - Idle`,
-    assets.animation`Drifting Feather - Collected`,
+    assets.animation`Wrapped Candy - Idle`,
+    assets.animation`Wrapped Candy - Collected`,
 ];
 
 if (collectibleAnimationSmokeTest.length != 24) {

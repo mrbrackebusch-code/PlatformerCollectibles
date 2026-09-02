@@ -270,11 +270,20 @@ def draw_potion(dy: int, phase: int) -> list[list[int]]:
     rect(frame, 5, 3 + dy, 10, 4 + dy, 8)
     body = mask_polygon([(5, 4 + dy), (10, 4 + dy), (13, 12 + dy), (11, 14 + dy), (4, 14 + dy), (2, 12 + dy)])
     paint_mask(frame, body, 8, 9)
-    for y in range(9 + dy, 14 + dy):
-        for x in range(2, 14):
+    liquid_surfaces = (
+        {x: 9 for x in range(3, 13)},
+        {x: 8 if x <= 6 else 9 if x <= 9 else 10 for x in range(3, 13)},
+        {x: 9 for x in range(3, 13)},
+        {x: 10 if x <= 5 else 9 if x <= 8 else 8 for x in range(3, 13)},
+    )
+    surface = liquid_surfaces[phase]
+    for x in range(3, 13):
+        top = surface[x] + dy
+        for y in range(top, 14 + dy):
             if (x, y) in body and frame[y][x] != 8:
                 frame[y][x] = 10
-    line(frame, 3, 9 + dy, 12, 9 + dy, 3)
+        if (x, top) in body and frame[top][x] != 8:
+            frame[top][x] = 3
     pixel(frame, 4, 6 + dy, 1)
     bubble_positions = [(10, 11), (7, 10), (9, 7), (6, 6)]
     bx, by = bubble_positions[phase]
@@ -371,18 +380,23 @@ def draw_crown(dy: int, phase: int) -> list[list[int]]:
     return frame
 
 
-def draw_feather(dx: int, dy: int, phase: int) -> list[list[int]]:
+def draw_candy(phase: int) -> list[list[int]]:
     frame = blank()
-    # Dark quill and two offset vanes make this read as a feather, not a shard.
-    line(frame, 4 + dx, 13 + dy, 11 + dx, 3 + dy, 8)
-    line(frame, 5 + dx, 13 + dy, 11 + dx, 4 + dy, 13)
-    vane = [(10, 3), (12, 3), (12, 5), (10, 6), (12, 6), (10, 8), (8, 9), (8, 5), (6, 7), (7, 10), (5, 10)]
-    for x, y in vane:
-        pixel(frame, x + dx, y + dy, 9 if (x + y + phase) % 3 else 1)
-    pixel(frame, 4 + dx, 14 + dy, 11)
-    motes = [(2, 4), (13, 9), (2, 11), (13, 2)]
-    mx, my = motes[phase]
-    pixel(frame, mx, my, 9)
+    left_tip = (0, -1, 0, 1)[phase]
+    right_tip = -left_tip
+    left_wrapper = mask_polygon([(0.5, 4.5 + left_tip), (4.5, 6), (4.5, 10), (0.5, 11.5 + left_tip), (1.5, 8)])
+    right_wrapper = mask_polygon([(15.5, 4.5 + right_tip), (11.5, 6), (11.5, 10), (15.5, 11.5 + right_tip), (14.5, 8)])
+    paint_mask(frame, left_wrapper, 14, 5)
+    paint_mask(frame, right_wrapper, 14, 5)
+    body = mask_ellipse(7.5, 7.5, 4.5, 4)
+    paint_mask(frame, body, 14, 3)
+    stripe_x = (6, 7, 8, 7)[phase]
+    for y in range(5, 11):
+        if (stripe_x, y) in body and frame[y][stripe_x] != 14:
+            frame[y][stripe_x] = 5
+    pixel(frame, 6, 5, 1)
+    if phase == 2:
+        pixel(frame, 13, 3, 3)
     return frame
 
 
@@ -577,17 +591,17 @@ def item_specific_collected(style: str, idle: list[list[list[int]]]) -> list[lis
             pixel(fourth, x, y, color)
         return [first, second, third, fourth]
 
-    if style == "feather":
+    if style == "candy":
         first = clone(base)
-        sparkle(first, 12, 2, 9)
-        second = shift(base, 1, -2)
-        third = shift(base, 2, -4)
-        for y, row in enumerate(third):
-            for x, value in enumerate(row):
-                if value and (x + y) % 2:
-                    third[y][x] = 0
+        sparkle(first, 13, 2, 1)
+        second = draw_candy(2)
+        pixel(second, 1, 3, 5)
+        pixel(second, 14, 12, 5)
+        third = scaled_sprite(base, 6, 5)
+        for x, y, color in ((1, 4, 5), (3, 6, 4), (14, 4, 5), (12, 6, 4), (2, 11, 5), (13, 11, 5)):
+            pixel(third, x, y, color)
         fourth = blank()
-        for x, y, color in ((4, 12, 8), (7, 8, 9), (10, 4, 1), (13, 1, 9)):
+        for x, y, color in ((3, 3, 5), (7, 6, 3), (11, 2, 1), (13, 9, 4)):
             pixel(fourth, x, y, color)
         return [first, second, third, fourth]
 
@@ -601,13 +615,13 @@ def build_families() -> list[dict]:
         {"id": "gem", "name": "Shimmering Crystal", "idle_ms": 140, "colors": (9, 1, 6), "idle": [shift(draw_gem(0, phase), dx, dy) for phase, (dx, dy) in enumerate(((0, -1), (1, 0), (0, 1), (-1, 0)))]},
         {"id": "star", "name": "Pulsing Star", "idle_ms": 130, "colors": (5, 1, 4), "idle": [draw_star(phase) for phase in range(4)]},
         {"id": "heart", "name": "Orbiting Heart", "idle_ms": 150, "colors": (2, 1, 3), "idle": [shift(draw_heart(1.0, 0, phase), dx, dy) for phase, (dx, dy) in enumerate(((0, -1), (-1, 0), (0, 1), (1, 0)))]},
-        {"id": "key", "name": "Glinting Key", "idle_ms": 150, "colors": (5, 1, 14), "idle": [draw_key(0, phase) for phase in range(4)]},
+        {"id": "key", "name": "Swaying Key", "idle_ms": 150, "colors": (5, 1, 14), "idle": [shift(draw_key(0, phase), dx, 0) for phase, dx in enumerate((-1, 0, 1, 0))]},
         {"id": "potion", "name": "Bubbling Potion", "idle_ms": 160, "colors": (10, 3, 8), "idle": [draw_potion(0, phase) for phase in range(4)]},
         {"id": "berries", "name": "Swinging Berries", "idle_ms": 150, "colors": (2, 3, 7), "idle": [draw_swinging_berries(sway, phase) for phase, sway in enumerate((-1, 0, 1, 0))]},
         {"id": "gear", "name": "Turning Gear", "idle_ms": 120, "colors": (11, 1, 12), "idle": [draw_gear(phase) for phase in range(4)]},
         {"id": "battery", "name": "Pulsing Energy Cell", "idle_ms": 140, "colors": (9, 1, 8), "idle": [draw_battery(0, phase) for phase in range(4)]},
         {"id": "crown", "name": "Gliding Crown", "idle_ms": 150, "colors": (5, 1, 14), "idle": [shift(draw_crown(0, phase), dx, 0) for phase, dx in enumerate((0, 1, 0, -1))]},
-        {"id": "feather", "name": "Drifting Feather", "idle_ms": 170, "colors": (9, 1, 8), "idle": [draw_feather(dx, dy, phase) for phase, (dx, dy) in enumerate(((0, 0), (1, -1), (0, 0), (-1, 1)))]},
+        {"id": "candy", "name": "Wrapped Candy", "idle_ms": 160, "colors": (3, 1, 5), "idle": [draw_candy(phase) for phase in range(4)]},
     ]
     for family in families:
         family["collected"] = item_specific_collected(family["id"], family["idle"])
@@ -788,13 +802,13 @@ An original MakeCode Arcade asset pack with **12 collectible families**, each co
 
 ![Animated preview](collectibles-preview.gif)
 
-Included collectibles: spinning coin, energy orb, crystal, star, heart, key, potion, berries, gear, energy cell, crown, and feather.
+Included collectibles: spinning coin, energy orb, crystal, star, heart, key, potion, berries, gear, energy cell, crown, and wrapped candy.
 
 ## Use in MakeCode Arcade
 
 After this folder is published as a public GitHub repository, add its GitHub URL through **Settings → Extensions**. Because `assetPack` is enabled, the named animations appear in the Animation gallery and the pack's code is ignored.
 
-For each item, choose the matching `Idle` and `Collected` animations. Loop the idle animation. Run the collected animation once, then destroy or hide the collectible after the final frame. Each collected sequence preserves the item's identity: coins flip away, orbs contract, crystals split into shards, hearts release tiny hearts, potions pop into bubbles, batteries discharge, and feathers drift upward. No stock destroyed effect is needed.
+For each item, choose the matching `Idle` and `Collected` animations. Loop the idle animation. Run the collected animation once, then destroy or hide the collectible after the final frame. Each collected sequence preserves the item's identity: coins flip away, orbs contract, crystals split into shards, hearts release tiny hearts, potions pop into bubbles, batteries discharge, and candies unwrap into sugar sparkles. No stock destroyed effect is needed.
 
 Suggested timing is recorded in `animation-manifest.json`. Idle loops use 120–170 ms per frame; collected animations use 75 ms per frame and should not loop.
 

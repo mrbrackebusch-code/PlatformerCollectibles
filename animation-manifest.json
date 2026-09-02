@@ -426,7 +426,7 @@
         },
         {
             "id": "key",
-            "name": "Glinting Key",
+            "name": "Swaying Key",
             "width": 16,
             "height": 16,
             "states": {
@@ -438,8 +438,8 @@
                         {
                             "index": 1,
                             "png": "frames/key/idle-1.png",
-                            "png_sha256": "24b9d0450ddbf20ce9ac841b4658b31d7a39136be136bef482a23fdf05b8b19d",
-                            "f4_sha256": "94ed48f53e0e413a35adbf06945d61f7cbf5ab7c918ef8c2f77a347bc45baeec",
+                            "png_sha256": "1f8608dc2a0ad7bfd200d91290db9ae79c9f07d4835eb45f172faba4af404d39",
+                            "f4_sha256": "1a21e8bbf5376ffd9dee66ae4af725fe437376276cbdf8d6d0916858938f697d",
                             "opaque_pixels": 55
                         },
                         {
@@ -452,8 +452,8 @@
                         {
                             "index": 3,
                             "png": "frames/key/idle-3.png",
-                            "png_sha256": "e81a1f26d67ad47dbf0ae7767e5dca6df3aaa1be9f91b02c699327a4cd60dfc0",
-                            "f4_sha256": "ba96c03245bb92e4a1215b664e0bfcf8ab5b8ec33aae0e06c6d85f81f2dd7cbc",
+                            "png_sha256": "c6472447dd8bd707a1a7173833d71818df60bc346156de2ffe6370b350372124",
+                            "f4_sha256": "5605129e588cd36d928cb79ec66bffdb0829b9414f544f6a9f9af8cd3be7559d",
                             "opaque_pixels": 60
                         },
                         {
@@ -473,15 +473,15 @@
                         {
                             "index": 1,
                             "png": "frames/key/collected-1.png",
-                            "png_sha256": "33eca07ff5905021822ebc14245f54f8d0734cf10a8fe3b9cce33771c2c9a4f3",
-                            "f4_sha256": "a2eb81b648c1bb2022eac935cb3ce996360811bc706b60b1112176a87c021d5b",
+                            "png_sha256": "e6d4fd0076f9ef24f69e5b40864b617e2daf091d85099b67c8e6e099ab7146a4",
+                            "f4_sha256": "19a4ae2e987fc914182176011f2537fdb4ee74c6de93244084d31aa0a1ae382c",
                             "opaque_pixels": 60
                         },
                         {
                             "index": 2,
                             "png": "frames/key/collected-2.png",
-                            "png_sha256": "c87b688864d85a69420a0f02b1b66bc97e5598bd0f6aa14389128acdc109b12d",
-                            "f4_sha256": "d8da8642e6225ac05f33f542884d5ce9543df748bd85d8d2faeba2541e7ad287",
+                            "png_sha256": "c361166c8d47e408be829b549cb00f8540b4fca2ad207e940d2f31fdb453a3e6",
+                            "f4_sha256": "867cdc3d80ada14baa4ecd6af82bf8d96047a1b8e1bb80efa0afc398f36073c5",
                             "opaque_pixels": 56
                         },
                         {
@@ -516,30 +516,30 @@
                         {
                             "index": 1,
                             "png": "frames/potion/idle-1.png",
-                            "png_sha256": "289efd35e50adc47e3429e3392317f632a98ab0afe3ef35bebdcb169d84cbcf3",
-                            "f4_sha256": "3cf2f9973afca3f57cbb96ceb21b68d3405e818c0423924ca7258907ac4f2eeb",
-                            "opaque_pixels": 98
+                            "png_sha256": "d58ee53ede1aacd2ea216bbd3078aa83120d43d00851df53053467378dc9a0b1",
+                            "f4_sha256": "9a51a050d7536a2be3d591d906ee649160bc8c2827382209230c13bf43dd9c38",
+                            "opaque_pixels": 97
                         },
                         {
                             "index": 2,
                             "png": "frames/potion/idle-2.png",
-                            "png_sha256": "3aee928d58aa2bc0051e10ae9067de5e46f6fb695dd2d0942437047771f19888",
-                            "f4_sha256": "24a5e6f0d8aecd8e8c25918bcca59e3f7a422b7f49dd4e11e8fd511c3e798da6",
-                            "opaque_pixels": 98
+                            "png_sha256": "b8254c69fac81410580e82bbd97e2e2747a0d9040f1a3af7a3ff09b9b64add75",
+                            "f4_sha256": "6fad20178bb1dd567847cd62be2b174a46950eccbc661aedde6a2a07e03d9a79",
+                            "opaque_pixels": 97
                         },
                         {
                             "index": 3,
                             "png": "frames/potion/idle-3.png",
-                            "png_sha256": "54f75fa6f7603f2b546b98c252a0558f0cef14a6d9e8943e4e66ecab49ab3102",
-                            "f4_sha256": "a5a1b0bd2ea405490e1ce8f692639c124aa9f02829f4935703eb2a12b2366ce9",
-                            "opaque_pixels": 98
+                            "png_sha256": "43aa78613d9c540dce63a8c870926e8d8f928b3afbc8f9cd0c2b62657eca4b36",
+                            "f4_sha256": "b2094c2ee54f6e1e6167142c0ed5bc15dd3307b0aefda16ff31593770b6d5b32",
+                            "opaque_pixels": 97
                         },
                         {
                             "index": 4,
                             "png": "frames/potion/idle-4.png",
-                            "png_sha256": "854de14d48c8b29aefabd0397c91e464725083103d6e6bdd95371804d229e47b",
-                            "f4_sha256": "1115287ed62ae0f4682274dfc15e48c66f2200e37cfe45b361feff626763b8d7",
-                            "opaque_pixels": 99
+                            "png_sha256": "8e978580f845fbcbef173a5ed451300a42215e2f75255366f04cce90d207dca7",
+                            "f4_sha256": "255193d09eb3395f3cc206fbbc4c37170130d1aec703adf01a3c250c9b98e83d",
+                            "opaque_pixels": 98
                         }
                     ]
                 },
@@ -551,16 +551,16 @@
                         {
                             "index": 1,
                             "png": "frames/potion/collected-1.png",
-                            "png_sha256": "7601ea3a37c6f6cc7959e4c35fd35db74a78fa047bd756b4097f39b5898375b4",
-                            "f4_sha256": "3daca4cffa5ad5f9d8e4aa7e5723a89159ce7e1a77a8a21d1addc9fe19df3c96",
-                            "opaque_pixels": 99
+                            "png_sha256": "9b881e685391f4b3d3f5ac09e72bb7b0eed0ddd4aed0849e4dbe7ea9374c145c",
+                            "f4_sha256": "5a43f8863e15687c9c1d808845ad24d2ce07f729499aaa0e2d8fe8f7218119d6",
+                            "opaque_pixels": 98
                         },
                         {
                             "index": 2,
                             "png": "frames/potion/collected-2.png",
-                            "png_sha256": "3b78ab9ec3069178e4b0bfc4f77b5655eda91f7de87ca456f445a11ba6124d09",
-                            "f4_sha256": "c567269d2a4e7f9e82270c00d41f06b9efdf47f0eec646912f7d2162f2cbd57f",
-                            "opaque_pixels": 95
+                            "png_sha256": "15e3ed18e3588e7d8a175d253eacccea3ddf26f63d8bc1aa6ad80654ee3c2f4f",
+                            "f4_sha256": "e7e446ec5aed744bd8b27aff6feb921a37e4e5df3b838e836b911459e15af3e3",
+                            "opaque_pixels": 94
                         },
                         {
                             "index": 3,
@@ -893,77 +893,77 @@
             }
         },
         {
-            "id": "feather",
-            "name": "Drifting Feather",
+            "id": "candy",
+            "name": "Wrapped Candy",
             "width": 16,
             "height": 16,
             "states": {
                 "idle": {
-                    "animation_id": "featherIdle",
-                    "frame_ms": 170,
+                    "animation_id": "candyIdle",
+                    "frame_ms": 160,
                     "loop": true,
                     "frames": [
                         {
                             "index": 1,
-                            "png": "frames/feather/idle-1.png",
-                            "png_sha256": "bc8ca3286e2ef13c517a8d42c348bf69f3d5ae25b74cca36214aa638f67f4a36",
-                            "f4_sha256": "60f1dbe662481db10327b260b27bd0d906a24df4d605014b2249987b1e62814e",
-                            "opaque_pixels": 29
+                            "png": "frames/candy/idle-1.png",
+                            "png_sha256": "6de8b37840734c3c12c4fe6f7a4549d7f5fb376a759748994bf42515039420bb",
+                            "f4_sha256": "3395a645d37a07eb1e3ad936d521344bc6333650e109c1a8bc860c6614440a7d",
+                            "opaque_pixels": 88
                         },
                         {
                             "index": 2,
-                            "png": "frames/feather/idle-2.png",
-                            "png_sha256": "a1a30fde99cddd5c88d4fb79cec2bda2b05509bfd6eeea3f0332c873ced3c930",
-                            "f4_sha256": "a28f844a4b748081e81e206de106298bb3c8de68ccc8ab127425bba5d3e590af",
-                            "opaque_pixels": 29
+                            "png": "frames/candy/idle-2.png",
+                            "png_sha256": "2d88735bf897f993aaa7d8911c36aa53d29e1a666a910791cbea96c5cdaae4b7",
+                            "f4_sha256": "103dec1eec53038d59c2291a6624f5a9ab3b890cd8ee4a7cbf12d4e2940bbe63",
+                            "opaque_pixels": 88
                         },
                         {
                             "index": 3,
-                            "png": "frames/feather/idle-3.png",
-                            "png_sha256": "b0aa0543df76de03601bf07a6e4a34e9fa484117b7408e805266de6f6daa3ce0",
-                            "f4_sha256": "fd03d88ebebf590585ff14fc1736f8acdf3e808e4c1370ed35628082d381bb4d",
-                            "opaque_pixels": 29
+                            "png": "frames/candy/idle-3.png",
+                            "png_sha256": "9e1bc02d7b8f45162817affd1ad1559d1117624a0f1daf8e6cc7a7d0d08e4c55",
+                            "f4_sha256": "8493afe5292b7c198ffb1e884f7bbcf4edd20dc01757bd46ca4c991dbf01d84e",
+                            "opaque_pixels": 89
                         },
                         {
                             "index": 4,
-                            "png": "frames/feather/idle-4.png",
-                            "png_sha256": "caa49bf412acc22623a526a4607a90c0ac21f8e7677219afc06d5b5b2ee85a33",
-                            "f4_sha256": "c17077848eaa341794de30925e69da306e95f817d631b1ce1225d5915ab9b97f",
-                            "opaque_pixels": 29
+                            "png": "frames/candy/idle-4.png",
+                            "png_sha256": "2b26d53d8f84a55fd3ade67bea06729895a95e30016412216e82fa74b9db6258",
+                            "f4_sha256": "52482cd4fd0b349208f249090d5f919a1f924b907d2a3fa988ad92613e779009",
+                            "opaque_pixels": 88
                         }
                     ]
                 },
                 "collected": {
-                    "animation_id": "featherCollected",
+                    "animation_id": "candyCollected",
                     "frame_ms": 75,
                     "loop": false,
                     "frames": [
                         {
                             "index": 1,
-                            "png": "frames/feather/collected-1.png",
-                            "png_sha256": "36af7693f4d3e7c97073636d6631bb47e4ce5dbc6c764e8ee37fa58cbeb4a5b2",
-                            "f4_sha256": "e3321f282e701d3402d19d6e243d84e709f2ab9e7b80bc8ad6b32a275675e38e",
-                            "opaque_pixels": 33
+                            "png": "frames/candy/collected-1.png",
+                            "png_sha256": "f0cca47200477d32f8a8faecd9f20630ccadf602e8fecc1f474909bff3b14099",
+                            "f4_sha256": "9ea94b57fcf9b1873aeefba3f232ff055025933091a08310e772bb1393a80118",
+                            "opaque_pixels": 93
                         },
                         {
                             "index": 2,
-                            "png": "frames/feather/collected-2.png",
-                            "png_sha256": "7ce94a878c10e9ea6a13196bab2b2ac87a29363e626833c987661ee459aa7be7",
-                            "f4_sha256": "be82cab2a1399790b4b2203c4526114c75bfa6f4f9f19e0b22eacb508904c7b8",
-                            "opaque_pixels": 29
+                            "png": "frames/candy/collected-2.png",
+                            "png_sha256": "ec0348cc8473eefb18e86c7863f3c12a08c7a79e841ef8b0575e0c0c842b5ab7",
+                            "f4_sha256": "b8a6165b262610ce8c2475add294fd22a4a175e6cba7a80f558cd98a2e952dc4",
+                            "opaque_pixels": 91
                         },
                         {
                             "index": 3,
-                            "png": "frames/feather/collected-3.png",
-                            "png_sha256": "7df70fc0e41d5537c0f9246bfba0b859af1fab7cfdb2d215f2d39110555b9a47",
-                            "f4_sha256": "e380b494b9f7c899850164f1d7546fb4bdd4fd5c8f78296f544eb9b40b6c8d6a",
-                            "opaque_pixels": 13
+                            "png": "frames/candy/collected-3.png",
+                            "png_sha256": "1f80dd5fc4b27da8ad1c1c7ab07b391a0bac5cfdcdc7987c61109eeb4ad449d3",
+                            "f4_sha256": "c0ad7fe26c095abc3bfa04a2ad9c3e76d16455cddf23596c741e57b8509d79c1",
+                            "opaque_pixels": 27
                         },
                         {
                             "index": 4,
-                            "png": "frames/feather/collected-4.png",
-                            "png_sha256": "fd333c99d017d2d2317fe8a21744320660bfc174b185ef4932a41b2c7c3f5e30",
-                            "f4_sha256": "142a400195adff33b35972e9947a018b3ecd73bb61672aefe85e4efad5080ea6",
+                            "png": "frames/candy/collected-4.png",
+                            "png_sha256": "1e0504d194a973cb39e4787e31731abd2d8c24695515f047619c8ce469948377",
+                            "f4_sha256": "f78fc5e00c29cd4c7690df57b194390c898894840c8f8bd4d9ed4abcf165cad7",
                             "opaque_pixels": 4
                         }
                     ]
