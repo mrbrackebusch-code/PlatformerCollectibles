@@ -1,0 +1,583 @@
+{
+    "*": {
+        "mimeType": "image/x-mkcd-f4",
+        "dataEncoding": "base64",
+        "namespace": "collectibles"
+    },
+    "coinIdle1": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAODu7g4AAAAATkRE5AAAAOBEREREDgAAThFERETkAABe5e7uXuUAAF7l7u5e5QAAXlVVVVXlAADgVVVVVQ4AAABeVVXlAAAAAODu7g4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "coinIdle2": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADg7u4OAAAA4E5EROQOAABeUVVVVeUAAF5VVVVV5QAA4F5VVeUOAAAA4O7uDgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "coinIdle3": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADg7u7u7g4AAFBRVVVVBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "coinIdle4": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADg7u4OAAAA4F5VVeUOAABeVVVVVeUAAE5BRERE5AAA4E5EROQOAAAA4O7uDgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "coinIdle": {
+        "namespace": "collectibles",
+        "id": "coinIdle",
+        "mimeType": "application/mkcd-animation",
+        "dataEncoding": "json",
+        "data": "{\"frames\":[\"collectibles.coinIdle1\",\"collectibles.coinIdle2\",\"collectibles.coinIdle3\",\"collectibles.coinIdle4\"],\"flippedHorizontal\":false}",
+        "displayName": "Spinning Coin - Idle"
+    },
+    "coinCollected1": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAREQEAAAAAEREREQAAABARERERAQAAERERERERAAAREREREREAABEREREREQAAERERERERAAAQEREREQEAAAARERERAAAAABAREQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "coinCollected2": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAABQAAAAAAAAAAUFBQAAAABQEABQAAAAAAUQAAAAAFBQEBERUAAAAAAFEAAABQUAAAAQAFAAAAAABQAABQAAAABQUFAAAAAAAAAABQAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "coinCollected3": {
+        "data": "hwQQABAAAAAAAABABQAAAAAABFRVBAAAAEEAAAVAAAAABAAAAAAFAEAAAAAAAEAAAAAAAAAAAARQAAAAAAAAAFUFAAAAAAAFUAAAAAAAUFUAAAAAAAAABUAAAAAAAAAAAAQAAAAAAAQAAAAAAABQAABQBFAAAAQAAABAVUVAAAAAAABQBAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "coinCollected4": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "coinCollected": {
+        "namespace": "collectibles",
+        "id": "coinCollected",
+        "mimeType": "application/mkcd-animation",
+        "dataEncoding": "json",
+        "data": "{\"frames\":[\"collectibles.coinCollected1\",\"collectibles.coinCollected2\",\"collectibles.coinCollected3\",\"collectibles.coinCollected4\"],\"flippedHorizontal\":false}",
+        "displayName": "Spinning Coin - Collected"
+    },
+    "orbIdle1": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAAAAAACIiAAAAAAAiJlpiAAAAAAYmWaGAAAAgBFhZmYIAACAGWZmZggAAIBpZmZmCAAAgGZmZmYIAAAAaGZmhgAAAACIZmaIAAAAAACIiAAAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "orbIdle2": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACQAICICAAAAACAmJmGCAAAAICZaWYIAAAAmJFmZoYAAAAYEWZmhgAAAJhhZmaGAAAAaGZmZoYAAACAZmZmCAAAAIBoZoYIAAAAAICICAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "orbIdle3": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAAAAACIiAAAAAAAiJlpiAAAAACYkWaGAAAAgBkRZmYIAACAmWFmZggAAIBpZmZmCAAAgGZmZmYIAAAAaGZmhgAAAACIZmaIAAAAAACIiAAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "orbIdle4": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAiAgAAAAAgJiZhgiQAACAmWlmCAAAAJgZZmaGAAAAmBFhZoYAAACYFmZmhgAAAGhmZmaGAAAAgGZmZggAAAmAaGaGCAAAAACAiAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "orbIdle": {
+        "namespace": "collectibles",
+        "id": "orbIdle",
+        "mimeType": "application/mkcd-animation",
+        "dataEncoding": "json",
+        "data": "{\"frames\":[\"collectibles.orbIdle1\",\"collectibles.orbIdle2\",\"collectibles.orbIdle3\",\"collectibles.orbIdle4\"],\"flippedHorizontal\":false}",
+        "displayName": "Bobbing Energy Orb - Idle"
+    },
+    "orbCollected1": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAREQAAAAAAEREREQAAAAARERERAAAAEBEREREBAAAQEREREQEAABARERERAQAAEBEREREBAAAAEREREQAAAAARERERAAAAAAAREQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "orbCollected2": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAACQAJAAAAAAAAkJCQAAAACQEACQAAAAAAkQAAAAAACZEBERkAAAAAAJEAAAGQAAAAAQAJAAAAAACQAACQAAAACQkJAAAAAAAAEACQAAAAAAAAAACQAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "orbCollected3": {
+        "data": "hwQQABAAAAAAAACQAAAAAAAACAgICAAAAIAAAACAAAAACAAAAAAAAIAAAAAAAIAAAAAAAAAAAAiAAAAAAAAAAAEAAAAAAACYgAAAAAAAAIAAAAAAAAAACIAAAAAAAAAAAAgAAAAAAAgAAAAAAACAAAAACAAAAAgAAACAgICAAAAAAAAACQAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "orbCollected4": {
+        "data": "hwQQABAAAAAAAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACQAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "orbCollected": {
+        "namespace": "collectibles",
+        "id": "orbCollected",
+        "mimeType": "application/mkcd-animation",
+        "dataEncoding": "json",
+        "data": "{\"frames\":[\"collectibles.orbCollected1\",\"collectibles.orbCollected2\",\"collectibles.orbCollected3\",\"collectibles.orbCollected4\"],\"flippedHorizontal\":false}",
+        "displayName": "Bobbing Energy Orb - Collected"
+    },
+    "gemIdle1": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAAAAJiGCAAAAAAAEWmGAAAAAIAZmWkIAAAAmBmZmWYIAACYGZmZmYYAAJgZmZmJBgAAgBmZmWYAAAAAGJlpAAAAAAAQaQYAAAAAAIAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "gemIdle2": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAACIAAAAAAAAgGmIAAAAAACAkWYIAAAAAJiRmYYAAACAmZGZaYYAAICZkZmZaQgAgJmRmZloAAAAmJGZaQYAAACAkZkGAAAAAACRZgAAAAAAAGgAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "gemIdle3": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAAAAJiGCAAAAAAAGGmGAAAAAIAZmWkIAAAAmBmZmWYIAACYGZmZmYYAAJgRmZmJBgAAgBmZmWYAAAAAGJlpAAAAAAAQaQYAAAAAAIAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "gemIdle4": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAACQAAAAAAAAAAiAAAAAAAAIBpiAAAAAAAgJFmCAAAAACYkZmGAAAAgJmRmWmGAACAmZGZmWkIAICZkZmZaAAAAJiRmWkGAAAAgJGZBgAAAAAAkWYAAAAAAABoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "gemIdle": {
+        "namespace": "collectibles",
+        "id": "gemIdle",
+        "mimeType": "application/mkcd-animation",
+        "dataEncoding": "json",
+        "data": "{\"frames\":[\"collectibles.gemIdle1\",\"collectibles.gemIdle2\",\"collectibles.gemIdle3\",\"collectibles.gemIdle4\"],\"flippedHorizontal\":false}",
+        "displayName": "Shimmering Crystal - Idle"
+    },
+    "gemCollected1": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAQAAAAAAABERAQAAAAAAERERAAAAABAREREBAAAAEREREREBAAAREREREREAABERERERAQAAEBEREREAAAAAERERAAAAAAAQEQEAAAAAABABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "gemCollected2": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkACQAAABAAAAAAkJCQAAAACQEACQAAAAAAkQAAAAAACQEBERkAAAAAAJEAAACQAAAAAQAJAAAAAACQAACQAAAACQkJAAAAAAEAAACQAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "gemCollected3": {
+        "data": "hwQQABAAAAAAAABgAAAAABAABgYGBgAAEGAAAABgkAAABgAAAAAQAGAAAAAAAGAAAAAAAAAAAAZgAAAAAAAAAAYAAAAAAAAGYAAAAAAAAGAAAAAAAAAABmAAAAAAAAAAAAYAAAAAAAYAAAAAAABgAQABBgAAAAYJAAlgYGBgAAAAAAAABgAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "gemCollected4": {
+        "data": "hwQQABAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "gemCollected": {
+        "namespace": "collectibles",
+        "id": "gemCollected",
+        "mimeType": "application/mkcd-animation",
+        "dataEncoding": "json",
+        "data": "{\"frames\":[\"collectibles.gemCollected1\",\"collectibles.gemCollected2\",\"collectibles.gemCollected3\",\"collectibles.gemCollected4\"],\"flippedHorizontal\":false}",
+        "displayName": "Shimmering Crystal - Collected"
+    },
+    "starIdle1": {
+        "data": "hwQQABAAAAAAAEAAAAAAAAAAQAAAAAAAAABABAAAAAAAAEBFAABEAAAAQFVERAQAAABAVVVFAAAAQBRVVUUAAEBUUVVVBAAAAEBUVVVFAAAAAEBVVUUAAAAAQFVERAQAAABARQAARAAAAEAEAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "starIdle2": {
+        "data": "hwQQABAAAAAAAEAAAAAAAAAAQAAAAAAAAABABAAAAAAAAEBFAABEAAAAQFVERAQAAABAVVVFAAAAQBRVVUUAAEBUUVVVBAAAAEBUVVVFAAAAAEBVVUUAAAAAQFVERAQAAABARQAARAAAAEAEAAAAAAABQAAAAAAAEBEAAAAAAAAAAQAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "starIdle3": {
+        "data": "hwQQABAAAAAAAEAAAAAFAAAAQAAAUFUAAABABAAABQAAAEBFAABEAAAAQFVERAQAAABAVVVFAAAAQBRVVUUAAEBUUVVVBAAAAEBUVVVFAAAAAEBVVUUAAAAAQFVERAQAAABARQAARAAAAEAEAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "starIdle4": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAABEAAAAAAAAQFUERAQAAABAVUVFAAAAABRVVQQAAEBEUVVVBAAAAABUVVUEAAAAAEBVRUUAAAAAQFUERAQAAAAARAAAAAAAAAAEAAAAAAAAAAAAUAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "starIdle": {
+        "namespace": "collectibles",
+        "id": "starIdle",
+        "mimeType": "application/mkcd-animation",
+        "dataEncoding": "json",
+        "data": "{\"frames\":[\"collectibles.starIdle1\",\"collectibles.starIdle2\",\"collectibles.starIdle3\",\"collectibles.starIdle4\"],\"flippedHorizontal\":false}",
+        "displayName": "Pulsing Star - Idle"
+    },
+    "starCollected1": {
+        "data": "hwQQABAAAAAAABAAAAAAAAAAEAAAAAAAAAAQAQAAAAAAABARAAARAAAAEBEREQEAAAAQERERAAAAEBEREREAABARERERAQAAABARERERAAAAABAREREAAAAAEBEREQEAAAAQEQAAEQAAABABAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "starCollected2": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAABQAAAAAAAAAAUFBQAAAABQEABQAAAAAAUQAAAAAFBQEBERUAAAAAAFEAAABQUAAAAQAFAAAAAABQAABQAAAABQUFAAAAAAAAAABQAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "starCollected3": {
+        "data": "hwQQABAAAAAAAABAAAAAAAAABAQEBAAAAEAAAABQAAAAAQAAABAAAEABAAAAAEAAAAAAAAAAAARAAAAAAAAAAAQAAAAAAAAEQAAAAAAAAEAAAAAAAAAABEAAAAAAABAAAAQAAAAAUAQAAAEAAABAAAAABQAAAAQAAABAQEBAAAAAAAAABAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "starCollected4": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "starCollected": {
+        "namespace": "collectibles",
+        "id": "starCollected",
+        "mimeType": "application/mkcd-animation",
+        "dataEncoding": "json",
+        "data": "{\"frames\":[\"collectibles.starCollected1\",\"collectibles.starCollected2\",\"collectibles.starCollected3\",\"collectibles.starCollected4\"],\"flippedHorizontal\":false}",
+        "displayName": "Pulsing Star - Collected"
+    },
+    "heartIdle1": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAODu7g4AAAAAPjMz4gAAAAA+MzMiDgAAAOAxMyLiAAAA4DMzIiIOAAAALiIiIuIAAOAiIiIiDgAA4CIiIuIAAAAuIiIiDgAAAC4iIuIAAAAA4CLuDgAAAAAA7gAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "heartIdle2": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAMAAAAAAAAO7u7gAAAADgMzMjDgAAAOAzMyPiAAAAAB4zIyIOAAAAPjMjIuIAAADgIiIiIg4AAC4iIiLiAAAALiIiIg4AAOAiIiLiAAAA4CIiIg4AAAAALuLuAAAAAADgDgAAAAAAAAAwAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "heartIdle3": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAODu7g4AAAAAPjMz4gAAAAA+MzMiDgAAAOAxMyLiAAAA4DMzIiIOAAAALiIiIuIAAOAiIiIiDgAA4CIiIuIAAAAuIiIiDgAAAC4iIuIAAAAA4CLuDgAAAAAA7gAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "heartIdle4": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAADu7u4AAAAA4DMzIw4AAADgMzMj4gAAAAAeMyMiDgAAAD4zIyLiAAAA4CIiIiIOAAAuIiIi4gAAAC4iIiIOAADgIiIi4gAAAOAiIiIOAAAAAC7i7gAAAAAA4A4AAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "heartIdle": {
+        "namespace": "collectibles",
+        "id": "heartIdle",
+        "mimeType": "application/mkcd-animation",
+        "dataEncoding": "json",
+        "data": "{\"frames\":[\"collectibles.heartIdle1\",\"collectibles.heartIdle2\",\"collectibles.heartIdle3\",\"collectibles.heartIdle4\"],\"flippedHorizontal\":false}",
+        "displayName": "Beating Heart - Idle"
+    },
+    "heartCollected1": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAABAREQEAAAAAEREREQAAAAARERERAQAAABARERERAAAAEBEREREBAAAAEREREREAABARERERAQAAEBEREREAAAARERERAQAAABEREREAAAAAEBERAQAAAAAAEQAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "heartCollected2": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAMgICIgAAAAAgEAAgAAAAAAIQAAAAAAAgEBERIAAAAAACEAAAAgAAAAAQACAAAAAAAgAAAgAAAAAxICAQAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "heartCollected3": {
+        "data": "hwQQABAAAAAAAAAwAAAAAAAAAwMDAwAAABAAAAAwAAAAAwAAAAAAADAAAAAAADAAAAAAAAAAAAIwAAAAAAAAAAMAAAAAAAADMAAAAAAAADAAAAAAAAAAAzAAAAAAAAACAAMAAAAAAAMAAAAAAAAwAAAgAwAAAAMAAAAwMDAwAAAAAAAAAwAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "heartCollected4": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "heartCollected": {
+        "namespace": "collectibles",
+        "id": "heartCollected",
+        "mimeType": "application/mkcd-animation",
+        "dataEncoding": "json",
+        "data": "{\"frames\":[\"collectibles.heartCollected1\",\"collectibles.heartCollected2\",\"collectibles.heartCollected3\",\"collectibles.heartCollected4\"],\"flippedHorizontal\":false}",
+        "displayName": "Beating Heart - Collected"
+    },
+    "keyIdle1": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAADg7g4AAAAAAF5V5QAAAAAAXgDlAAAAAABeAOUAAAAAAF5V5QAAAAAA4O4OAAAAAAAQ5Q4AAAAAAADl7gAAAAAAAOXuAAAAAAAA5e4OAAAAAADl7g4AAAAAAO7uDgAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "keyIdle2": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAADu7gAAAAAA4FVVDgAAAADgBVAOAAAAAOAFUA4AAAAA4FVVDgAAAAAA7u4AAAAAAABQ7gAAAAAAAFHuDgAAAAAAUO4OAAAAAABQ7u4AAAAAAFDu7gAAAAAA4O7uAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "keyIdle3": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAADg7g4AAAAAAF5V5QAAAAAAXgDlAAAAAABeAOUAAAAAAF5V5QAAAAAA4O4OAAAAAAAA5Q4AAAAAAADl7gAAAAAAEOXuAAAAAAAA5e4OAAAAUADl7g4AAABVBe7uDgAAAFAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "keyIdle4": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA7u4AAAAAAOBVVQ4AAAAA4AVQDgAAAADgBVAOAAAAAOBVVQ4AAAAAAO7uAAAAAAAAUO4AAAAAAABQ7g4AAAAAAFDuDgAAAAAAUe7uAAAAAABQ7u4AAAAAAODu7gAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "keyIdle": {
+        "namespace": "collectibles",
+        "id": "keyIdle",
+        "mimeType": "application/mkcd-animation",
+        "dataEncoding": "json",
+        "data": "{\"frames\":[\"collectibles.keyIdle1\",\"collectibles.keyIdle2\",\"collectibles.keyIdle3\",\"collectibles.keyIdle4\"],\"flippedHorizontal\":false}",
+        "displayName": "Glinting Key - Idle"
+    },
+    "keyCollected1": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEQEAAAAAABEREQAAAAAAEQARAAAAAAAREBEAAAAAABEREQAAAAAAEBERAAAAAAAQEQEAAAAAAAAREQAAAAAAABERAAAAAAAAEREBAAAAAAAREQEAAAAAABERAQAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "keyCollected2": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAABQAAAAAAAAAAUFBQAAAABQEABQAAAAAQUQAAAAAABQEBERUAAAAAAFEAAAVQAAAAAQAFAAAAAABQAABQAAAABQUFAAAAAAAAUABQAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "keyCollected3": {
+        "data": "hwQQABAAAAAAAADgAAAAAAAADg4ODgEAAOAAAADgAAAADgAAAAAAAOAAAAAAAOAAUAAAAAAAAA7gAAAAAAAAAA4AAAAAAAAO4AAAAAAAAOAAAAAAAAAADuAAAAAAAAAAAA4AAAAAAA4AAAAAAADgBQAADgAAAA4AAABQ4ODgAAAAAAAADgAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "keyCollected4": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "keyCollected": {
+        "namespace": "collectibles",
+        "id": "keyCollected",
+        "mimeType": "application/mkcd-animation",
+        "dataEncoding": "json",
+        "data": "{\"frames\":[\"collectibles.keyCollected1\",\"collectibles.keyCollected2\",\"collectibles.keyCollected3\",\"collectibles.keyCollected4\"],\"flippedHorizontal\":false}",
+        "displayName": "Glinting Key - Collected"
+    },
+    "potionIdle1": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAAAOKiKAAAAgIE5qooAAICYmTmqigDgjpiZOaqKANCNmJk5qooA0I2YmTmqigDgjpiZOaqKAACAiIg5OooAAAAAADioCAAAAAAAMIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "potionIdle2": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAAAOKiKAAAAgIE5qooAAICYmTmqigDgjpiZOaqKANCNmJk5o4oA0I2YmTmqigDgjpiZOaqKAACAiIg5qooAAAAAADioCAAAAAAAMIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "potionIdle3": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACIAAAAAACAg6oIAAAAGJijqggAAIiZmaOqCADuiJmZo6oIAN2ImZmjqggA3YiZmaOqCADuiJmTo6oIAACIiJijqggAAAAAgIOKAAAAAAAAAwgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "potionIdle4": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAAAOKiKAAAAgIE5qooAAICYmTmqigDgjpiTOaqKANCNmJk5qooA0I2YmTmqigDgjpiZOaqKAACAiIg5qooAAKAAADioCAAAAAAAMIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "potionIdle": {
+        "namespace": "collectibles",
+        "id": "potionIdle",
+        "mimeType": "application/mkcd-animation",
+        "dataEncoding": "json",
+        "data": "{\"frames\":[\"collectibles.potionIdle1\",\"collectibles.potionIdle2\",\"collectibles.potionIdle3\",\"collectibles.potionIdle4\"],\"flippedHorizontal\":false}",
+        "displayName": "Bubbling Potion - Idle"
+    },
+    "potionCollected1": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAQAAAAAAMRETAAAAMBETMREAABATERETMQAQMRETMRETABATERERMREAMBETERETMQAQMRETMRETAAAQMRETMREAAAAAABETAQAAAAAAMBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "potionCollected2": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgAAAAAAAAAAoKCgAAAACgEACgAAAAAAMQAAAAAACgoBERoAAAAAAKEAAACgAAAAAQMKAAAAAKCgAACgAAADCgoKAAAAAAAAAACgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "potionCollected3": {
+        "data": "hwQQABAAAAAAAACAAAAAAAAACAgICAAAAIAAAACAAAAACAAAAAABAIAAAAAAAIAAAAAAAAAAAAiAAAAAAAAAAAgAAAAKAAAIgAAAAAAAAIAAAAAAAAAACIAAoAAAAAAAAAgAAAAAAAgAAAAAAACAAKAACAAAAAgAAACAgICAAAAAAAAACAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "potionCollected4": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "potionCollected": {
+        "namespace": "collectibles",
+        "id": "potionCollected",
+        "mimeType": "application/mkcd-animation",
+        "dataEncoding": "json",
+        "data": "{\"frames\":[\"collectibles.potionCollected1\",\"collectibles.potionCollected2\",\"collectibles.potionCollected3\",\"collectibles.potionCollected4\"],\"flippedHorizontal\":false}",
+        "displayName": "Bubbling Potion - Collected"
+    },
+    "berriesIdle1": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO4OAAAAAADgIeIAAAAAAD4iIg4AAAAAJyIiDgAAAHcuIiIOAAB3AODu7gAAAHcH4CLiAAAAd3A+IiIOAAB3ACciIg4AAAAALiIiDgAAAADgIuIAAAAAAADuDgAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "berriesIdle2": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4O4AAAAAAAAeIg4AAAAA4CMi4gAAAABwIiLiAAAAcOciIuIAAHAHAO7uDgAAAHcALiIOAABwB+cjIuIAAHAHcCIi4gAAcAfgIiLiAAAAAAAuIg4AAAAAAODuAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "berriesIdle3": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO4OAAAAAADgIeIAAAAAAD4iIg4AAAAAJyIiDgAAAHcuIiIOAAB3AODu7gAAAHAH4CLiAAAAd3A+IiIOAAB3ACciIg4AAHcALiIiDgAAAADgIuIAAAAAAADuDgAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "berriesIdle4": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAODuAAAAAAAAHiIOAAAAAOAjIuIAAAAAcCIi4gAAAHDnIiLiAABwBwDu7g4AAHB3AC4iDgAAcAfnIyLiAABwB3AiIuIAAAAA4CIi4gAAAAAALiIOAAAAAADg7gAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "berriesIdle": {
+        "namespace": "collectibles",
+        "id": "berriesIdle",
+        "mimeType": "application/mkcd-animation",
+        "dataEncoding": "json",
+        "data": "{\"frames\":[\"collectibles.berriesIdle1\",\"collectibles.berriesIdle2\",\"collectibles.berriesIdle3\",\"collectibles.berriesIdle4\"],\"flippedHorizontal\":false}",
+        "displayName": "Bouncing Berries - Idle"
+    },
+    "berriesCollected1": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEDAAAAAAAQMREAAAAAABETMQEAAAAAERETAQAAABETMREDAAATEBERMQAAABEDEBETAAAAMRATMREDAAATABETMQEAAAAAMRETAQAAAAAQMREAAAAAAAATAQAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "berriesCollected2": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiAAAAAAAAAAICAgAAAAAgEAAgAgAAAAIQAAAAAAAgEBERIAAAAAACEAAAAgAAAAAQACAAAAAAAgAAAgMAAAAgICAAAAAAAAADAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "berriesCollected3": {
+        "data": "hwQQABAAAAAAAABwAAAAAAAAAQcHBwAAAHAAAABwAAAABwAAAAAgAHAAAAAAAHAAAAAAAAAAAAdwAAAAAAAAAAcAAAAAAAAHcAAAAAAAAHAAAAAAAAAAB3AAAAAAAAAAAAcAAAAAAAcAAAAAAABwAgAABwAAAAcAAAAgcHBwAAAAAAAABwAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "berriesCollected4": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "berriesCollected": {
+        "namespace": "collectibles",
+        "id": "berriesCollected",
+        "mimeType": "application/mkcd-animation",
+        "dataEncoding": "json",
+        "data": "{\"frames\":[\"collectibles.berriesCollected1\",\"collectibles.berriesCollected2\",\"collectibles.berriesCollected3\",\"collectibles.berriesCollected4\"],\"flippedHorizontal\":false}",
+        "displayName": "Bouncing Berries - Collected"
+    },
+    "gearIdle1": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAMAMAAAAAAAAsAsAAAAAAADMzAAAAAAAzLu7zAAAAACxu7vLAAAAwLsLsLsMAMDLuwAAu7wMwMu7AAC7vAwAwLsLsLsMAAAAvLu7ywAAAADMu7vMAAAAAADMzAAAAAAAALALAAAAAAAAwAwAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "gearIdle2": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAAwADMzAsMAAAMy7u7vAAAALC8u7vLAAAAwLsLsLsMAADAuwAAuwwAAMC7AAC7DAAAwLsLsLsMAACwsbu7ywAAAAzLu7u8AAAAwADMzAsMAAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "gearIdle3": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAMAMAAAAAAAAsAsAAAAAAADMzAAAAAAAzLu7zAAAAAC8u7vLAAAAwLsLsLsMAMDLuwAAu7wMwMu7AAC7vAwAwLsLsLsMAAAAvLu7GwAAAADMu7vMAAAAAADMzAAAAAAAALALAAAAAAAAwAwAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "gearIdle4": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAAwADMzAsMAAAMy7u7vAAAALC8u7sbAAAAwLsLsLsMAADAuwAAuwwAAMC7AAC7DAAAwLsLsLsMAACwvLu7ywAAAAzLu7u8AAAAwADMzAsMAAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "gearIdle": {
+        "namespace": "collectibles",
+        "id": "gearIdle",
+        "mimeType": "application/mkcd-animation",
+        "dataEncoding": "json",
+        "data": "{\"frames\":[\"collectibles.gearIdle1\",\"collectibles.gearIdle2\",\"collectibles.gearIdle3\",\"collectibles.gearIdle4\"],\"flippedHorizontal\":false}",
+        "displayName": "Turning Gear - Idle"
+    },
+    "gearCollected1": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAABABAAAAAAAAEAEAAAAAAAAREQAAAAAAEREREQAAAAARERERAAAAEBEREBEBABAREREREREBEBEREAAREQEAEBEREBEBAAAAEREREQAAAAARERERAAAAAAAREQAAAAAAABABAAAAAAAAEAEAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "gearCollected2": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAsAAAAAAAAACwABAAAAAQAAsLCwAAAACwEACwAAAAAAsQAAAAAACwEBERsLAAAAsLEAAACwAAAAAQALAAAAAACwAACwAAAACwsLAAAQAAAAEACwAAAAAAAAALAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "gearCollected3": {
+        "data": "hwQQABAAAAAAAADAAAAAABAADAwMDAAAEMAAAADAsAAADAAAAAAQAMAAAAAAAMAAAAAAAAAAAAzAAAAAAAAAAAwAAAAAAAAMwAAAAAAAAMAAAAAAAAAADMAAAAAAAAAAAAwAAAAAAAwAAAAAAADAAQABDAAAAAwLAAvAwMDAAAAAAAAADAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "gearCollected4": {
+        "data": "hwQQABAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALAAsAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "gearCollected": {
+        "namespace": "collectibles",
+        "id": "gearCollected",
+        "mimeType": "application/mkcd-animation",
+        "dataEncoding": "json",
+        "data": "{\"frames\":[\"collectibles.gearCollected1\",\"collectibles.gearCollected2\",\"collectibles.gearCollected3\",\"collectibles.gearCollected4\"],\"flippedHorizontal\":false}",
+        "displayName": "Turning Gear - Collected"
+    },
+    "batteryIdle1": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACIiIiIiIgIABjMzMzMzAiwyMzMbGbGCLDIzMxsZsYIsMjMzGxmxgiwyMzMbGbGCADIzMzMzMwIAIiIiIiIiAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "batteryIdle2": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACIiIiIiIgIABjMzMzMzAiwyMxmZmbGCLDInGlmZsYIsMicaWZmxgiwyMxmZmbGCADIzMzMzMwIAIiIiIiIiAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "batteryIdle3": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAAICIiIiIiIgAgMHMzMzMjACLZmZmZmaMAJtpZmZmZowAm2lmZmZmjACLZmZmZmaMAIDMzMzMzIwAgIiIiIiIiAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "batteryIdle4": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACIiIiIiIgIABjMzMzMzAiwyMxmZmbGCLDIzGZmZsYIsMjMZmZmxgiwyMxmZmbGCADIzMzMzMwIAIiIiIiIiAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "batteryIdle": {
+        "namespace": "collectibles",
+        "id": "batteryIdle",
+        "mimeType": "application/mkcd-animation",
+        "dataEncoding": "json",
+        "data": "{\"frames\":[\"collectibles.batteryIdle1\",\"collectibles.batteryIdle2\",\"collectibles.batteryIdle3\",\"collectibles.batteryIdle4\"],\"flippedHorizontal\":false}",
+        "displayName": "Pulsing Energy Cell - Idle"
+    },
+    "batteryCollected1": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAREREREREBABEREREREQEQERERERERARAREREREREBEBEREREREQEQERERERERAQAREREREREBABEREREREQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "batteryCollected2": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACQkAAAAAAAAAkJCQAAAACQEZmQAAAAAAmQAAAAAACQEBEZkAAAAAAJEAAACQAAABAQCZAAAAAACZkACQAAAACQkJAAAAAAAACQCQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "batteryCollected3": {
+        "data": "hwQQABAAAAAAAACAAAAAAAAACAgIGAAAAIAAAACAAAAACAAAAAAAAIAJAAAAAIAAAAAAAAAAAAiAAAAAAAAAAAgAAAAAAAAIgAAAAAAAAIAAAAAAAAAACIAAAAAAAAAAAAgAAAAAkAgAAAAAAACAAAAACAAAAAgAAACJgICAAAAAAAAACAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "batteryCollected4": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "batteryCollected": {
+        "namespace": "collectibles",
+        "id": "batteryCollected",
+        "mimeType": "application/mkcd-animation",
+        "dataEncoding": "json",
+        "data": "{\"frames\":[\"collectibles.batteryCollected1\",\"collectibles.batteryCollected2\",\"collectibles.batteryCollected3\",\"collectibles.batteryCollected4\"],\"flippedHorizontal\":false}",
+        "displayName": "Pulsing Energy Cell - Collected"
+    },
+    "crownIdle1": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAADg7gAAAAAAAABe7u4OAAAAEOBV5Q4AAAAAXlXlDgAAAO5VVeUOAADuVVWl5Q4AAADuVaXlDgAAAABeVeUOAAAAAF5V5Q4AAADgVe7lDgAAAO7uAO4OAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "crownIdle2": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAADuDgAAAAAAAODl7u4AAAAAAV5V7gAAAADgVVXuAAAA4F5VVe4AAOBeVVVa7gAAAOBeVVruAAAAAOBVVe4AAAAA4FVV7gAAAABe5V7uAAAA4O4O4O4AABAAAAAAAAAAEQEAAAAAAAAQAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "crownIdle3": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAADg7gAAAAAAAABe7u4OAAAAEOBV5Q4AAAAAXlXlDgAAAO5VVeUOAADuVVWl5Q4AAADuVaXlDgAAAABeVeUOAAAAAF5V5Q4AAADgVe7lDgAAAO7uAO4OAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "crownIdle4": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAABQAAAAAAAAAA7g4AAAAAAADg5e7uAAAAAAFeVe4AAAAA4FVV7gAAAOBeVVXuAADgXlVVWu4AAADgXlVa7gAAAADgVVXuAAAAAOBVVe4AAAAAXuVe7gAAAODuDuDuAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "crownIdle": {
+        "namespace": "collectibles",
+        "id": "crownIdle",
+        "mimeType": "application/mkcd-animation",
+        "dataEncoding": "json",
+        "data": "{\"frames\":[\"collectibles.crownIdle1\",\"collectibles.crownIdle2\",\"collectibles.crownIdle3\",\"collectibles.crownIdle4\"],\"flippedHorizontal\":false}",
+        "displayName": "Floating Crown - Idle"
+    },
+    "crownCollected1": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEQAAAAAAAAAREREBAAAAEBAREQEAAAAAERERAQAAABEREREBAAAREREREQEAAAARERERAQAAAAAREREBAAAAABEREQEAAAAQERERAQAAABERABEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "crownCollected2": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFBQAAAAAAAAAAUFBQAAAABQEAAQAAAAAAUQAAAAAABREBERUAAAAAAFEAAABQAAAAAQAFAAAAAABQAAVQAAAABQUFAAAAAAAFAABQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "crownCollected3": {
+        "data": "hwQQABAAAAAAAADgAAAAAAABDg4ODgAAAOEAAADgUAAADgAAAAAQAOAAAAAAAOAAAAAAAAAAAA7gAAAAAAAAAA4AAAAAAAAO4AAAAAAAAOAAAAAAAAAADuAAAAAAAAAAAA4AAAAAAA4AAAAAAAAQAAABDgAAAF4AAAXg4ODgAAAAAAAADgAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "crownCollected4": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "crownCollected": {
+        "namespace": "collectibles",
+        "id": "crownCollected",
+        "mimeType": "application/mkcd-animation",
+        "dataEncoding": "json",
+        "data": "{\"frames\":[\"collectibles.crownCollected1\",\"collectibles.crownCollected2\",\"collectibles.crownCollected3\",\"collectibles.crownCollected4\"],\"flippedHorizontal\":false}",
+        "displayName": "Floating Crown - Collected"
+    },
+    "featherIdle1": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAAAAAAAAAAAIALAAAAAACB2AAAAACQANgNAAAAAACACQAAAACQgJ0AAAAAAADYAAAAAACQ2AkBAAAAAIANAAAAAAAAEJABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "featherIdle2": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuAAAAAAAkIgNAAAAAAmA3QAAAAAAABgAAAAAAAnYAQAAAAAAgA0AAAAAAImdkAAAAAAA2AAAAAAAAAAJkQCQAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "featherIdle3": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAAAAAAAAIALAAAAAACJ2AAAAAAQANgNAAAAAACACQAAAAAQgJ0AAAAAAADYAAAAAAAQ2AEJAAAAAIANAAAAAAAAkJAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "featherIdle4": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuAAAAAAAEIgNAAAAAAmA3QAAAAAAAJgAAAAAAAnYCQAAAAAAgA0AAAAAAImdEAAAAAAA2AAAAAAAAAABGQAAAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "featherIdle": {
+        "namespace": "collectibles",
+        "id": "featherIdle",
+        "mimeType": "application/mkcd-animation",
+        "dataEncoding": "json",
+        "data": "{\"frames\":[\"collectibles.featherIdle1\",\"collectibles.featherIdle2\",\"collectibles.featherIdle3\",\"collectibles.featherIdle4\"],\"flippedHorizontal\":false}",
+        "displayName": "Drifting Feather - Idle"
+    },
+    "featherCollected1": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAABABAAAAEAAREQAAAAAQABEBAAAAEBERAQAAAAAQEBEAAAAAAAARAAAAAAAQEQEBAAAAABABAAAAAAAAEBABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "featherCollected2": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACQAAAAAAAAAAkJmQAAAACQEACQAAAAAAkQAQAAAACQEBERkAAAAAAJGQAACQAAAAAQAJAAAAAQCQAACQAAAACQkJAAAAAAAAAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "featherCollected3": {
+        "data": "hwQQABAAAAAAAACAAAAAAAAACAgICAAAAIAAAACAEAAACAAAAAAAAIAAAAAAAIEAAAAAAJARAAiAAAAAEAAAAAgAABABAAAIgAAQAQAAAIAAAJEAAAAACIAAAAAAAAAAAAgAAAAAAAgAAAAAAACAAJAACAAAAAgAAACAgICAAAAAAAAACAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "featherCollected4": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "featherCollected": {
+        "namespace": "collectibles",
+        "id": "featherCollected",
+        "mimeType": "application/mkcd-animation",
+        "dataEncoding": "json",
+        "data": "{\"frames\":[\"collectibles.featherCollected1\",\"collectibles.featherCollected2\",\"collectibles.featherCollected3\",\"collectibles.featherCollected4\"],\"flippedHorizontal\":false}",
+        "displayName": "Drifting Feather - Collected"
+    }
+}

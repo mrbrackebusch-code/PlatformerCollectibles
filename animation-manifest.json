@@ -1,0 +1,974 @@
+{
+    "pack": "Platformer Animated Collectibles",
+    "version": "0.0.1",
+    "generator": "build_collectibles.py",
+    "license": "MIT",
+    "palette": [
+        "#000000",
+        "#ffffff",
+        "#ff2121",
+        "#ff93c4",
+        "#ff8135",
+        "#fff609",
+        "#249ca3",
+        "#78dc52",
+        "#003fad",
+        "#87f2ff",
+        "#8e2ec4",
+        "#a4839f",
+        "#5c406c",
+        "#e5cdc4",
+        "#91463d",
+        "#000000"
+    ],
+    "family_count": 12,
+    "animation_count": 24,
+    "frame_count": 96,
+    "facts": {
+        "dimensions": "16x16",
+        "frames_per_animation": 4,
+        "idle_animations_loop": true,
+        "collected_animations_loop": false,
+        "stock_destroy_effects_used": false,
+        "main_ts_is_empty": true,
+        "asset_pack_enabled": true
+    },
+    "families": [
+        {
+            "id": "coin",
+            "name": "Spinning Coin",
+            "width": 16,
+            "height": 16,
+            "states": {
+                "idle": {
+                    "animation_id": "coinIdle",
+                    "frame_ms": 120,
+                    "loop": true,
+                    "frames": [
+                        {
+                            "index": 1,
+                            "png": "frames/coin/idle-1.png",
+                            "png_sha256": "bd0cf3dc03fae7c3dff03858c1546a6969e2369358c65037984f20fff190f912",
+                            "f4_sha256": "27aa99163be84a071124d90cd36eb5cfc081cb4b925b4dc5e69ded811dfe0fd6",
+                            "opaque_pixels": 96
+                        },
+                        {
+                            "index": 2,
+                            "png": "frames/coin/idle-2.png",
+                            "png_sha256": "326c0ac58bdcbd9816b37974ae12b2a0d30810092ae0d2fa3e291b1a87fdd77c",
+                            "f4_sha256": "20bdde65d1c127494227992883a7fb1cc83cbf4efec7fb5b562b0152ebb58f60",
+                            "opaque_pixels": 56
+                        },
+                        {
+                            "index": 3,
+                            "png": "frames/coin/idle-3.png",
+                            "png_sha256": "dc08a876e9ee5b7356b346f0c6772509bcb4aefd9a32fe6a0bd425b0fe745d3d",
+                            "f4_sha256": "996803633118b5eb6fd2cd3623166cf109c6394e5e62e2284a2713e4d2efe298",
+                            "opaque_pixels": 20
+                        },
+                        {
+                            "index": 4,
+                            "png": "frames/coin/idle-4.png",
+                            "png_sha256": "f79954a9242524e54079d9e814e3d143f9d9e12a7bc3cb23ceb1e4d4d2f92b4a",
+                            "f4_sha256": "d63ebef8b1a454cf00736b7e0aa42040beb58e25a17ba0aa3ebfdad28b6348f9",
+                            "opaque_pixels": 56
+                        }
+                    ]
+                },
+                "collected": {
+                    "animation_id": "coinCollected",
+                    "frame_ms": 75,
+                    "loop": false,
+                    "frames": [
+                        {
+                            "index": 1,
+                            "png": "frames/coin/collected-1.png",
+                            "png_sha256": "e4043dd0aa9839a2b4dbc045a0f3884e3889148698c984c2a25b47cd6b0aa2fd",
+                            "f4_sha256": "dce05371b6e63cad1b0d4930870c04ae9c0ae8fde924c42bc1270e9844db40f3",
+                            "opaque_pixels": 96
+                        },
+                        {
+                            "index": 2,
+                            "png": "frames/coin/collected-2.png",
+                            "png_sha256": "5377b5622933de66412dfb38a0b34485fd914977c72a5efe9e2a6bdbe47a3dd8",
+                            "f4_sha256": "133406279b6f42b6e5da9e74f3d0b1783c2f4ea54f3c7f78a96efe1c13b84893",
+                            "opaque_pixels": 31
+                        },
+                        {
+                            "index": 3,
+                            "png": "frames/coin/collected-3.png",
+                            "png_sha256": "c76f3c16ae8926d447543a8db726e4ce8ce4316ca9e4f0ec2df0ce1d0af233d1",
+                            "f4_sha256": "fcf5d1cc55823c47e3ae534a8a472a3e2a6201c545b6a6c8deeb41cbe9857a1b",
+                            "opaque_pixels": 43
+                        },
+                        {
+                            "index": 4,
+                            "png": "frames/coin/collected-4.png",
+                            "png_sha256": "e08aa172575284b7968121d6cbd93f6208b24f396ae4cb1e09a442b903b905dc",
+                            "f4_sha256": "da80c82f1c05a74f619be4f2e7c9276cc5a7d9548fd402b68e9f0851f864327b",
+                            "opaque_pixels": 2
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "orb",
+            "name": "Bobbing Energy Orb",
+            "width": 16,
+            "height": 16,
+            "states": {
+                "idle": {
+                    "animation_id": "orbIdle",
+                    "frame_ms": 150,
+                    "loop": true,
+                    "frames": [
+                        {
+                            "index": 1,
+                            "png": "frames/orb/idle-1.png",
+                            "png_sha256": "a4d631eab70579e3c4005cad31ae45ff38808c43a6757ccf3da92207e8225279",
+                            "f4_sha256": "f5a1009e14bb91e65410355d2b5bc4cbef97bf38d39ec9e25aad57b6a45d1b0c",
+                            "opaque_pixels": 82
+                        },
+                        {
+                            "index": 2,
+                            "png": "frames/orb/idle-2.png",
+                            "png_sha256": "e669a1d8ce5249b5b12aafbc8b384fc604173d5dbe178575f7040a2299e183cb",
+                            "f4_sha256": "104299dd3cca3011339cdfaa21736fba3bda45349cd681b81164ae72433efa23",
+                            "opaque_pixels": 82
+                        },
+                        {
+                            "index": 3,
+                            "png": "frames/orb/idle-3.png",
+                            "png_sha256": "c4073ab69efbf12ef429383bfe3ef24cd50056c2d6d1881b565a75247ba7e145",
+                            "f4_sha256": "271f2fc38d33da645c9b2e8ea92ca53818d0d59edd774351fda65fed63a37d6b",
+                            "opaque_pixels": 82
+                        },
+                        {
+                            "index": 4,
+                            "png": "frames/orb/idle-4.png",
+                            "png_sha256": "5fa4ed7986c4bc0b123da2962a2680974509260f7977dfc3ac6d5e2bc0f29c36",
+                            "f4_sha256": "35b36e0019250f0c44a9515593f257332face2dcdfd26801b6f437594077f3f0",
+                            "opaque_pixels": 82
+                        }
+                    ]
+                },
+                "collected": {
+                    "animation_id": "orbCollected",
+                    "frame_ms": 75,
+                    "loop": false,
+                    "frames": [
+                        {
+                            "index": 1,
+                            "png": "frames/orb/collected-1.png",
+                            "png_sha256": "8d8d3e3601c2b0897b76ff2ef7f12362cd83d2b6bded7b675e6cd45aa1cdbd43",
+                            "f4_sha256": "0dd070ecd8be1f26c4eb97ee65f125689e5a32d77b8fd128342019a30f006d9f",
+                            "opaque_pixels": 82
+                        },
+                        {
+                            "index": 2,
+                            "png": "frames/orb/collected-2.png",
+                            "png_sha256": "a8d3d997f697af2d1af652f2db267f257347d104a39910038e4265407c532cad",
+                            "f4_sha256": "384772a819b7ee2e41f6b1592726f4db5cdaebbf4dad26a535fbeff03b7733f3",
+                            "opaque_pixels": 33
+                        },
+                        {
+                            "index": 3,
+                            "png": "frames/orb/collected-3.png",
+                            "png_sha256": "e7b71884289900e336188c0a12ee4c8490566e5514c234098931875166598f88",
+                            "f4_sha256": "f0bcdd376f815a11f8bbda49ec92fa7d391c4f1959d53d1725c8b436d1b2da65",
+                            "opaque_pixels": 29
+                        },
+                        {
+                            "index": 4,
+                            "png": "frames/orb/collected-4.png",
+                            "png_sha256": "1221d43527cc39ea5fcbd087c07d56ea93c1c03b038e40c50cbeff9582164fc3",
+                            "f4_sha256": "ceeb756141a8f79cab705c34dcd7e133626f529b90051aeaa203ca5cc0c90b9f",
+                            "opaque_pixels": 4
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "gem",
+            "name": "Shimmering Crystal",
+            "width": 16,
+            "height": 16,
+            "states": {
+                "idle": {
+                    "animation_id": "gemIdle",
+                    "frame_ms": 140,
+                    "loop": true,
+                    "frames": [
+                        {
+                            "index": 1,
+                            "png": "frames/gem/idle-1.png",
+                            "png_sha256": "344d202c719dd0251a2716d91ecec0b030b1623c53e3270099cae4efe5197889",
+                            "f4_sha256": "fc2ba10337eb3ed14dd72ab2413ea51e589583545b3c43f4acb0fcaec532f1f3",
+                            "opaque_pixels": 76
+                        },
+                        {
+                            "index": 2,
+                            "png": "frames/gem/idle-2.png",
+                            "png_sha256": "8660dcd5837a928ea483db9d104884dd8cee9ded486c4f962530144fd499340e",
+                            "f4_sha256": "fc502d846fbe7d582324866d83ba9426147318b485a1647073d0c2e1063b9d3e",
+                            "opaque_pixels": 77
+                        },
+                        {
+                            "index": 3,
+                            "png": "frames/gem/idle-3.png",
+                            "png_sha256": "34d1c238b5071e1807a68b08d791baacd0c9a370a788aa76b6cc70afdf1be91d",
+                            "f4_sha256": "55cd7ab276a253e311e13919316800c70acf44f9fc9fe4624e5e990ad25eb042",
+                            "opaque_pixels": 76
+                        },
+                        {
+                            "index": 4,
+                            "png": "frames/gem/idle-4.png",
+                            "png_sha256": "bee9779866490d8da480861131daed1c336cb60e4d6352c491812e1881d4aec1",
+                            "f4_sha256": "61bb7ed006c70b26267dbea09e9f270c92a5193513f1e0615631ea269c5e0595",
+                            "opaque_pixels": 77
+                        }
+                    ]
+                },
+                "collected": {
+                    "animation_id": "gemCollected",
+                    "frame_ms": 75,
+                    "loop": false,
+                    "frames": [
+                        {
+                            "index": 1,
+                            "png": "frames/gem/collected-1.png",
+                            "png_sha256": "daa3db8b0d40ac56915eda05b378ca07b33a270d2a3a58a06660a3ef340430a5",
+                            "f4_sha256": "244ac6f063dbfe4c45b47ad1b139d94806e0c5e964c647d630c7ab0c4ab656e6",
+                            "opaque_pixels": 76
+                        },
+                        {
+                            "index": 2,
+                            "png": "frames/gem/collected-2.png",
+                            "png_sha256": "9f6b5575adee9c70455e0797827e3c7fa4868e1eb500a17b8dafc2e64ce491e0",
+                            "f4_sha256": "a80f77a843c268b8069ca58ce5f34f22396943d8589738855eb0a5e4e1f0dd5d",
+                            "opaque_pixels": 31
+                        },
+                        {
+                            "index": 3,
+                            "png": "frames/gem/collected-3.png",
+                            "png_sha256": "d50b5766439dd6edefb9245212bccacb176c8bebb31aa0cc73b1b2e9b1840fe9",
+                            "f4_sha256": "4aee8adb8c40d58e55e4ac5ab49927bad0314cc1a0d76555f05c2e6edd0a4319",
+                            "opaque_pixels": 36
+                        },
+                        {
+                            "index": 4,
+                            "png": "frames/gem/collected-4.png",
+                            "png_sha256": "7cc6dabee435200d7c4217112b6577765bbd07333e41b07b34ca670a07e5889e",
+                            "f4_sha256": "2ff1b111475d234187f5b6f0a93bda22d3f3d8e8c9b7d52b46212a7637279aae",
+                            "opaque_pixels": 2
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "star",
+            "name": "Pulsing Star",
+            "width": 16,
+            "height": 16,
+            "states": {
+                "idle": {
+                    "animation_id": "starIdle",
+                    "frame_ms": 130,
+                    "loop": true,
+                    "frames": [
+                        {
+                            "index": 1,
+                            "png": "frames/star/idle-1.png",
+                            "png_sha256": "3b1a6357b81e0d4efdfaede745e095b5fd9c9292a3b23ab2e219a53229582075",
+                            "f4_sha256": "b36e7e96fbdc1fa96dc69135caec59bcbc1ac42992a0b2d8209b2459e3bc5fa4",
+                            "opaque_pixels": 75
+                        },
+                        {
+                            "index": 2,
+                            "png": "frames/star/idle-2.png",
+                            "png_sha256": "debacae49db95a28fb921058b80d4704a4c58a6953c9a1fa90b05cfe0dff3f7d",
+                            "f4_sha256": "a1d93d38638c1487bdba9df81ee117116b152cc66253ce4ad2c0331a5cb0737b",
+                            "opaque_pixels": 80
+                        },
+                        {
+                            "index": 3,
+                            "png": "frames/star/idle-3.png",
+                            "png_sha256": "ba4cd75e43840e00f16367627e04c0bca218bda3a517652effee02d8baa4f4f6",
+                            "f4_sha256": "09358afd743a0ec09a7310284bdff4858f850582dec7bec83b66b32f60fce1e9",
+                            "opaque_pixels": 80
+                        },
+                        {
+                            "index": 4,
+                            "png": "frames/star/idle-4.png",
+                            "png_sha256": "654d5d9ad71184191ecd3e7139a8c5ed25a13522a70c0fc7f10e48b81c4bf94d",
+                            "f4_sha256": "e711e726f93727df8f117dd3f8c850a455df8c19305c1a7d3adefb696ab92ac9",
+                            "opaque_pixels": 59
+                        }
+                    ]
+                },
+                "collected": {
+                    "animation_id": "starCollected",
+                    "frame_ms": 75,
+                    "loop": false,
+                    "frames": [
+                        {
+                            "index": 1,
+                            "png": "frames/star/collected-1.png",
+                            "png_sha256": "ddee65ed20e6e329fc0ac74492d7abfe6bfea561258157da5d8eab2863ab9b94",
+                            "f4_sha256": "f2ce74e2c2c0ff8a57186a9aad0ded1814a0bf1511ffa4634d267485f53b2be7",
+                            "opaque_pixels": 75
+                        },
+                        {
+                            "index": 2,
+                            "png": "frames/star/collected-2.png",
+                            "png_sha256": "5377b5622933de66412dfb38a0b34485fd914977c72a5efe9e2a6bdbe47a3dd8",
+                            "f4_sha256": "133406279b6f42b6e5da9e74f3d0b1783c2f4ea54f3c7f78a96efe1c13b84893",
+                            "opaque_pixels": 31
+                        },
+                        {
+                            "index": 3,
+                            "png": "frames/star/collected-3.png",
+                            "png_sha256": "03d75d14c7fc8b3b09dfb95af5d1c58566de83aff68f1e6819f5dbde5a3cb358",
+                            "f4_sha256": "d73b06fd28a435c052c3f07b27f72382be0936f61cade7f5c199a8997b6750a5",
+                            "opaque_pixels": 33
+                        },
+                        {
+                            "index": 4,
+                            "png": "frames/star/collected-4.png",
+                            "png_sha256": "8321eb4bbb259c682d277faf0df1bb5d5e00ad76f7a606a2ad35d355900818a2",
+                            "f4_sha256": "f93edd3a1716ca608dc1d56e847faf5238c010a16047948876151354edef2d0a",
+                            "opaque_pixels": 2
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "heart",
+            "name": "Beating Heart",
+            "width": 16,
+            "height": 16,
+            "states": {
+                "idle": {
+                    "animation_id": "heartIdle",
+                    "frame_ms": 150,
+                    "loop": true,
+                    "frames": [
+                        {
+                            "index": 1,
+                            "png": "frames/heart/idle-1.png",
+                            "png_sha256": "aa5bfa075a2483e2ef76d96e4a4f245866cb50e14acbfbbb70af1948e175e24f",
+                            "f4_sha256": "0c059189fc9d30b38d45165c125eb5c03d224ea0f9376da453ff7133fd56c0c0",
+                            "opaque_pixels": 96
+                        },
+                        {
+                            "index": 2,
+                            "png": "frames/heart/idle-2.png",
+                            "png_sha256": "f09a6fd1aecd336d15f5f5459d751dafc5708cbe0a7a408259698e02afd87f76",
+                            "f4_sha256": "7a2c3e2c6948a8c6eb342aefb5d2393119f4bee2177dad8ca61c6f98cba47a1b",
+                            "opaque_pixels": 98
+                        },
+                        {
+                            "index": 3,
+                            "png": "frames/heart/idle-3.png",
+                            "png_sha256": "aa5bfa075a2483e2ef76d96e4a4f245866cb50e14acbfbbb70af1948e175e24f",
+                            "f4_sha256": "0c059189fc9d30b38d45165c125eb5c03d224ea0f9376da453ff7133fd56c0c0",
+                            "opaque_pixels": 96
+                        },
+                        {
+                            "index": 4,
+                            "png": "frames/heart/idle-4.png",
+                            "png_sha256": "6cd1b28333d3cf737c9ce94ac6ff6e269b2eb592caff9f0e96a21794ec1d5611",
+                            "f4_sha256": "8742e85d3ff7583859a86d1a15b342750e8d6f0fe9e0355c6a1ad25c360a6401",
+                            "opaque_pixels": 96
+                        }
+                    ]
+                },
+                "collected": {
+                    "animation_id": "heartCollected",
+                    "frame_ms": 75,
+                    "loop": false,
+                    "frames": [
+                        {
+                            "index": 1,
+                            "png": "frames/heart/collected-1.png",
+                            "png_sha256": "1b265115a90f94aa8ed7f6a1cff43259f644e9332b34a80cbe23095ad0f8b3d3",
+                            "f4_sha256": "c0ca4e49a0f7844f550618c8b49fe5d76a750e631a35138bf71dab2256808915",
+                            "opaque_pixels": 96
+                        },
+                        {
+                            "index": 2,
+                            "png": "frames/heart/collected-2.png",
+                            "png_sha256": "c44ed8e1a1365f62e82e6029da3e2a27b083c2af7db99450d0c32ab0a08e3c93",
+                            "f4_sha256": "814cc498d79e5ec0b3b89c94b685e196be6da33cb2ab1f27946cff3422ef7347",
+                            "opaque_pixels": 32
+                        },
+                        {
+                            "index": 3,
+                            "png": "frames/heart/collected-3.png",
+                            "png_sha256": "1b1e6ddde35d7a6fdeb66884e3bdb27043959bae60b317dfe5178b15b093e3f2",
+                            "f4_sha256": "c6a0d9a3f960aaa4fe2075e99259ec33c0a524086a4da73f82f43e452e8edd39",
+                            "opaque_pixels": 30
+                        },
+                        {
+                            "index": 4,
+                            "png": "frames/heart/collected-4.png",
+                            "png_sha256": "feb482ab85cb414dec3fd0c5724f770a546de476fce32bcc2dac3fe53b55f70f",
+                            "f4_sha256": "8d86fe66e917a40f8b3b030e84d257c8e42ad57fef6a175150082716b5ea6e56",
+                            "opaque_pixels": 2
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "key",
+            "name": "Glinting Key",
+            "width": 16,
+            "height": 16,
+            "states": {
+                "idle": {
+                    "animation_id": "keyIdle",
+                    "frame_ms": 150,
+                    "loop": true,
+                    "frames": [
+                        {
+                            "index": 1,
+                            "png": "frames/key/idle-1.png",
+                            "png_sha256": "24b9d0450ddbf20ce9ac841b4658b31d7a39136be136bef482a23fdf05b8b19d",
+                            "f4_sha256": "94ed48f53e0e413a35adbf06945d61f7cbf5ab7c918ef8c2f77a347bc45baeec",
+                            "opaque_pixels": 55
+                        },
+                        {
+                            "index": 2,
+                            "png": "frames/key/idle-2.png",
+                            "png_sha256": "e9c7a21641a48098ba62b714c78ccfd70ce68f725631211d63cb6bebb80902d5",
+                            "f4_sha256": "b54965e584d7d5add5dafd62cf349712044d2bb93d1b04f45791614ffd81783f",
+                            "opaque_pixels": 55
+                        },
+                        {
+                            "index": 3,
+                            "png": "frames/key/idle-3.png",
+                            "png_sha256": "e81a1f26d67ad47dbf0ae7767e5dca6df3aaa1be9f91b02c699327a4cd60dfc0",
+                            "f4_sha256": "ba96c03245bb92e4a1215b664e0bfcf8ab5b8ec33aae0e06c6d85f81f2dd7cbc",
+                            "opaque_pixels": 60
+                        },
+                        {
+                            "index": 4,
+                            "png": "frames/key/idle-4.png",
+                            "png_sha256": "1681947b26ee97e1cd565c1d899b363d9b3b730ac71726e89339858115aec409",
+                            "f4_sha256": "ec7797210599822696c65a78f5d7238bc459982b0b21f8e98103620af9dc11c5",
+                            "opaque_pixels": 55
+                        }
+                    ]
+                },
+                "collected": {
+                    "animation_id": "keyCollected",
+                    "frame_ms": 75,
+                    "loop": false,
+                    "frames": [
+                        {
+                            "index": 1,
+                            "png": "frames/key/collected-1.png",
+                            "png_sha256": "dedf29f18a4bf54994bcebc4609362432fa3384d1b6fb766c371385d6ef7def3",
+                            "f4_sha256": "b0772ce65f93148c24228ede1820580fe195d1ab8e9caa040a373fe5c7efef94",
+                            "opaque_pixels": 57
+                        },
+                        {
+                            "index": 2,
+                            "png": "frames/key/collected-2.png",
+                            "png_sha256": "58ab61cc05c51fa25775b0e02ba26574d332268e8836a7624558189a89f9bb1b",
+                            "f4_sha256": "3015b0d9e5992382be2decd75937dccb9fc726dace76d90f14829a36287e4406",
+                            "opaque_pixels": 32
+                        },
+                        {
+                            "index": 3,
+                            "png": "frames/key/collected-3.png",
+                            "png_sha256": "e91702396cab67a2635b77fa4e27c77e3a81cfc80ee5ebbf9cc5ce16b27fba05",
+                            "f4_sha256": "1e3f634f4f139aaf1d64ab753de798c4ce784d12a64d67657fd95757bceb3d5d",
+                            "opaque_pixels": 31
+                        },
+                        {
+                            "index": 4,
+                            "png": "frames/key/collected-4.png",
+                            "png_sha256": "1846b7d7421a056ea0e9858abeefe73b0819dc15811e0efa9f7487a1ad1dd485",
+                            "f4_sha256": "59924a6e23bf9f90d422eb74543603cec9dfba9a9e4fdf95507f4ee8cfb2d981",
+                            "opaque_pixels": 2
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "potion",
+            "name": "Bubbling Potion",
+            "width": 16,
+            "height": 16,
+            "states": {
+                "idle": {
+                    "animation_id": "potionIdle",
+                    "frame_ms": 160,
+                    "loop": true,
+                    "frames": [
+                        {
+                            "index": 1,
+                            "png": "frames/potion/idle-1.png",
+                            "png_sha256": "289efd35e50adc47e3429e3392317f632a98ab0afe3ef35bebdcb169d84cbcf3",
+                            "f4_sha256": "3cf2f9973afca3f57cbb96ceb21b68d3405e818c0423924ca7258907ac4f2eeb",
+                            "opaque_pixels": 98
+                        },
+                        {
+                            "index": 2,
+                            "png": "frames/potion/idle-2.png",
+                            "png_sha256": "3aee928d58aa2bc0051e10ae9067de5e46f6fb695dd2d0942437047771f19888",
+                            "f4_sha256": "24a5e6f0d8aecd8e8c25918bcca59e3f7a422b7f49dd4e11e8fd511c3e798da6",
+                            "opaque_pixels": 98
+                        },
+                        {
+                            "index": 3,
+                            "png": "frames/potion/idle-3.png",
+                            "png_sha256": "da6d484a2b0f4e0ada1173753bfdff09eda1003409c9ca39711647e2f0c10397",
+                            "f4_sha256": "d1b759191b4e0a40f47e9afd6a48c32dc7fb5e26d0025738ccc24f5183990bce",
+                            "opaque_pixels": 98
+                        },
+                        {
+                            "index": 4,
+                            "png": "frames/potion/idle-4.png",
+                            "png_sha256": "854de14d48c8b29aefabd0397c91e464725083103d6e6bdd95371804d229e47b",
+                            "f4_sha256": "1115287ed62ae0f4682274dfc15e48c66f2200e37cfe45b361feff626763b8d7",
+                            "opaque_pixels": 99
+                        }
+                    ]
+                },
+                "collected": {
+                    "animation_id": "potionCollected",
+                    "frame_ms": 75,
+                    "loop": false,
+                    "frames": [
+                        {
+                            "index": 1,
+                            "png": "frames/potion/collected-1.png",
+                            "png_sha256": "1730bed4e6d9c9d9fb417dc02b99717a289e4b27d692e89a1c2c97f51ad73597",
+                            "f4_sha256": "9ac99d0c9568e654b772eb3e48bd0116f8c258abcac43f4616b863bc5ab57c22",
+                            "opaque_pixels": 98
+                        },
+                        {
+                            "index": 2,
+                            "png": "frames/potion/collected-2.png",
+                            "png_sha256": "2d64faaa9b08a6f7edc6319d7920c2471ab244ee703048469a31777e9a8374f2",
+                            "f4_sha256": "144f5e1e7d2cea9e1ef85755138976340792411e449cb24815efa465dbe71949",
+                            "opaque_pixels": 30
+                        },
+                        {
+                            "index": 3,
+                            "png": "frames/potion/collected-3.png",
+                            "png_sha256": "d43208d433ae62009e11b799fd25fdfeed5862377ae42197022f1b4f53b731aa",
+                            "f4_sha256": "65376b25d85e55ffcd1f546dcd8aeff60dfcd513971c6e9da25e7f74591e7f97",
+                            "opaque_pixels": 32
+                        },
+                        {
+                            "index": 4,
+                            "png": "frames/potion/collected-4.png",
+                            "png_sha256": "f612dc06b7068caf70f44472029b39872f98658a692a4abcddc5228b6ab8a81a",
+                            "f4_sha256": "d5a8fa26665a195133b908d6eb1613ff1757fb920a25c906bbcc947657502cf0",
+                            "opaque_pixels": 2
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "berries",
+            "name": "Bouncing Berries",
+            "width": 16,
+            "height": 16,
+            "states": {
+                "idle": {
+                    "animation_id": "berriesIdle",
+                    "frame_ms": 150,
+                    "loop": true,
+                    "frames": [
+                        {
+                            "index": 1,
+                            "png": "frames/berries/idle-1.png",
+                            "png_sha256": "1caa784f4bb86e2b820c2c330b274182ffa2072f0c13e8083bb4418cd80d3b25",
+                            "f4_sha256": "e2a5c944c1b8e84fe4c97d6aefd39a8b37e5b3c10f3ed0e560890d6025f23906",
+                            "opaque_pixels": 80
+                        },
+                        {
+                            "index": 2,
+                            "png": "frames/berries/idle-2.png",
+                            "png_sha256": "e1fdd7b1f5a13c91277630c70470e7b898325f7dcfaa94b8226407453ff26865",
+                            "f4_sha256": "e8fd89247450569d6e28f1c50f1f3048df7f165eaf23b42fc16e08e66eeeddb9",
+                            "opaque_pixels": 81
+                        },
+                        {
+                            "index": 3,
+                            "png": "frames/berries/idle-3.png",
+                            "png_sha256": "291b472fdc8c7727f38eccc7940559d3fb1bac879091195c0b7b4e8abab11b1c",
+                            "f4_sha256": "3c18b7fdcdaf58a44c30e27b2e3e3654611853756bf8e49fea014128e84793a0",
+                            "opaque_pixels": 81
+                        },
+                        {
+                            "index": 4,
+                            "png": "frames/berries/idle-4.png",
+                            "png_sha256": "8ae1ff71f341411947ea11c9c7ec5fca455b1186f776610438b38af0fc9611ca",
+                            "f4_sha256": "3bbb67bfba857e9e80a5e331013d31621c339b798d0c3b6895eee7f3700c75df",
+                            "opaque_pixels": 80
+                        }
+                    ]
+                },
+                "collected": {
+                    "animation_id": "berriesCollected",
+                    "frame_ms": 75,
+                    "loop": false,
+                    "frames": [
+                        {
+                            "index": 1,
+                            "png": "frames/berries/collected-1.png",
+                            "png_sha256": "69738d34b577b09ca0b7ea478ac032c49ea4e0bd2e53d1d752912f837cb397cb",
+                            "f4_sha256": "28ffabb9522cf51a04f5852f79e0c41e79db84f817131c339ad4f2344493de37",
+                            "opaque_pixels": 82
+                        },
+                        {
+                            "index": 2,
+                            "png": "frames/berries/collected-2.png",
+                            "png_sha256": "871cba856c43b34ddf5e45777791e0c02e5aa58d0bc529f18af20ef4e7852548",
+                            "f4_sha256": "ee42c41432f889e791bdd1201cdbf739c4645762b43d3e063b2da82838ab0fac",
+                            "opaque_pixels": 31
+                        },
+                        {
+                            "index": 3,
+                            "png": "frames/berries/collected-3.png",
+                            "png_sha256": "86b94cce314efce45ca4c9017728ac0c14febe648ae8ae5cb6b0cc947db18a43",
+                            "f4_sha256": "c19ad4cbf76bf9a590ef8b4e157bbd6b5540ea6907b9e4aa30a7f26b0f4e2e4c",
+                            "opaque_pixels": 30
+                        },
+                        {
+                            "index": 4,
+                            "png": "frames/berries/collected-4.png",
+                            "png_sha256": "14e12b4d7c11a926b39a3db20236fc6a2e90ad692a26ec62beaea3b3bf15fe9c",
+                            "f4_sha256": "5875b56ffa3056baf31c79bb933162293421a820049303b8c54ddd8c01dfa562",
+                            "opaque_pixels": 2
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "gear",
+            "name": "Turning Gear",
+            "width": 16,
+            "height": 16,
+            "states": {
+                "idle": {
+                    "animation_id": "gearIdle",
+                    "frame_ms": 120,
+                    "loop": true,
+                    "frames": [
+                        {
+                            "index": 1,
+                            "png": "frames/gear/idle-1.png",
+                            "png_sha256": "7eda36deedbf5ae6ea65fd2dc5dc4eb3512b8e3b7e0f1341b0b297a0b415043f",
+                            "f4_sha256": "21faa370fb66b765994eb429b8d493b3b260f97c6311b0c4c8fb045317889c5b",
+                            "opaque_pixels": 84
+                        },
+                        {
+                            "index": 2,
+                            "png": "frames/gear/idle-2.png",
+                            "png_sha256": "ac87ba1c8b6bc9c84e8bfa7afd37dd428f72212db99fcd7a8c349e3a1c692cf3",
+                            "f4_sha256": "3bfb54265bdfef1f3c3b5d3c22cb36e31c3758ae052b552b789da0539b75e7c7",
+                            "opaque_pixels": 80
+                        },
+                        {
+                            "index": 3,
+                            "png": "frames/gear/idle-3.png",
+                            "png_sha256": "a4b6e7d967914cde552310df260c86e8683b5a4e18aa78ecbf8a0e1a8618e0d7",
+                            "f4_sha256": "95d56fe2a999b9d5f37d4ba80b1359213eca20dc8b9b660292b74f8705587a0e",
+                            "opaque_pixels": 84
+                        },
+                        {
+                            "index": 4,
+                            "png": "frames/gear/idle-4.png",
+                            "png_sha256": "cfdc40c02ef29bf3ec3251a2d70c86aa5338a3fa5dd45096620ff15c3f420d1f",
+                            "f4_sha256": "8c85193b547bcdc5806ff78c8c034eeac6a9f38ca7d6fa639f5ebc870fa09cee",
+                            "opaque_pixels": 80
+                        }
+                    ]
+                },
+                "collected": {
+                    "animation_id": "gearCollected",
+                    "frame_ms": 75,
+                    "loop": false,
+                    "frames": [
+                        {
+                            "index": 1,
+                            "png": "frames/gear/collected-1.png",
+                            "png_sha256": "092727e9f7078b56c88e21882c698570c4c1f30cb81eaeadee7729224f583a97",
+                            "f4_sha256": "718825e6c9995c0bddf0a10281ea264433751b8ad43877dec0887949b7fba39a",
+                            "opaque_pixels": 91
+                        },
+                        {
+                            "index": 2,
+                            "png": "frames/gear/collected-2.png",
+                            "png_sha256": "8d376606c73b6f68652f7314879154b4275a13c6f349385c8ce04e1e1455d757",
+                            "f4_sha256": "db3041d04b4342be2c7b34d0552b6eaf30d48701f8a9a89533a18d0f4df3fcfa",
+                            "opaque_pixels": 35
+                        },
+                        {
+                            "index": 3,
+                            "png": "frames/gear/collected-3.png",
+                            "png_sha256": "8c05796df72894c52ee5a10fef9c669201490fba0d95714187ab26ec58c3798f",
+                            "f4_sha256": "32987e79a9468e536312a85b9cfaaf8fbf70702fea94890b94edf0cf02e1e8a0",
+                            "opaque_pixels": 36
+                        },
+                        {
+                            "index": 4,
+                            "png": "frames/gear/collected-4.png",
+                            "png_sha256": "270ce3467d6bbb4e6ca0b29c242900d99d2c4051bb09fc2fcef4830db4af9bba",
+                            "f4_sha256": "118b33eb5980499c53e197f1ec41b1f361f6485da675bee5bcef5e0aadc7ba57",
+                            "opaque_pixels": 4
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "battery",
+            "name": "Pulsing Energy Cell",
+            "width": 16,
+            "height": 16,
+            "states": {
+                "idle": {
+                    "animation_id": "batteryIdle",
+                    "frame_ms": 140,
+                    "loop": true,
+                    "frames": [
+                        {
+                            "index": 1,
+                            "png": "frames/battery/idle-1.png",
+                            "png_sha256": "2debe8dfbd7752be406279a807c2ee48de8f4a5f23d4aec911f03254c5cbdaa0",
+                            "f4_sha256": "67e5a998b36538a505094b0de4e9556d4b7628188f0d7c9b79379bd17062bb38",
+                            "opaque_pixels": 108
+                        },
+                        {
+                            "index": 2,
+                            "png": "frames/battery/idle-2.png",
+                            "png_sha256": "deeb2a8232a186be41eea133847ac117c68418613cb720771c4752297fb00101",
+                            "f4_sha256": "d07a65f82c74e67b5b4c8aca28ac85ee39a4a3de8436dd8a9e45085dd00bbf35",
+                            "opaque_pixels": 108
+                        },
+                        {
+                            "index": 3,
+                            "png": "frames/battery/idle-3.png",
+                            "png_sha256": "4eace921df69ce65ba019a2167458c651942e2b18af9a816370737dfb1e74061",
+                            "f4_sha256": "32339f529e89a9e2db2aa23cdbe2c71574bc8c38fb3c598251f318a95e17b1db",
+                            "opaque_pixels": 110
+                        },
+                        {
+                            "index": 4,
+                            "png": "frames/battery/idle-4.png",
+                            "png_sha256": "fcf294459d2fc6fac6b61ed96e3d0ba0ec7b0f7607a821e8f9c97b8d2044a89b",
+                            "f4_sha256": "0f906af770ba2502f3a5c3d99dfb9bb89cb73c998b781d5744af0526da0dc0c1",
+                            "opaque_pixels": 108
+                        }
+                    ]
+                },
+                "collected": {
+                    "animation_id": "batteryCollected",
+                    "frame_ms": 75,
+                    "loop": false,
+                    "frames": [
+                        {
+                            "index": 1,
+                            "png": "frames/battery/collected-1.png",
+                            "png_sha256": "8108b4d31edafdf7fbb9c271ad4a738cd3f972160e79cf6e836ecee9ac111b2b",
+                            "f4_sha256": "ad39353af6a6318943be71d93171a277e6088d488a4a3fa222b5e6b62e05372b",
+                            "opaque_pixels": 108
+                        },
+                        {
+                            "index": 2,
+                            "png": "frames/battery/collected-2.png",
+                            "png_sha256": "0877fae8456049bc3f98f7a398b3cd3f30a76a30c86dfa2188431133a8159aa5",
+                            "f4_sha256": "cc64ae0161eed4ba0d106c3454b649154503fe536a016ee08655d0463c02e046",
+                            "opaque_pixels": 36
+                        },
+                        {
+                            "index": 3,
+                            "png": "frames/battery/collected-3.png",
+                            "png_sha256": "c213b17ba03069e87e924a2c40e69aa3543b854aa9babce68a012cee314a9deb",
+                            "f4_sha256": "364f3f7e43b768b76c690db15d7dff0cd6bd4356cc29d3e951b257b31b19a016",
+                            "opaque_pixels": 32
+                        },
+                        {
+                            "index": 4,
+                            "png": "frames/battery/collected-4.png",
+                            "png_sha256": "1be2d14ffa170060d89ef9df7088e61ebd0ee2b9b44afcba6a7d62ae9b7b830e",
+                            "f4_sha256": "d7f2b8b236b6eb34082f34a99ce5c04f4b37c7f492878d06a4ceafa18e6e158c",
+                            "opaque_pixels": 2
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "crown",
+            "name": "Floating Crown",
+            "width": 16,
+            "height": 16,
+            "states": {
+                "idle": {
+                    "animation_id": "crownIdle",
+                    "frame_ms": 150,
+                    "loop": true,
+                    "frames": [
+                        {
+                            "index": 1,
+                            "png": "frames/crown/idle-1.png",
+                            "png_sha256": "cf734218f06e24d305f5111e1598b05438fa9d8499779f08cdbe3248f24c85ad",
+                            "f4_sha256": "28ddd6bcf4ef322c0cb95aedb40ecc05e76981873074d17eff2bf40b085c6daf",
+                            "opaque_pixels": 82
+                        },
+                        {
+                            "index": 2,
+                            "png": "frames/crown/idle-2.png",
+                            "png_sha256": "9be64d705dddf52ee34b13f69837b4335e1fae6a94fc8b75bd2f6b56550eab35",
+                            "f4_sha256": "76df672aba91e9cd88ba74b943de609e6e10fccd6a618684dc3aacfd1be948c0",
+                            "opaque_pixels": 87
+                        },
+                        {
+                            "index": 3,
+                            "png": "frames/crown/idle-3.png",
+                            "png_sha256": "cf734218f06e24d305f5111e1598b05438fa9d8499779f08cdbe3248f24c85ad",
+                            "f4_sha256": "28ddd6bcf4ef322c0cb95aedb40ecc05e76981873074d17eff2bf40b085c6daf",
+                            "opaque_pixels": 82
+                        },
+                        {
+                            "index": 4,
+                            "png": "frames/crown/idle-4.png",
+                            "png_sha256": "04dc3fa6d6bc0ffcd08db66d857f10dea0d2d3a3ed15d28e979b5b5dd3bb2681",
+                            "f4_sha256": "05ec1661faca99cb0898f781013733f65796dcc8e1890b119f286316fd5d3c69",
+                            "opaque_pixels": 83
+                        }
+                    ]
+                },
+                "collected": {
+                    "animation_id": "crownCollected",
+                    "frame_ms": 75,
+                    "loop": false,
+                    "frames": [
+                        {
+                            "index": 1,
+                            "png": "frames/crown/collected-1.png",
+                            "png_sha256": "80f9bb8058bbd3e87c2c6facea04447717175abee99237d539754255ee65facd",
+                            "f4_sha256": "aa1b26298b936d054285d5cc9fba637e185a3466bcc4c25072c46ec16711b0a6",
+                            "opaque_pixels": 82
+                        },
+                        {
+                            "index": 2,
+                            "png": "frames/crown/collected-2.png",
+                            "png_sha256": "2c101067a19ad69b7000bfe2306a58a7dfb57190900bac9fc5a57848524d46b9",
+                            "f4_sha256": "fe1b5e32bab8b29948cf3c7125ee96634eea768535b85e79ef6083024b64ce03",
+                            "opaque_pixels": 31
+                        },
+                        {
+                            "index": 3,
+                            "png": "frames/crown/collected-3.png",
+                            "png_sha256": "e484ce0f8358eb6b7566b43df9b10d809eda89826a4a5e53acc67198ce07fd51",
+                            "f4_sha256": "61b46dd39027a9fc86e668b44c5f53b00176a18a4025a922ec4b7f04fe0e91ca",
+                            "opaque_pixels": 35
+                        },
+                        {
+                            "index": 4,
+                            "png": "frames/crown/collected-4.png",
+                            "png_sha256": "7ce5ee3326f54e0ad7a70cd807c8e1d413804b9b4275fb53141639363c9a753e",
+                            "f4_sha256": "e6841bf919d0a4e3d849b6f55f981471a1193d35de1e1cbda47dabe298b77185",
+                            "opaque_pixels": 2
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "feather",
+            "name": "Drifting Feather",
+            "width": 16,
+            "height": 16,
+            "states": {
+                "idle": {
+                    "animation_id": "featherIdle",
+                    "frame_ms": 170,
+                    "loop": true,
+                    "frames": [
+                        {
+                            "index": 1,
+                            "png": "frames/feather/idle-1.png",
+                            "png_sha256": "bc8ca3286e2ef13c517a8d42c348bf69f3d5ae25b74cca36214aa638f67f4a36",
+                            "f4_sha256": "60f1dbe662481db10327b260b27bd0d906a24df4d605014b2249987b1e62814e",
+                            "opaque_pixels": 29
+                        },
+                        {
+                            "index": 2,
+                            "png": "frames/feather/idle-2.png",
+                            "png_sha256": "a1a30fde99cddd5c88d4fb79cec2bda2b05509bfd6eeea3f0332c873ced3c930",
+                            "f4_sha256": "a28f844a4b748081e81e206de106298bb3c8de68ccc8ab127425bba5d3e590af",
+                            "opaque_pixels": 29
+                        },
+                        {
+                            "index": 3,
+                            "png": "frames/feather/idle-3.png",
+                            "png_sha256": "b0aa0543df76de03601bf07a6e4a34e9fa484117b7408e805266de6f6daa3ce0",
+                            "f4_sha256": "fd03d88ebebf590585ff14fc1736f8acdf3e808e4c1370ed35628082d381bb4d",
+                            "opaque_pixels": 29
+                        },
+                        {
+                            "index": 4,
+                            "png": "frames/feather/idle-4.png",
+                            "png_sha256": "caa49bf412acc22623a526a4607a90c0ac21f8e7677219afc06d5b5b2ee85a33",
+                            "f4_sha256": "c17077848eaa341794de30925e69da306e95f817d631b1ce1225d5915ab9b97f",
+                            "opaque_pixels": 29
+                        }
+                    ]
+                },
+                "collected": {
+                    "animation_id": "featherCollected",
+                    "frame_ms": 75,
+                    "loop": false,
+                    "frames": [
+                        {
+                            "index": 1,
+                            "png": "frames/feather/collected-1.png",
+                            "png_sha256": "1166ce3896c2b28ef1717c90731d4e526fd351b4ff389dde14d5a8261e0644da",
+                            "f4_sha256": "337b7bf92fcefec92bc2ca1a7e3850686ec6222a61e3eb6682de678d80645a01",
+                            "opaque_pixels": 34
+                        },
+                        {
+                            "index": 2,
+                            "png": "frames/feather/collected-2.png",
+                            "png_sha256": "f3ecbda551690bb62459ce882471153985895d75ea44f3410a897ca634e39530",
+                            "f4_sha256": "9333c8c3914cb29bfc28210b5e7ab727fe356ee4c46fcd1808c020f7cfa7c693",
+                            "opaque_pixels": 31
+                        },
+                        {
+                            "index": 3,
+                            "png": "frames/feather/collected-3.png",
+                            "png_sha256": "a8a22c409aff3f64312cb5ea2ae286f7732cf85dd56b7faba838868f495040cd",
+                            "f4_sha256": "8784c47b35b8f3b6896b8dcc8cbdc0ad7e4c55c50c924fcf873338c2f129c27b",
+                            "opaque_pixels": 41
+                        },
+                        {
+                            "index": 4,
+                            "png": "frames/feather/collected-4.png",
+                            "png_sha256": "88bc191d3066d73e246d5dac743bdbe4fa8051996530927d19c3512c477e902b",
+                            "f4_sha256": "e5c6929c7c54c05efe7e09505ac085ff590e83bedf709beb4a061ace8281143f",
+                            "opaque_pixels": 2
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

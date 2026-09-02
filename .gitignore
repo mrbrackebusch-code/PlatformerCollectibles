@@ -1,0 +1,4 @@
+built/
+pxt_modules/
+*.uf2
+*.hex
