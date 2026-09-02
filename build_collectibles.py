@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parent
 FRAME_DIR = ROOT / "frames"
 PREVIEW_DIR = ROOT / "previews"
 SIZE = 16
+VERSION = "0.0.2"
 
 # MakeCode Arcade's default 16-color palette. Index 0 is transparent.
 PALETTE_HEX = [
@@ -147,6 +148,25 @@ def encode_f4(frame: list[list[int]]) -> bytes:
         for y in range(0, SIZE, 2):
             result.append(frame[y][x] | (frame[y + 1][x] << 4))
     return bytes(result)
+
+
+def encode_animation(frames: list[list[list[int]]], interval: int) -> str:
+    """Encode MakeCode's binary mkcd-animation payload.
+
+    Unlike image JRES entries, animation payloads are base64-encoded ASCII hex.
+    The frame pixels are packed row-major, two 4-bit palette indices per byte.
+    """
+    assert frames
+    data = bytearray()
+    for value in (interval, SIZE, SIZE, len(frames)):
+        data.extend((value & 0xFF, (value >> 8) & 0xFF))
+    for frame in frames:
+        flattened = [value for row in frame for value in row]
+        for index in range(0, len(flattened), 2):
+            low = flattened[index]
+            high = flattened[index + 1] if index + 1 < len(flattened) else 0
+            data.append(low | (high << 4))
+    return base64.b64encode(data.hex().encode("ascii")).decode("ascii")
 
 
 def ascii_rows(frame: list[list[int]]) -> list[str]:
@@ -735,23 +755,17 @@ def ts_image(frame: list[list[int]]) -> str:
 
 
 def write_project_files(families: list[dict]) -> None:
-    jres: dict[str, object] = {"*": {"mimeType": "image/x-mkcd-f4", "dataEncoding": "base64", "namespace": "collectibles"}}
+    jres: dict[str, object] = {"*": {"namespace": "collectibles"}}
     animations: list[dict] = []
     for family in families:
         for state in ("idle", "collected"):
             animation_id = f"{family['id']}{state.title()}"
-            frame_ids: list[str] = []
-            for index, frame in enumerate(family[state], start=1):
-                frame_id = f"{animation_id}{index}"
-                frame_ids.append(f"collectibles.{frame_id}")
-                jres[frame_id] = {"data": base64.b64encode(encode_f4(frame)).decode("ascii"), "mimeType": "image/x-mkcd-f4"}
             display_name = f"{family['name']} - {'Idle' if state == 'idle' else 'Collected'}"
             jres[animation_id] = {
                 "namespace": "collectibles",
                 "id": animation_id,
                 "mimeType": "application/mkcd-animation",
-                "dataEncoding": "json",
-                "data": json.dumps({"frames": frame_ids, "flippedHorizontal": False}, separators=(",", ":")),
+                "data": encode_animation(family[state], family[f"{state}_ms"]),
                 "displayName": display_name,
             }
             animations.append({"id": animation_id, "display_name": display_name, "frames": family[state]})
@@ -780,7 +794,7 @@ def write_project_files(families: list[dict]) -> None:
 
     config = {
         "name": "Platformer Animated Collectibles",
-        "version": "0.0.1",
+        "version": VERSION,
         "description": "Twelve original 16x16 collectibles with compact idle loops and custom collected animations for MakeCode Arcade.",
         "files": ["main.blocks", "main.ts", "README.md", "assets.json", "images.g.jres", "images.g.ts"],
         "preferredEditor": "blocksprj",
@@ -897,7 +911,7 @@ def write_frames_and_manifest(families: list[dict]) -> None:
     all_animations = [entry for family in manifest_families for entry in family["states"].values()]
     manifest = {
         "pack": "Platformer Animated Collectibles",
-        "version": "0.0.1",
+        "version": VERSION,
         "generator": "build_collectibles.py",
         "license": "MIT",
         "palette": PALETTE_HEX,
@@ -929,11 +943,22 @@ def validate(families: list[dict]) -> None:
             for frame in frames:
                 assert len(frame) == SIZE and all(len(row) == SIZE for row in frame)
                 assert all(0 <= value <= 15 for row in frame for value in row)
+            payload = bytes.fromhex(base64.b64decode(encode_animation(frames, family[f"{state}_ms"])).decode("ascii"))
+            assert len(payload) == 8 + len(frames) * SIZE * SIZE // 2
+            assert int.from_bytes(payload[0:2], "little") == family[f"{state}_ms"]
+            assert int.from_bytes(payload[2:4], "little") == SIZE
+            assert int.from_bytes(payload[4:6], "little") == SIZE
+            assert int.from_bytes(payload[6:8], "little") == len(frames)
+            unpacked = []
+            for packed in payload[8:]:
+                unpacked.extend((packed & 0xF, packed >> 4))
+            expected = [value for frame in frames for row in frame for value in row]
+            assert unpacked == expected
         assert sum(value != 0 for row in family["collected"][-1] for value in row) <= 8
 
 
 def make_zip() -> None:
-    package = ROOT / "Platformer-Animated-Collectibles-v0.0.1.zip"
+    package = ROOT / f"Platformer-Animated-Collectibles-v{VERSION}.zip"
     if package.exists():
         package.unlink()
     roots = ["README.md", "LICENSE", "pxt.json", "main.ts", "main.blocks", "test.ts", "assets.json", "images.g.jres", "images.g.ts", "tsconfig.json", "animation-manifest.json", "ANIMATION_ASCII.md", "contact-sheet.png", "collectibles-preview.gif", "build_collectibles.py", ".gitignore"]

@@ -1,6 +1,6 @@
 {
     "pack": "Platformer Animated Collectibles",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "generator": "build_collectibles.py",
     "license": "MIT",
     "palette": [
